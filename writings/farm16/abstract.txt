@@ -1,0 +1,11 @@
+O.---odot---is a portable media programming framework based on
+the OSC data encoding. It embeds a small expression language
+which allows writing and executing programs in OSC structures. The
+integration of programming and declarative functional descriptions
+within data transfer protocols enables structured and expressive communication
+in media systems: program snippets can be distributed
+in OSC messages, which evaluate to further OSC messages in the
+different communicating software. We present experiments using
+this framework in the OpenMusic computer-aided composition environment,
+and illustrate via case studies some advantages of such
+integrated system.

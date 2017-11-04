@@ -1,0 +1,5 @@
+@inproceedings{aspect_icmc_2014,
+author = {John MacCallum Adrian Freed and David Wessel},
+title = {New Tools for Aspect-Oriented Programming in Music and Media Programming Environments},
+booktitle = {Proceedings of the International Computer Music Conference}, 
+year = 2014}

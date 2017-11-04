@@ -1,0 +1,7 @@
+We present a practice-based research project, which examines temporal relationships between physiological
+processes with human movement and mediated environments. Ongoing research will provide a foundation for the
+creation of performances in which real-time heart rate data from contemporary dancers is used to generate click
+tracks for live musicians. The complex constructions of time in this project necessitate novel visualization
+strategies throughout the research, development, creation, and production process, including: time domain
+display of data with rich and facile interaction using bokeh; visualization of biometric data as a form of
+biofeedback; and unique representations of time in music notation.

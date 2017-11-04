@@ -1,0 +1,1 @@
+ J. MacCallum and A. Schmeder. Timewarp: A graphical tool for the control of polyphonic smoothly varying tempos. In <i>Proceedings of the International Computer Music Conference</i>, 2010.

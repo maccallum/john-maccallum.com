@@ -1,0 +1,5 @@
+@inproceedings{odot_nime_2011,
+author = {Adrian Freed and John MacCallum and Andrew Schmeder},
+title = {Composability for musical gesture signal processing using new OSC-based object and functional programming extensions to Max/MSP},
+booktitle = {Proceedings of the New Interfaces for Musical Expression Conference}, 
+year = 2011}

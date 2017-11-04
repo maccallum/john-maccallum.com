@@ -1,0 +1,8 @@
+EFFICACe est un projet de recherche centré sur les outils de
+composition assistée par ordinateur (CAO), explorant les rapports
+entre calcul, temps et interactions dans les processus de
+composition musicale. Nous présentons différents travaux en
+cours dans le cadre de ce projet, concernant l’application de
+processus interactifs pour le traitement et l’ordonnancement
+des séquences temporelles, le traitement et la spatialisation
+sonore, ou encore les interfaces homme-machine.

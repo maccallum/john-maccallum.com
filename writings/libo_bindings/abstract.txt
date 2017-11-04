@@ -1,0 +1,8 @@
+We present recent work on odot, a system that extends Open
+Sound Control and facilitates the rapid and dynamic construction
+of Message-Oriented Middleware providing an interoperability
+layer for communication between applications.
+Unlike traditional middleware systems, odot, when embedded
+in a host environment, provides a node where computation
+can take place, allowing middleware to take shape dynamically
+as the needs of the system develop.

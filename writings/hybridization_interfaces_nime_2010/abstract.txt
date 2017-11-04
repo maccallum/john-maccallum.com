@@ -1,0 +1,7 @@
+We present two complementary approaches for the visualization and interaction of dimensionally reduced 
+data sets using hybridization interfaces.  Our implementations privilege syncretic systems allowing 
+one to explore combinations (hybrids) of disparate elements of a data set through their placement
+in a 2-D space.  The first approach allows for the placement of data points anywhere on the plane
+according to an anticipated performance strategy.  The contribution (weight) of each data point 
+varies according to a power function of the distance from the control cursor.  The second approach
+uses constrained vertex colored triangulations of manifolds with labels placed at the vertices of triangular tiles.  Weights are computed by barycentric projection of the control cursor position. 

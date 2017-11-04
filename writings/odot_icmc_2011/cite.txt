@@ -1,0 +1,1 @@
+A. Freed, J. MacCallum, A. Schmeder.  Dynamic, instance-based, object-oriented programming in Max/MSP using open sound control message delegation.  In <i>Proceedings of the International Computer Music Conference.</i> Huddersfield, UK.  2011.

@@ -1,0 +1,1 @@
+A. Freed, J. MacCallum, A. Schmeder.  Composability for musical gesture signal processing using new OSC-based object and functional programming extensions to Max/MSP.  In <i>Proceedings of the New Interfaces for Musical Expression Conference.</i> Oslo, Norway. 2011.

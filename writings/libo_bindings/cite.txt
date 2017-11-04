@@ -1,0 +1,1 @@
+John MacCallum, Ilya Rostovtsev, Rama Gottfried, Jean Bresson, Adrian Freed. Dynamic Message-Oriented Middleware with Open Sound Control and Odot. <i>Proceedings of the International Computer Music Conference (ICMC).</i> Denton, Texas. 2015.

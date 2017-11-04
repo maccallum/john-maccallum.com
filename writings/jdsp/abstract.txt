@@ -1,0 +1,10 @@
+In this article we propose a biorelational framework for performance with biosensors, in
+which interactions are not based on causality, control, and representation, but rather,
+manifest through shared awareness and agency across multiple, fluid assemblies of self,
+other and environment. The transdisciplinary scope of this study traces trajectories from
+the performing and somatic arts into philosophy, biomedicine, cognitive science and
+computer-human interaction. A brief survey of common approaches to interaction design
+with biosensors will contextualize discussion of our current practice-based research and
+creation project, 'Choreography and Composition of Internal Time'. In this project, we
+are examining temporal relationships between physiological processes, such as heart rate
+and breath, with rhythms in movement, music and mediated environments.

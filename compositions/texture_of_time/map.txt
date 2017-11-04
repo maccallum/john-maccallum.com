@@ -1,0 +1,5 @@
+texture_fullscore.pdf score
+texture_parts.zip parts
+pn_eco2.pdf program notes
+texture_sketch_1-39.pdf sketch1
+texture_sketch_40-78.pdf sketch2

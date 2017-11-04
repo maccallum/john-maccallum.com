@@ -1,0 +1,20 @@
+In the opening bars of <i>Aberration</i> the three percussionists, governed, as one would expect, by a common tempo,
+present a simple rhythmic pattern.
+Soon though, the tempos of each of the three musicians begin to fluctuate slowly and independently of 
+one another---the performers begin to wander from the path of the single tempo established at the beginning
+of the composition.  At times the three performers violently assert their individual tempos by playing 
+simple rhythmic figures reminiscent of the material in the opening of the work albeit in their own 
+independent tempos, while at other times they attempt to reconstruct the music from the beginning of the work
+by playing carefully chosen rhythms that, when combined, form a composite semblance of that original material.
+The tempo of the material being reconstructed
+then speeds up slightly before beginning a long
+slow deceleration.  As we approach the trough, we hear all four tempos at once---each of the performers
+playing in their own tempo and also each playing elements of the slowly decelerating fourth.  
+</p>
+<i>Aberration</i> makes use of new software developed by John MacCallum 
+at the Center for New Music and Audio Technologies (CNMAT).
+This software builds on previous work by Matthew Wright and has been used extensively in works by Edmund
+Campion including <i>ADKOM</i> and <i>Auditory Fiction</i>.
+</p>
+<i>Aberration</i> was commissioned by and written for the Rootstock Percussion Trio (Chris Froh, 
+Dan Kennedy, and Loren Mach) and is dedicated to Edmund Campion.

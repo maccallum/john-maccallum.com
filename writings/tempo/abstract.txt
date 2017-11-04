@@ -1,0 +1,7 @@
+We present computer-aided composition experiments related
+to the notions of polyrhythmic structures and variable
+tempo curves. We propose a formal context and some
+tools that enable the generation of complex polyrhythms
+with continuously varying tempos integrated in compositional
+processes and performance, implemented as algorithms
+and user interfaces.

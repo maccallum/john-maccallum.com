@@ -1,0 +1,1 @@
+J. MacCallum, A. Freed, D. Wessel. New Tools for Aspect-Oriented Programming in Music and Media Programming Environments.  In <i>Proceedings of the International Computer Music Conference.</i> Thessaloniki, Greece. 2014.

@@ -1,0 +1,3 @@
+libo_bindings.pdf download
+
+libo_bindings.bib cite

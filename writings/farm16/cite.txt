@@ -1,0 +1,2 @@
+Jean Bresson, John MacCallum, Adrian Freed. o.OM: Structured-Functional Communication between
+Computer Music Systems using OSC and Odot. <i>Proceedings of the ACM SIGPLAN International Workshop on Functional Art, Music, Modelling and Design (FARM).</i> Nara, Japan. 2016.

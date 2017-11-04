@@ -1,0 +1,5 @@
+@inproceedings{migrator_icmc09,
+author = {John MacCallum and Andrew Schmeder and David Wessel},
+title = {Timbral Migration: Stochastic Processes for the Control of Smooth Spectral Transformation},
+booktitle = {Proceedings of the International Computer Music Conference}, 
+year = 2009}

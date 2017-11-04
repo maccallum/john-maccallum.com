@@ -1,0 +1,8 @@
+We describe a tool for real-time musical analysis based on a measure of roughness, the principal element of sensory dis
+sonance.  While most historical musical analysis is based on the notated score, our tool permits analysis of a recorded
+ or live audio signal in its full complexity.  We proceed from the work of Richard Parncutt and Ernst Terhardt, extendi
+ng their algorithms for the psychoacoustic analysis of harmony to be used for the live analysis of spectral data. This 
+allows for the study of a wider variety of timbrally-rich acoustic or electronic sounds which was not possible with pre
+vious algorithms.  Further, the direct treatment of audio signal facilitates a wide range of analytical applications, f
+rom the comparison of multiple recordings of the same musical work to the real-time analysis of a live performance.  Ou
+r algorithm is programmed in C as an external object for the program Max/MSP.
