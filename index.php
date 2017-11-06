@@ -17,7 +17,7 @@ if($_GET["clearlog"] == true){
 	}
 }
 
-$excludes = array("index.php" => true, "index.alpha.php" => true, "index.php.bak" => true, "bg.png" => true, "map.txt" => true, "dontmessup" => true, "log.txt" => true, "dl" => true, "niftyplayer" => true, "make-bg.pl" => true, "favicon.gif" => true, "favicon.ico" => true, "test.php" => true, "wind.js" => true, "title.txt" => true, "diss" => true, "blog" => true, "blog.old" => true, "dav" => true, "scripts" => true, "wp-content" => true);
+$excludes = array("index.php" => true, "index.alpha.php" => true, "index.php.bak" => true, "bg.png" => true, "map.txt" => true, "dontmessup" => true, "log.txt" => true, "dl" => true, "niftyplayer" => true, "make-bg.pl" => true, "favicon.gif" => true, "favicon.ico" => true, "test.php" => true, "wind.js" => true, "title.txt" => true, "diss" => true, "blog" => true, "blog.old" => true, "dav" => true, "scripts" => true, "wp-content" => true, "scordatura.php" => true);
 $functions_for_extensions = array("txt" => "writetext", "pdf" => "writelinktofile", "mp3" => "makeplaya");
 $functions_for_files = array("soundcloud" => "makescplaya");
 
