@@ -1,1 +1,2 @@
-<a href="../../dl/hyphos_click.zip">software</a>
+<a href="https://github.com/maccallum/hyphos-electronics/archive/master.tar.gz">software.tar.gz</a>
+<a href="https://github.com/maccallum/hyphos-electronics/archive/master.zip">software.zip</a>
