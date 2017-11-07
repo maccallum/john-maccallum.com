@@ -10,14 +10,14 @@ $text = "";
 }
 $transport = $_GET["transport"];
 
-echo "<h1>";
-if(text != ""){
-echo $text."<br>";
-echo "(".$freq." Hz)";
-}else{
-echo $freq." Hz";
-}
-echo "<br>";
+// echo "<h1>";
+// if(text != ""){
+// echo $text."<br>";
+// echo "(".$freq." Hz)";
+// }else{
+// echo $freq." Hz";
+// }
+// echo "<br>";
 if($transport == "start"){
 echo "<html>";
 echo "<head>";
@@ -41,7 +41,7 @@ echo "<a href=\"".$_SERVER['PHP_SELF']."?transport=stop&freq=".$freq."&text=".$t
 }else{
 echo "<a href=\"".$_SERVER['PHP_SELF']."?transport=start&freq=".$freq."&text=".$text."\">start</a>";
 }
-echo "</h1>";
+//echo "</h1>";
 echo "</body>";
 echo "</html>";
 ?>
