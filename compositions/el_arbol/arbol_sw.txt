@@ -1,0 +1,3 @@
+<a href="https://github.com/maccallum/arbol-electronics/archive/master.tar.gz">software (.tar.gz)</a>
+<br>
+<a href="https://github.com/maccallum/arbol-electronics/archive/master.zip">software (.zip)</a>
