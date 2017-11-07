@@ -247,7 +247,8 @@ function writeprobeheader(){
 	echo "<style>\n";
 	echo "a{font-family: \"Courier New\", Courier, monospace; text-decoration:none; color:#000000;}\n";
 	echo "body{font-family: \"Courier New\", Courier, monospace; margin: 0px; padding: 0px}\n";
-	echo ".text{border: 1px black; border-style: solid; padding: 4px;}\n";
+	//echo ".text{border: 1px black; border-style: solid; padding: 4px;}\n";
+	echo ".txt{border-style: none}\n";
 	echo ".invisible{border: 1px black; border-style: solid; padding 4px; visibility: hidden}\n";
 	echo "</style>\n";
 	echo "</head>\n";
