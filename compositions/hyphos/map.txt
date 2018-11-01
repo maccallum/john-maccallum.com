@@ -1,3 +1,0 @@
-hyphos_fullscore_with_frontmatter.pdf score
-hyphos_click.zip software
-hyphos_parts.zip parts

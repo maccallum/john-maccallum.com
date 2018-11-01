@@ -1,1 +1,3 @@
-<a href="https://github.com/maccallum/limn-score/blob/master/score/limn_score.pdf">score</a>
+<a href="https://github.com/maccallum/limn-score/blob/master/score/limn_score.pdf">
+<script>document.write(messup("score"))</script>
+</a>

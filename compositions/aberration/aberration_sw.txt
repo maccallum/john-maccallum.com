@@ -1,3 +1,5 @@
-<a href="https://github.com/maccallum/aberration-click-tracks/archive/master.tar.gz">software (.tar.gz)</a>
+<a href="https://github.com/maccallum/aberration-click-tracks/archive/master.tar.gz">
+<script>document.write(messup("software"))</script> (.tar.gz)</a>
 <br>
-<a href="https://github.com/maccallum/aberration-click-tracks/archive/master.zip">software (.zip)</a>
+<a href="https://github.com/maccallum/aberration-click-tracks/archive/master.zip">
+<script>document.write(messup("software"))</script> (.zip)</a>
