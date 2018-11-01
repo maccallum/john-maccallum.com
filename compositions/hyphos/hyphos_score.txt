@@ -1,1 +1,1 @@
-<a href="https://github.com/maccallum/hyphos-score/blob/master/score/hyphos_fullscore_with_frontmatter.pdf"><script>document.write(messup("score"))</script</a>
+<a href="https://github.com/maccallum/hyphos-score/blob/master/score/hyphos_fullscore_with_frontmatter.pdf"><script>document.write(messup("score"))</script></a>
