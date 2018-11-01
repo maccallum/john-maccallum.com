@@ -256,7 +256,21 @@ function gettitle(){
 function writeprobeheader(){
 	echo "<html><head>\n";
 	echo "<script type=\"text/javascript\" src=\"wind.js\"></script>\n";
-	echo "<script type=\"text/javascript\" language=\"javascript\" src=\"./niftyplayer/niftyplayer.js\"></script>";
+	echo "<script type=\"text/javascript\" language=\"javascript\">";
+        echo "function messup(word){";
+        echo "var st = \"\";";
+        echo "var ar = word.split(\"\");";
+        echo "for(var i = 0; i < ar.length; i++){";
+        echo "st = st + ar[i];";
+        echo "r = Math.floor(Math.random() * 3);";
+        echo "for(var j = 0; j < r; j++){";
+        echo "st = st + \"&mdash;\";";
+        echo "}";
+        echo "}";
+        echo "st = st.replace(\"_\", \"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\");";
+        echo "return st;";
+        echo "}";
+        echo "</script>";
 	echo "<title>" . messup("john") . "&mdash;&mdash;&mdash;&mdash;" . messup("maccallum") . "</title>\n";
 	echo "<style>\n";
 	echo "a{font-family: \"Courier New\", Courier, monospace; text-decoration:none; color:#000000;}\n";
