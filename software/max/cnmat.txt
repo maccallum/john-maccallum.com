@@ -1,3 +1,0 @@
-<a href="http://cnmat.berkeley.edu/downloads">
-CNMAT's collection of Max externals including the o.* objects.
-</a>
