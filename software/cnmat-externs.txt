@@ -1,0 +1,4 @@
+<a href="https://github.com/CNMAT/CNMAT-Externs">
+<script>document.write(messup("CNMAT Externals"))</script><br>
+Collection of externals and patches for Max/MSP/Jitter
+</a>
