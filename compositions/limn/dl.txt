@@ -1,1 +1,3 @@
-<a href="https://github.com/maccallum/limn-electronics/archive/master.zip">download electronics</a>
+<a href="https://github.com/maccallum/limn-electronics/archive/master.zip">
+<script>document.write(messup("download electronics"))</script>
+</a>
