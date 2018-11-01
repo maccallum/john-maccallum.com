@@ -1,1 +1,5 @@
-maccallum_john_cv.pdf full cv
+maccallum_john_cv.pdf <script>document.write(messup("curriculum vit&aelig;"))</script>
+maccallum_john_diversity.pdf <script>document.write(messup("diversity statement"))</script>
+maccallum_john_publications.bib <script>document.write(messup("publications"))</script> (bibtex)
+maccallum_john_research.pdf <script>document.write(messup("research statement"))</script>
+maccallum_john_teaching.pdf <script>document.write(messup("teaching statement"))</script>
