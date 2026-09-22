@@ -1,28 +1,123 @@
 ---
-title: home
-layout: page
+layout: default
+description: >-
+  John MacCallum is a composer, media artist, and software engineer whose
+  work uses technology to probe our relationship to time, with the heart
+  as timekeeper. Recent works with Teoma Naccarato, notated works,
+  recordings, and the instruments he builds.
+nav:
+  - {label: Recent works, href: "#recent"}
+  - {label: Listen, href: "#listen"}
+  - {label: All works, href: "#works"}
+  - {label: Links, href: "#links"}
+  - {label: Contact, href: "#contact"}
 ---
+{%- assign featured = site.data.works | where_exp: "w", "w.featured" | sort: "featured" -%}
+{%- assign collaborative = site.data.works | where: "collaborative", true -%}
+{%- assign solo = site.data.works | where: "collaborative", false -%}
+{%- assign limn = site.data.works | where: "slug", "limn" | first -%}
 
-<article class="home">
-  <div class="wrapper">
+<section class="bio" aria-label="Biography">
+  <p>John MacCallum is a composer, media artist, and software engineer. Born in California and trained in music composition and computer science, he lived in Berlin from 2019 to 2025 and is now based in Falmouth, UK. His work uses technology to probe our relationship to time. At its center is the heart, as timekeeper, material performer, and world-builder. For over a decade that work has been made in collaboration with choreographer and media artist Teoma Naccarato: extended-duration performances inside high-channel-count real-time audio/visual systems that put philosophical pressure on notions of representation, boundaries, and binaries. He designs and builds the software these systems run on, as he has throughout his career, first at UC Berkeley’s Center for New Music and Audio Technologies and now as an engineer on Max and Max for Live at Cycling ’74 and Ableton; the music drives the software, and the software, in turn, the music. He holds degrees in music composition from UC Berkeley (PhD), McGill, and the University of the Pacific.</p>
+</section>
 
-    <div class="content" id="content">
-      {% include random_spacer.html spacer='"<br>"'
-         min=site.min-leading-vspace
-         max=site.max-leading-vspace %}
+<section id="recent">
+  <h2>Three recent works</h2>
+  <p class="lede">All three were created and performed with choreographer Teoma Naccarato. In each, MacCallum composed the sound and live electronics and designed the sensing, video, and network systems; Naccarato choreographed and directed. Both perform.</p>
 
-      {% for p in site.ptags %}
-
-      
-      {% include textbox.html txt=p.title url=p.url fn="messup"
-         wrapper="linktext" %}
-      {% include random_spacer.html spacer='"<br>"'
-         min=site.min-vspace max=site.max-vspace %}
-
-      {% endfor %}
-
-      {% include connect.html offset1=1 offset2=0 %}
+  {%- for w in featured %}
+  <article class="featured" id="{{ w.slug }}">
+    {%- assign v = w.videos | first %}
+    {%- if v and v.embed != "" %}
+    <div class="video">
+      <iframe src="{{ v.embed }}" title="{{ w.title }}, {{ v.label | downcase }}" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
     </div>
-    
-  </div>
-</article>
+    {%- else %}
+    <div class="video video-pending">
+      <p>Video in preparation. Stills and documentation on the <a href="{{ w.external }}">project page</a>.</p>
+    </div>
+    {%- endif %}
+    <h3>{{ w.title }} <span class="year">({{ w.year }})</span></h3>
+    <p>{{ w.summary }}</p>
+    {%- if w.support %}
+    <p class="support">Supported by {{ w.support }}.</p>
+    {%- endif %}
+    <p class="work-links">
+      {%- for v in w.videos %}
+      <a href="{{ v.url | default: v.embed }}">{{ v.label }}</a> ·
+      {%- endfor %}
+      <a href="{{ w.external }}">Project page</a>
+    </p>
+  </article>
+  {%- endfor %}
+</section>
+
+<section id="listen">
+  <h2>Listen</h2>
+  <figure class="audio">
+    <iframe src="{{ limn.recording_embed }}" title="{{ limn.title }}, recording" loading="lazy" seamless></iframe>
+    <figcaption><em>{{ limn.title }}</em> ({{ limn.year }}), for flute, cello, and live electronics. Commissioned by the {{ limn.commission }}; performed from 2015 to 2026, most recently in Berkeley in February 2026. <a href="{{ limn.recording }}">Listen on Bandcamp</a>.</figcaption>
+  </figure>
+  <p>More recordings on <a href="{{ site.links.bandcamp }}">Bandcamp</a>.</p>
+</section>
+
+<section id="works">
+  <h2>Works</h2>
+
+  <h3>Performance, video, and installation works</h3>
+  <p class="lede">These {{ collaborative | size }} works were created and performed with choreographer Teoma Naccarato, since 2025 under the name <a href="{{ site.links.frictionfield }}">Friction Field Collaborative</a>. Unless otherwise noted, MacCallum is responsible for composition, sound, live electronics, and the design of the sensing, video, and network systems; Naccarato for choreography, direction, and video. Both perform.</p>
+  <ul class="works">
+    {%- for w in collaborative %}
+    <li>
+      {%- if w.external != "" -%}
+      <a href="{{ w.external }}">{{ w.title }}</a>
+      {%- else -%}
+      <span class="title">{{ w.title }}</span>
+      {%- endif %} <span class="meta">{{ w.year }} · {{ w.kind }}{% if w.duration != "" %} · {{ w.duration }}{% endif %}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+
+  <h3>Notated and electroacoustic works</h3>
+  <p class="lede">Linked titles lead to program notes, recordings, and, where available, scores, parts, sketches, and electronics.</p>
+  <ul class="works">
+    {%- for w in solo %}
+    <li>
+      {%- if w.legacy -%}
+      <a href="{{ site.legacy_base }}{{ w.legacy }}"><em>{{ w.title }}</em></a>
+      {%- else -%}
+      <em class="title">{{ w.title }}</em>
+      {%- endif %} <span class="meta">{{ w.year }} · {{ w.forces }} · {{ w.duration }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section id="links">
+  <h2>Links</h2>
+  <dl class="links">
+    <dt>Recordings</dt>
+    <dd><a href="{{ site.links.bandcamp }}">Bandcamp</a></dd>
+
+    <dt>Instruments</dt>
+    <dd><a href="{{ site.links.odot }}">odot</a>, a programming environment for OpenSoundControl, co-designed with Adrian Freed at CNMAT</dd>
+    <dd><a href="{{ site.links.github }}">GitHub</a></dd>
+
+    <dt>Collaboration</dt>
+    <dd><a href="{{ site.links.frictionfield }}">Friction Field Collaborative</a>, with Teoma Naccarato</dd>
+    <dd><a href="{{ site.links.iii }}">III</a> and <a href="{{ site.links.immediations }}">Im/mediations</a>, the two series of works</dd>
+    <dd><a href="{{ site.links.interstitial_listening }}">Interstitial Listening</a>, workshops</dd>
+
+    <dt>CV</dt>
+    {%- if site.cv_full != "" %}
+    <dd><a href="{{ site.cv_full | relative_url }}">Full CV</a> (PDF){% if site.cv_one_page != "" %} · <a href="{{ site.cv_one_page | relative_url }}">One page</a> (PDF){% endif %}</dd>
+    {%- else %}
+    <dd>Available by <a href="mailto:{{ site.email }}?subject=CV">email</a></dd>
+    {%- endif %}
+  </dl>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+</section>

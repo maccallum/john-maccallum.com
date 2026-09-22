@@ -1,0 +1,333 @@
+# One entry per work. Drives the front page's works index now and, later,
+# the per-work pages and the works index at /works.
+#
+# Facts (year, forces, duration, commission) come from
+# professional_docs/workslist/workslist.tex. Do not add a fact that is not
+# in the works list, the CV, or the old site's folders.
+#
+# kind:          notated | electroacoustic | performance | video | installation
+# collaborative: true for the works with Teoma Naccarato; `external` then
+#                points to the project page (frictionfield.co once it exists)
+# legacy:        folder on the old PHP site; linked until the work has a page
+#                here, then used for redirects
+# featured:      1-3, the order on the front page
+# threads:       time | instruments | collaboration (primary tags)
+#
+
+# ---------------------------------------------------------------
+# Performance, video, and installation works, with Teoma Naccarato
+# ---------------------------------------------------------------
+
+- slug: once-replete
+  title: "III: Once Replete"
+  year: "2023"
+  kind: performance
+  collaborative: true
+  forces: "Two performers beneath plaster casts onto which video from III: Once Returned is projected; heartbeats sonified live from ECGs"
+  duration: "6 h"
+  support: "National Performance Network (NPN) Stepping Out, with funds from the German Federal Government Commissioner for Culture and the Media"
+  threads: [time, instruments, collaboration]
+  external: "https://iii-iii-iii.org/about/iii-once-replete/"
+  featured: 1
+  summary: >-
+    Six-hour durational performance inside a video and audio installation.
+    Two performers wearing electrocardiograms; the sound is composed live
+    from their heart signals. Premiered June 1–3, 2023, SomoS Art Gallery,
+    Berlin.
+  videos: []   # [{label: "Excerpt", embed: "<player URL>", url: "<page URL>"}]
+
+- slug: once-returned
+  title: "III: Once Returned"
+  year: "2022"
+  kind: performance
+  collaborative: true
+  forces: "72-hour continuous live-streamed performance: a six-hour choreography repeated twelve times without stopping, every action scripted by a metronome; two performers wearing ECGs, 12-camera video array, live audio from the electrocardiograms"
+  duration: "72 h"
+  support: "National Performance Network (NPN) Stepping Out, with funds from the German Federal Government Commissioner for Culture and the Media"
+  threads: [time, instruments, collaboration]
+  external: "https://iii-iii-iii.org/about/iii-oncereturned/"
+  featured: 2
+  summary: >-
+    Seventy-two-hour continuous live-streamed performance within a
+    twelve-camera video array. Click-track scores guide every movement,
+    including breath; the audio is composed in real time from two ECGs.
+    Premiered May 30–June 2, 2022, Atelier III, Berlin.
+  videos: []
+
+- slug: 9x9x9
+  title: "Im/mediations: 9x9x9"
+  year: "2022"
+  kind: performance
+  collaborative: true
+  forces: "Nine live-streamed solo performances, each 90 minutes; nine performers, nine-camera array, click-track score"
+  duration: "9 × 90′"
+  support: "Fonds Darstellende Künste"
+  threads: [time, instruments, collaboration]
+  external: "https://immediations.com/9x9x9/"
+
+- slug: regard
+  title: "III: Regard"
+  year: "2022"
+  kind: video
+  collaborative: true
+  forces: "Video; three performers filmed in extreme close-up by three cameras each"
+  duration: ""
+  threads: [collaboration]
+  external: "https://iii-iii-iii.org/about/iii-regard/"
+
+- slug: remains
+  title: "Im/mediations: REMAINS"
+  year: "2021"
+  kind: performance
+  collaborative: true
+  forces: "Solo dancer with live electronics and nine-camera video surveillance system"
+  duration: "15′"
+  support: "National Performance Network (NPN) Stepping Out, with funds from the German Federal Government Commissioner for Culture and the Media"
+  threads: [instruments, collaboration]
+  external: "https://immediations.com/remains/"
+  featured: 3
+  summary: >-
+    For solo dancer with live electronics and a nine-camera video
+    surveillance system. Premiered 2021 at Lake Studios Berlin,
+    live-streamed.
+  videos: []
+
+- slug: void
+  title: "Im/mediations: VOID"
+  year: "2021"
+  kind: video
+  collaborative: true
+  forces: "Video and spoken-word composition; eighteen video solos"
+  duration: "15′"
+  threads: [collaboration]
+  external: "https://immediations.com/void/"
+
+- slug: idle
+  title: "Im/mediations: IDLE"
+  year: "2021"
+  kind: performance
+  collaborative: true
+  forces: "Durational series of online one-on-one encounters; twelve-hour live stream"
+  duration: "12 h"
+  threads: [time, collaboration]
+  external: "https://immediations.com/idle/"
+
+- slug: once-removed
+  title: "III: Once Removed"
+  year: "2020"
+  kind: performance
+  collaborative: true
+  forces: "Two performers wearing ECGs, video, and live electronics; stage version with projection and intimate version in the round"
+  duration: "10′ / 30′"
+  threads: [time, collaboration]
+  external: "https://iii-iii-iii.org/about/iii-once-removed/"
+
+- slug: circulation
+  title: "III: Circulation"
+  year: "2018"
+  kind: performance
+  collaborative: true
+  forces: "Three dancers wearing ECGs, video, and live electronics"
+  duration: "30′"
+  threads: [time, collaboration]
+  external: "https://iii-iii-iii.org/about/iii-circulation/"
+  legacy: "./compositions/iii_circulation"
+
+- slug: portraits
+  title: "III: Portraits"
+  year: "2018"
+  kind: video
+  collaborative: true
+  forces: "Two short films shown simultaneously"
+  duration: "18′"
+  threads: [collaboration]
+  external: "https://iii-iii-iii.org/about/iii-portraits/"
+
+- slug: cloud
+  title: "III: Cloud"
+  year: "2018"
+  kind: performance
+  collaborative: true
+  forces: "Two dancers wearing ECGs and two percussionists"
+  duration: "30′"
+  threads: [time, collaboration]
+  external: ""   # no project page found
+
+- slug: tangente
+  title: "III: Tangente"
+  year: "2016–17"
+  kind: performance
+  collaborative: true
+  forces: "Three musicians, three dancers wearing ECGs, and three breathers"
+  duration: "30′"
+  threads: [time, collaboration]
+  external: "https://iii-iii-iii.org/about/iii-tangente/"
+
+- slug: coeur-de-cochon
+  title: "III: Cœur de cochon"
+  year: "2016"
+  kind: video
+  collaborative: true
+  forces: "Short film"
+  duration: "7.5′"
+  threads: [collaboration]
+  external: "https://iii-iii-iii.org/about/iii-coeurdecochon/"
+
+- slug: respire
+  title: "III: Respire"
+  year: "2016"
+  kind: installation
+  collaborative: true
+  forces: "Three breathers; sonic and haptic installation"
+  duration: "10′"
+  threads: [time, collaboration]
+  external: "https://iii-iii-iii.org/about/iii-respire/"
+
+- slug: study-iii
+  title: "Study III"
+  year: "2016"
+  kind: performance
+  collaborative: true
+  forces: "Dancer wearing ECG and bass flute"
+  duration: "8′"
+  threads: [time, collaboration]
+  external: ""   # no project page found
+
+- slug: study-ii
+  title: "Study II"
+  year: "2015"
+  kind: performance
+  collaborative: true
+  forces: "Dancer wearing ECG, percussion, and live electronics"
+  duration: "8′"
+  threads: [time, collaboration]
+  external: ""   # no project page found
+
+- slug: synchronism
+  title: "Synchronism"
+  year: "2015"
+  kind: installation
+  collaborative: true
+  forces: "Performance-art installation: one-on-one performance, sound installation, and sound sculpture"
+  duration: "3–4 h"
+  threads: [collaboration]
+  external: "https://iii-iii-iii.org/about/iii-synchronism/"
+
+- slug: study-i
+  title: "Study I"
+  year: "2014"
+  kind: performance
+  collaborative: true
+  forces: "Dancer wearing ECG and live electronics"
+  duration: "8′"
+  threads: [time, instruments, collaboration]
+  external: ""   # no project page found
+
+# ---------------------------------------------------------------
+# Notated and electroacoustic works
+# ---------------------------------------------------------------
+
+- slug: limn
+  title: "Limn"
+  year: "2015"
+  kind: notated
+  collaborative: false
+  forces: "Flute, cello, and live electronics"
+  duration: "7′"
+  commission: "Left Coast Chamber Ensemble"
+  threads: [time, instruments]
+  legacy: "./compositions/limn"
+  recording_embed: "https://bandcamp.com/EmbeddedPlayer/track=3318269950/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/"
+  recording: "https://john-maccallum.bandcamp.com/track/limn-a"
+
+- slug: synchromism
+  title: "Synchromism"
+  year: "2015"
+  kind: notated
+  collaborative: false
+  forces: "Organ (Rosales Op. 16)"
+  duration: "35′"
+  commission: "Cyril Deaconoff, with support from the Fleishhacker Foundation"
+  threads: [time]
+
+- slug: antony
+  title: "Antony: A Reimagining"
+  year: "2015"
+  kind: electroacoustic
+  collaborative: false
+  forces: "Live electronics; a reimagining of David Wessel’s Antony (1977), with Matthew Goodheart and Adrian Freed, in memory of David Wessel"
+  duration: "15′"
+  threads: [instruments, collaboration]
+
+- slug: hyphos
+  title: "Hyphos"
+  year: "2014"
+  kind: notated
+  collaborative: false
+  forces: "Alto flute, bass clarinet, cello, and live electronics"
+  duration: "10′"
+  commission: "Earplay"
+  threads: [time, instruments]
+  legacy: "./compositions/hyphos"
+
+- slug: delicate-texture-of-time
+  title: "…delicate texture of time…"
+  year: "2012–13"
+  kind: notated
+  collaborative: false
+  forces: "Flute, clarinet, saxophone, two percussion, violin, viola, and cello"
+  duration: "13′"
+  commission: "ECO Ensemble, with support from the Mellon Foundation"
+  threads: [time]
+  legacy: "./compositions/texture_of_time"
+
+- slug: aberration
+  title: "Aberration"
+  year: "2010"
+  kind: notated
+  collaborative: false
+  forces: "Percussion trio"
+  duration: "8′"
+  commission: "Rootstock Percussion"
+  threads: [time]
+  legacy: "./compositions/aberration"
+
+- slug: el-arbol
+  title: "El Árbol de la noche triste"
+  year: "2010"
+  kind: notated
+  collaborative: false
+  forces: "Viola and live electronics; written for Ellen Ruth Rose"
+  duration: "10′"
+  threads: [time, instruments]
+  legacy: "./compositions/el_arbol"
+
+- slug: blankness
+  title: "…blankness…"
+  year: "2008"
+  kind: notated
+  collaborative: false
+  forces: "Viola, vibraphone, and live electronics"
+  duration: "12′"
+  threads: [instruments]
+  legacy: "./compositions/blankness"
+
+- slug: frozen-into-shards-of-ice
+  title: "…frozen into shards of ice…"
+  year: "2007"
+  kind: electroacoustic
+  collaborative: false
+  forces: "Live electronics"
+  duration: "15′"
+  threads: [instruments]
+  legacy: "./compositions/shards_of_ice"
+
+- slug: almost-like-hail
+  title: "…almost like hail…"
+  year: "2007"
+  kind: notated
+  collaborative: false
+  forces: "Percussion and live electronics; written for Chris Froh"
+  duration: "18′"
+  threads: [instruments]
+  legacy: "./compositions/almost_like_hail"

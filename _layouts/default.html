@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    {%- if page.url == "/" %}
+    <h1 class="site-name">John MacCallum</h1>
+    {%- else %}
+    <p class="site-name"><a href="{{ '/' | relative_url }}">John MacCallum</a></p>
+    {%- endif %}
+    <p class="site-tagline">{{ site.tagline }}</p>
+    {%- if page.nav %}
+    <nav aria-label="Sections">
+      <ul>
+        {%- for item in page.nav %}
+        <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+    {%- endif %}
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>John MacCallum · Falmouth, UK · <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  </footer>
+</body>
+</html>

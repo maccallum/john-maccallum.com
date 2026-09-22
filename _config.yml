@@ -1,35 +1,68 @@
-top-level-pages:
- - home
- - about
- - compositions
- - "performance work"
- - publications
- - "software design"
+# john-maccallum.com
+# Build: bundle exec jekyll build   Preview: bundle exec jekyll serve
 
+title: "John MacCallum, composer and musical systems designer"
+author: John MacCallum
+tagline: Composer and musical systems designer
+description: >-
+  John MacCallum is a composer, media artist, and software engineer whose
+  work uses technology to probe our relationship to time, with the heart
+  as timekeeper. Works, recordings, scores, and the instruments he builds.
+email: john.m@ccallum.com
+url: "https://john-maccallum.com"
+baseurl: ""
 
+# Outbound links. Vimeo, LinkedIn, and Google Scholar are added once their
+# URLs are confirmed.
+links:
+  bandcamp: "https://john-maccallum.bandcamp.com"
+  github: "https://github.com/maccallum"
+  odot: "https://github.com/CNMAT/CNMAT-odot"
+  linktree: "https://linktr.ee/john.maccallum"
+  frictionfield: "https://frictionfield.co"
+  iii: "https://iii-iii-iii.org"
+  immediations: "https://immediations.com"
+  interstitial_listening: "https://interstitial-listening.com"
+
+# The old PHP site keeps running beside this one until cutover. Its work
+# pages are linked from here as /index.php?page=<legacy folder>.
+legacy_base: "/index.php?page="
 
 collections:
-  compositions:
-    output: true
   publications:
-    output: true
-  performance_work:
-    output: true
-  media_arts_programming:
-    output: true
-  ptags:
-    output: true
+    output: false   # later: /writing
 
-min-leading-vspace: 5
-max-leading-vspace: 20
-min-vspace: 2
-max-vspace: 6
-min-leading-dashes: 2
-max-leading-dashes: 10
-min-dashes: 0
-max-dashes: 8
-min-nwords: 2
-max-nwords: 5
-min-dashes-at-end: 0
-max-dashes-at-end: 8
+# The 2021 draft pages and the PHP site's folders stay in the repo as
+# sources but are not built.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .zsh_history
+  - "*.php"
+  - make-bg.pl
+  - wind.js
+  - iii.txt
+  - compositions
+  - software
+  - writings
+  - cv
+  - _compositions
+  - _performance_work
+  - _ptags
+  - _sass
+  - about.html
+  - compositions.html
+  - musical_systems_design.html
+  - performance_work.html
+  - publications.html
+  - assets/css/main.scss
+  - assets/js
 
+# CV PDFs, served from assets/cv/ once there is a public version
+# (the application CV carries a phone number and home address). While
+# empty, the front page offers the CV by email.
+cv_full: ""
+cv_one_page: ""

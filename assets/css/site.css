@@ -1,0 +1,147 @@
+/* john-maccallum.com
+   One typeface, a readable measure, black on white, dark mode from the
+   system setting. Nothing animated. */
+
+:root {
+  --text: #111;
+  --muted: #555;
+  --bg: #fff;
+  --rule: #d8d8d8;
+  --link: #111;
+  --link-underline: #999;
+  --panel: #f3f3f1;
+  --measure: 38rem;
+  --wide: 48rem;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", Georgia, serif;
+  font-size: 112.5%;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e8e6e3;
+    --muted: #a8a49e;
+    --bg: #161616;
+    --rule: #3a3a3a;
+    --link: #e8e6e3;
+    --link-underline: #777;
+    --panel: #222;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  padding: 2.5rem 1rem 3rem;
+  max-width: calc(var(--wide) + 2rem);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+a:hover, a:focus { text-decoration-color: currentColor; }
+
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 1rem; top: 1rem; background: var(--bg); padding: 0.25rem 0.5rem; }
+
+/* Header. The one survival of the old site: a dashed rule, drawn in CSS,
+   never inside the words. */
+.site-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px dashed var(--rule);
+}
+.site-name {
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+.site-name a { text-decoration: none; }
+.site-tagline { margin: 0.25rem 0 0; color: var(--muted); }
+
+nav ul {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+main > section { margin-bottom: 3.5rem; }
+main p, main ul, main dl, figcaption { max-width: var(--measure); }
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: normal;
+  margin: 0 0 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--rule);
+}
+h3 { font-size: 1.1rem; font-weight: normal; margin: 1.75rem 0 0.5rem; }
+h3 .year, .meta, .support, .lede, figcaption, .site-footer { color: var(--muted); }
+
+.bio p { font-size: 1.05rem; }
+.lede { font-size: 0.95rem; }
+.support { font-size: 0.9rem; }
+
+/* Featured works */
+.featured { margin-top: 2.25rem; }
+.featured h3 { margin-top: 0.75rem; font-style: italic; }
+.featured h3 .year { font-style: normal; }
+.featured p { margin: 0.4rem 0; }
+
+.video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--panel);
+  max-width: var(--wide);
+}
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-pending {
+  aspect-ratio: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px dashed var(--rule);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.video-pending p { margin: 0; }
+
+/* Audio */
+.audio { margin: 0; }
+.audio iframe { border: 0; width: 100%; max-width: var(--measure); height: 120px; display: block; }
+figcaption { font-size: 0.9rem; margin-top: 0.5rem; }
+
+/* Works index: one line per work where the screen allows */
+.works { list-style: none; padding: 0; margin: 0.75rem 0 0; }
+.works li {
+  padding: 0.3rem 0;
+  border-bottom: 1px dotted var(--rule);
+}
+.works .meta { font-size: 0.85rem; margin-left: 0.35rem; }
+
+/* Links */
+.links dt { margin-top: 1rem; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.links dd { margin: 0.2rem 0 0; }
+
+.site-footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--rule);
+  font-size: 0.85rem;
+}
