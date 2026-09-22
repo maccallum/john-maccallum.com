@@ -1,0 +1,18 @@
+map: 
+  text: "media | arts programming"
+  file: "media_arts_programming.html"
+perfphil: 
+  text: "performance | philosophy"
+  file: "performance_philosophy.html"
+perf: 
+  text: "performance | art"
+  file: "performance.html"
+comp: 
+  text: "music | composition"
+  file: "composition.html"
+temp: 
+  text: "time | temporality"
+  file: "temporality.html"
+mat: 
+  text: "bodies | materiality"
+  file: "materiality.html"

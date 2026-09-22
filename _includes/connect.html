@@ -1,0 +1,9 @@
+{% if include.id %}
+{% assign id = include.id %}
+{% else %}
+{% assign id = "dashes_" %}
+{% endif %}
+<script type="text/javascript">
+  connect( "{{ id }}1", "{{ id | append: ctr }}",
+	   {{ include.offset1 }}, {{ include.offset2 }} );
+</script>

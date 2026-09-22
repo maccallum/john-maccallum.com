@@ -1,0 +1,48 @@
+<html>
+  {% include head.html %}
+  <body>
+    {% comment %}
+    {% if page.title != "home" %}
+    <!-- <nav class="nav"> -->
+    <!--   <script type="text/javascript"> -->
+    <!-- 	var pages = new Array(); -->
+    <!-- 	{% for p in site.top-level-pages %} -->
+    <!-- 	{% for pp in site.pages %} -->
+    <!-- 	{% if pp.title == p %} -->
+    <!-- 	pages.push({"title" : "{{ pp.title }}", -->
+    <!-- 		    "url" : "{{ pp.url | escape }}" }); -->
+    <!-- 	{% endif %} -->
+    <!-- 	{% endfor %} -->
+    <!-- 	{% endfor %} -->
+    <!-- 	pages = shuffle(pages); -->
+    <!-- 	for(var i = 0; i < pages.length; i++){ -->
+    <!-- 	    document.write("<a href=\"" + pages[i].url + "\">" -->
+    <!-- 			   + pages[i].title.replace(/ /g, "&mdash;") -->
+    <!-- 			   + "</a>"); -->
+    <!-- 	    random_spacer("&mdash;", 2, 10); -->
+    <!-- 	} -->
+    <!--   </script> -->
+    <!-- </nav> -->
+    {% endif %}
+    {% endcomment %}
+    {{ content }}
+
+    {% include random_spacer.html spacer='"<br>"'
+       min=site.min-leading-vspace
+    max=site.max-leading-vspace %}
+
+    {% if page.ptags %}
+    {% assign ctr = 0 %}
+    {% for t in page.ptags %}
+    {% assign txt = site.data.ptags[t].text %}
+    {% assign url = "/ptags/" | append: site.data.ptags[t].file %}
+    {% include textbox.html
+    txt=txt
+    url=url fn="messup" id="ptag_dashes_"
+       wrapper="linktext" min-dashes=0 max-dashes=3 %}
+    {% include random_spacer.html spacer='"<br>"' min=1 max=3 %}
+    {% endfor %}
+    {% include connect.html offset1=1 offset2=0 id="ptag_dashes_" %}
+    {% endif %}
+  </body>
+</html>

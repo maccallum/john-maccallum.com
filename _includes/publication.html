@@ -1,0 +1,17 @@
+{% capture pub %}
+<a href="{{- include.p.url -}}">
+  <span class="authors">{{- include.p.authors -}}. </span>
+  <span class="title">{{- include.p.title -}}. </span>
+  <span class="publication">{{- include.p.publication -}}.  </span>
+  {%- if include.p.volume -%}
+  <span class="volume">{{- include.p.volume -}}. </span>
+  {%- endif -%}
+  <span class="year">{{- include.p.year -}}. </span>
+</a>
+{%- if include.p.doi -%}
+<span class="doi"><a href="https://doi.org/{{- include.p.doi -}}">DOI: {{- include.p.doi -}}</a></span>
+{%- endif -%}
+{% endcapture %}
+{% assign pub = pub | strip_newlines %}
+{% include textbox.html txt=pub fn="nomessup" wrapper="citation" %}
+{% include random_spacer.html spacer='"<br>"' min=2 max=10 %}

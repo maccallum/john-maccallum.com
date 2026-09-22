@@ -1,0 +1,35 @@
+top-level-pages:
+ - home
+ - about
+ - compositions
+ - "performance work"
+ - publications
+ - "software design"
+
+
+
+collections:
+  compositions:
+    output: true
+  publications:
+    output: true
+  performance_work:
+    output: true
+  media_arts_programming:
+    output: true
+  ptags:
+    output: true
+
+min-leading-vspace: 5
+max-leading-vspace: 20
+min-vspace: 2
+max-vspace: 6
+min-leading-dashes: 2
+max-leading-dashes: 10
+min-dashes: 0
+max-dashes: 8
+min-nwords: 2
+max-nwords: 5
+min-dashes-at-end: 0
+max-dashes-at-end: 8
+

@@ -1,0 +1,28 @@
+---
+title: home
+layout: page
+---
+
+<article class="home">
+  <div class="wrapper">
+
+    <div class="content" id="content">
+      {% include random_spacer.html spacer='"<br>"'
+         min=site.min-leading-vspace
+         max=site.max-leading-vspace %}
+
+      {% for p in site.ptags %}
+
+      
+      {% include textbox.html txt=p.title url=p.url fn="messup"
+         wrapper="linktext" %}
+      {% include random_spacer.html spacer='"<br>"'
+         min=site.min-vspace max=site.max-vspace %}
+
+      {% endfor %}
+
+      {% include connect.html offset1=1 offset2=0 %}
+    </div>
+    
+  </div>
+</article>

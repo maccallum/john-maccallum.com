@@ -1,0 +1,19 @@
+{% include random_spacer.html spacer='"<br>"'
+         min=site.min-leading-vspace
+         max=site.max-leading-vspace %}
+{% for c in site.collections %}
+{% for p in site[c.label] %}
+{% for t in p.ptags %}
+{% if t == page.ptag %}
+{% if p.layout == "publication" %}
+{% include publication.html p=p %}
+{% else %}
+{% include textbox.html txt=p.title url=p.url fn="messup" wrapper="linktext" %}
+{% endif %}
+{% include random_spacer.html spacer='"<br>"'
+min=site.min-vspace max=site.max-vspace %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% include connect.html offset1=1 offset2=0 %}

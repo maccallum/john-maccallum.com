@@ -1,0 +1,14 @@
+.compositions {
+    .wrapper {
+	.piece {
+	    display: table-row;
+	    .dashes {
+		display: table-cell;
+	    }
+
+	    .entry {
+		display: table-cell;
+	    }
+	}
+    }
+}

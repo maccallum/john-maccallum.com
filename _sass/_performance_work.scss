@@ -1,0 +1,14 @@
+.performance_work {
+    .wrapper {
+	.work {
+	    display: table-row;
+	    .dashes {
+		display: table-cell;
+	    }
+
+	    .entry {
+		display: table-cell;
+	    }
+	}
+    }
+}
