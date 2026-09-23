@@ -16,7 +16,8 @@
 # legacy:        folder on the old PHP site (for redirects)
 # recordings,
 # videos:        [{label, embed, url}]; embed is the player URL
-# materials:     [{label, url}]; local files keep their old-site paths
+# materials:     [{label, url, note}]; files live in compositions/<folder>/,
+#                the old site's paths, so old direct links keep working
 # performances:  most recent first; premiere: true marks the premiere
 
 # ---------------------------------------------------------------
@@ -287,8 +288,12 @@
   recordings:
     - {label: "Limn (A)", embed: "https://bandcamp.com/EmbeddedPlayer/track=3318269950/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/limn-a"}
   materials:
-    - {label: "Score", url: "https://github.com/maccallum/limn-score/blob/master/score/limn_score.pdf"}
-    - {label: "Electronics", url: "https://github.com/maccallum/limn-electronics/archive/master.zip", note: "zip"}
+    - {label: "Score", url: "/compositions/limn/limn_score.pdf", note: "PDF, 616 KB"}
+    - {label: "Electronics", url: "/compositions/limn/limn_electronics.zip", note: "Max patches and audio, zip, 54 MB"}
+    - {label: "Click tracks", url: "/compositions/limn/limn_click_tracks.zip", note: "Max patches and MP3s, zip, 7 MB"}
+    - {label: "Click track, flute", url: "/compositions/limn/click/fl_click.aif", note: "AIFF, 76 MB"}
+    - {label: "Click track, cello", url: "/compositions/limn/click/vlc_click.aif", note: "AIFF, 76 MB"}
+    - {label: "Click track, flute left, cello right", url: "/compositions/limn/click/fl-left_vlc-right.aif", note: "AIFF, 76 MB"}
     - {label: "Sketch", url: "/compositions/limn/limn_sketch.pdf", note: "PDF, 1.4 MB"}
   performances:
     - {date: "February 15, 2026", performers: "Stacey Pelinka (flute), Leighton Fong (cello)", venue: "Left Coast Chamber Ensemble, “Dreaming Chaconne,” Doug Adams Gallery, Berkeley, CA"}
@@ -339,9 +344,9 @@
   recordings:
     - {label: "Earplay", embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/351418252%3Fsecret_token%3Ds-F85tm&color=%23555555&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false", height: 166}
   materials:
-    - {label: "Score", url: "https://github.com/maccallum/hyphos-score/blob/master/score/hyphos_fullscore_with_frontmatter.pdf"}
+    - {label: "Score", url: "/compositions/hyphos/hyphos_score.pdf", note: "PDF, 972 KB"}
     - {label: "Parts", url: "/compositions/hyphos/hyphos_parts.zip", note: "zip, 408 KB"}
-    - {label: "Electronics", url: "https://github.com/maccallum/hyphos-electronics/archive/master.zip", note: "zip"}
+    - {label: "Electronics and click tracks", url: "/compositions/hyphos/hyphos_electronics.zip", note: "zip, 2 MB"}
   performances:
     - {date: "2016", venue: "MANCA Festival, Nice, France"}
     - {date: "2016", performers: "Earplay: Tod Brody (alto flute), Peter Josheff (bass clarinet), Ellen Ruth Rose (viola)", venue: "Festival of New American Music, Sacramento State University"}
@@ -363,7 +368,7 @@
   materials:
     - {label: "Score", url: "/compositions/texture_of_time/texture_fullscore.pdf", note: "PDF, 2 MB"}
     - {label: "Parts", url: "/compositions/texture_of_time/texture_parts.zip", note: "zip, 1.1 MB"}
-    - {label: "Click tracks", url: "https://github.com/maccallum/texture-click-tracks/archive/master.zip", note: "zip"}
+    - {label: "Click tracks", url: "/compositions/texture_of_time/texture_click_tracks.zip", note: "zip, 284 KB"}
     - {label: "Program note, ECO Ensemble", url: "/compositions/texture_of_time/pn_eco2.pdf", note: "PDF"}
     - {label: "Sketch, pages 1–39", url: "/compositions/texture_of_time/texture_sketch_1-39.pdf", note: "PDF, 54 MB"}
     - {label: "Sketch, pages 40–78", url: "/compositions/texture_of_time/texture_sketch_40-78.pdf", note: "PDF, 59 MB"}
@@ -387,9 +392,9 @@
     - {label: "Rootstock Percussion", embed: "https://www.youtube-nocookie.com/embed/7Q-GZx3dlTw", url: "https://www.youtube.com/watch?v=7Q-GZx3dlTw"}
     - {label: "Rootstock Percussion recording Aberration", embed: "https://www.youtube-nocookie.com/embed/14DklG9-Hn4", url: "https://www.youtube.com/watch?v=14DklG9-Hn4"}
   materials:
-    - {label: "Score", url: "https://github.com/maccallum/aberration-score/blob/master/aberration_fullscore.pdf"}
+    - {label: "Score", url: "/compositions/aberration/aberration_score.pdf", note: "PDF, 620 KB"}
     - {label: "Parts", url: "/compositions/aberration/aberration_parts.zip", note: "zip, 416 KB"}
-    - {label: "Click tracks", url: "https://github.com/maccallum/aberration-click-tracks/archive/master.zip", note: "zip"}
+    - {label: "Click tracks", url: "/compositions/aberration/aberration_click_tracks.zip", note: "zip, 184 KB"}
     - {label: "Sketch", url: "/compositions/aberration/aberration_sketch.pdf", note: "PDF, 27 MB"}
   performances:
     - {date: "July 1, 2013", performers: "Rootstock Percussion (Chris Froh, Dan Kennedy, Loren Mach)", venue: "Music in the Mountains SummerFest, Nevada City, CA"}
@@ -415,9 +420,9 @@
   recordings:
     - {label: "El Árbol de la noche triste", embed: "https://bandcamp.com/EmbeddedPlayer/track=4197628130/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/el-rbol-de-la-noche-triste"}
   materials:
-    - {label: "Score, viola version", url: "https://github.com/maccallum/arbol-score/blob/master/score/viola_score.pdf"}
-    - {label: "Score, cello version", url: "https://github.com/maccallum/arbol-score/blob/master/score/cello_score.pdf"}
-    - {label: "Electronics", url: "https://github.com/maccallum/arbol-electronics/archive/master.zip", note: "zip"}
+    - {label: "Score, viola version", url: "/compositions/el_arbol/el_arbol_score_viola.pdf", note: "PDF, 76 KB"}
+    - {label: "Score, cello version", url: "/compositions/el_arbol/el_arbol_score_cello.pdf", note: "PDF, 76 KB"}
+    - {label: "Electronics", url: "/compositions/el_arbol/el_arbol_electronics.zip", note: "zip, 88 KB"}
   performances:
     - {date: "2016", performers: "Marie Ythier (cello); MacCallum (electronics)", venue: "CMMAS, Morelia, Mexico"}
     - {date: "October 19, 2011", performers: "Jin-Won Yoon (viola)", venue: "Seoul International Computer Music Festival, South Korea"}
