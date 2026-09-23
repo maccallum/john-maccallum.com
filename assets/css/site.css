@@ -195,3 +195,24 @@ main > h1, .work-head h1 { font-size: 1.75rem; font-weight: normal; line-height:
 
 .ext { font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
 main > section .filters { margin: 0.5rem 0 1rem; }
+
+/* Software and writing */
+.sw { margin-bottom: 2.5rem; }
+.sw h2 .year, .pub .year { color: var(--muted); font-size: 0.9rem; }
+.sw-links, .sw-refs { font-size: 0.9rem; }
+.sw-refs { color: var(--muted); }
+ul.plain { list-style: none; padding: 0; }
+ul.plain li { margin: 0.4rem 0; }
+.pub { margin: 0 0 1.75rem; }
+.pub h3 { margin: 0 0 0.2rem; font-size: 1.05rem; line-height: 1.4; }
+.pub p { margin: 0.1rem 0; font-size: 0.92rem; }
+.pub-authors, .pub-links { color: var(--muted); }
+.pub details { margin-top: 0.3rem; font-size: 0.92rem; }
+.pub summary { cursor: pointer; color: var(--muted); }
+.pub details p { margin-top: 0.4rem; }
+.courses { padding-left: 1.1rem; }
+.courses li { margin: 0.45rem 0; }
+.courses strong { font-weight: 600; }
+#courses h3 { margin-top: 2rem; margin-bottom: 0; }
+#courses h3 + .meta { margin: 0.1rem 0 0.5rem; font-size: 0.9rem; }
+.about p { max-width: var(--measure); }

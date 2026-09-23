@@ -8,7 +8,9 @@ description: >-
 nav:
   - {label: Works, href: "#works"}
   - {label: Software, href: "#software"}
-  - {label: Project sites, href: "#sites"}
+  - {label: Writing, href: "/writing/"}
+  - {label: Teaching, href: "/teaching/"}
+  - {label: About, href: "/about/"}
   - {label: Contact, href: "#contact"}
 ---
 {%- assign featured = site.data.works | where_exp: "w", "w.featured" | sort: "featured" -%}
@@ -90,7 +92,7 @@ nav:
     <dt><a href="{{ site.links.rtecg }}">rtecg</a></dt>
     <dd>Real-time feature detection for the electrocardiogram, an implementation of the Pan–Tompkins algorithm.</dd>
   </dl>
-  <p>More on <a href="{{ site.links.github }}">GitHub</a>.</p>
+  <p><a href="{{ '/software/' | relative_url }}">All the software</a>, including the tools for polytemporal music and the performance systems.</p>
 </section>
 
 <section id="sites">

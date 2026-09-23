@@ -1,0 +1,40 @@
+---
+layout: default
+title: Writing
+description: >-
+  Articles and papers by John MacCallum, many with Teoma Naccarato: on
+  time, the heart, and bodies in performance, and on odot, OpenSoundControl,
+  and tools for polytemporal music. Abstracts and PDFs.
+---
+{%- assign groups = "article:Journal articles|conference:Conference papers|chapter:Book chapters" | split: "|" -%}
+
+<h1>Writing</h1>
+<p class="lede">Articles on performance, many written with Teoma Naccarato, and papers on the software. Where a PDF is linked, it is the authors’ copy.</p>
+
+{%- for g in groups %}
+{%- assign kv = g | split: ":" %}
+{%- assign items = site.data.writing | where: "kind", kv[0] %}
+{%- if items.size > 0 %}
+<section>
+  <h2>{{ kv[1] }}</h2>
+  {%- for p in items %}
+  <article class="pub" id="{{ p.id }}">
+    <h3>{% if p.pdf %}<a href="{{ p.pdf | relative_url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
+    <p class="pub-authors">{{ p.authors | join: ", " }}</p>
+    <p class="pub-venue"><em>{{ p.venue }}</em>{% if p.details %}, {{ p.details }}{% endif %}, {{ p.year }}.</p>
+    <p class="pub-links">
+      {%- if p.pdf %}<a href="{{ p.pdf | relative_url }}">PDF</a>{% endif %}
+      {%- if p.pdf and p.doi %} · {% endif %}
+      {%- if p.doi %}<a href="https://doi.org/{{ p.doi }}">doi:{{ p.doi }}</a>{% endif %}
+    </p>
+    {%- if p.abstract and p.abstract != "" %}
+    <details>
+      <summary>Abstract</summary>
+      <p{% if p.lang %} lang="{{ p.lang }}"{% endif %}>{{ p.abstract }}</p>
+    </details>
+    {%- endif %}
+  </article>
+  {%- endfor %}
+</section>
+{%- endif %}
+{%- endfor %}

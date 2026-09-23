@@ -1,0 +1,73 @@
+---
+layout: default
+title: Software
+description: >-
+  The software John MacCallum designs and builds for his works: asoma,
+  odot, tools for polytemporal music, the Camera Cage performance
+  system, rtecg, and more.
+---
+{%- assign papers = '/writing/' | relative_url -%}
+{%- assign works = '/works/' | relative_url -%}
+
+<h1>Software</h1>
+
+<p class="lede">MacCallum designs and builds the software his works run on, as he has throughout his career, first at UC Berkeley’s Center for New Music and Audio Technologies (CNMAT) and now as an engineer on Max and Max for Live at Cycling ’74 and Ableton. The music drives the software, and the software, in turn, the music.</p>
+
+<section class="sw" id="asoma">
+  <h2>asoma <span class="year">2019–</span></h2>
+  <p>The successor to odot. asoma adds computation to OpenSoundControl: the state of a running program can be paused on a laptop and resumed on a microcontroller, so that a heterogeneous collection of cameras, computers, sensors, and embedded hosts can be treated as a single instrument. An independent project, separate from MacCallum’s work at Cycling ’74; first public release planned for 2027.</p>
+  <p>To hear about the release, write to <a href="mailto:{{ site.email }}?subject=asoma">{{ site.email }}</a>.</p>
+</section>
+
+<section class="sw" id="odot">
+  <h2>odot <span class="year">2007–</span></h2>
+  <p>A programming environment for OpenSoundControl, co-designed with Adrian Freed at CNMAT. MacCallum wrote the C implementation, the expression language, and much of the Max library. odot provides a layer between OSC nodes so that they can be composed together dynamically: instruments, sensors, cameras, and computers that share no clock, native language, or vendor can be treated as a single system. In continuous use since 2007, and taught at UC Berkeley, the Synthesis Center at Arizona State University, and the Hochschule für Musik und Theater Hamburg.</p>
+  <p class="sw-links"><a href="https://cycling74.com/packages/odot">Max package</a> {% include external.html url="https://cycling74.com/packages/odot" %} · <a href="{{ site.links.odot }}">Source</a> {% include external.html url=site.links.odot %}</p>
+  <p class="sw-refs">Papers:
+    <a href="{{ papers }}#2011_FreedMacCallumSchmeder_NIME_ComposabilityForMusicalGSP">NIME 2011</a>,
+    <a href="{{ papers }}#2011_FreedMacCallumSchmeder_ICMC_DynamicInstanceBasedOOP">ICMC 2011</a>,
+    <a href="{{ papers }}#2013_MacCallumFreedWessel_NIME_AgileInterfaceDevelopment">NIME 2013</a>,
+    <a href="{{ papers }}#2014_MacCallumFreedWessel_ICMC_AspectOrientedProgramming">ICMC 2014</a>,
+    <a href="{{ papers }}#2014_FreedEtAl_ICMC_o.io">ICMC 2014</a>,
+    <a href="{{ papers }}#2015_MacCallumEtAl_ICMC_MessageOrientedMiddleware">ICMC 2015</a>,
+    <a href="{{ papers }}#2016_BressonMacCallumFreed_FARM-ICFP_o.OM">FARM 2016</a></p>
+</section>
+
+<section class="sw" id="polytemporal">
+  <h2>Tools for polytemporal music <span class="year">2008–2015</span></h2>
+  <p>Software for composing and performing music in independent, smoothly varying tempos: Timewarp, and tempo-curving tools developed with Jean Bresson. Used in <a href="{{ works }}aberration/"><em>Aberration</em></a>, <a href="{{ works }}delicate-texture-of-time/"><em>…delicate texture of time…</em></a>, <a href="{{ works }}hyphos/"><em>Hyphos</em></a>, and <a href="{{ works }}limn/"><em>Limn</em></a>, in works by Edmund Campion, and in several works with Teoma Naccarato. The click tracks for each piece are on its page.</p>
+  <p class="sw-refs">Papers:
+    <a href="{{ papers }}#2010_MacCallumSchmeder_ICMC_Timewarp">Timewarp, ICMC 2010</a>,
+    <a href="{{ papers }}#2015_BressonMacCallum_SMC_TempoCurving">Tempo curving, SMC 2015</a></p>
+</section>
+
+<section class="sw" id="camera-cage">
+  <h2>Camera Cage <span class="year">2014–</span></h2>
+  <p>The performance system built with Teoma Naccarato for the <a href="{{ site.links.iii }}">III</a> and <a href="{{ site.links.immediations }}">Im/mediations</a> works: biosensing, multi-camera live-feed and live-stream video, and networked audio. At its largest, for <em>III: Once Returned</em>, 12 cameras, 9 computers, and 3 networks running continuously for 72 hours.</p>
+</section>
+
+<section class="sw" id="rtecg">
+  <h2>rtecg</h2>
+  <p>Real-time feature detection for the electrocardiogram: an implementation of the Pan–Tompkins algorithm.</p>
+  <p class="sw-links"><a href="{{ site.links.rtecg }}">Source</a> {% include external.html url=site.links.rtecg %}</p>
+</section>
+
+<section class="sw" id="wfs">
+  <h2>Wavefield synthesis array, HfMT Hamburg <span class="year">2019–2022</span></h2>
+  <p>Control and composition software for the ZM4 loudspeaker array at the Hochschule für Musik und Theater Hamburg.</p>
+</section>
+
+<section class="sw" id="max">
+  <h2>Max <span class="year">2022–</span></h2>
+  <p>Core development of Max at Cycling ’74; Max for Live with Ableton since 2025.</p>
+</section>
+
+<section class="sw" id="more">
+  <h2>Also</h2>
+  <ul class="plain">
+    <li><a href="https://github.com/CNMAT/CNMAT-Externs">CNMAT Externals</a> {% include external.html url="https://github.com/CNMAT/CNMAT-Externs" %}: externals and patches for Max/MSP/Jitter.</li>
+    <li><a href="https://github.com/maccallum/x">x</a> {% include external.html url="https://github.com/maccallum/x" %}: random number generation and distribution for Max/MSP and other environments.</li>
+    <li><a href="https://github.com/maccallum/gnuplotcl">gnuplotcl</a> {% include external.html url="https://github.com/maccallum/gnuplotcl" %}: Gnuplot for Common Lisp.</li>
+  </ul>
+  <p>Everything else is on <a href="{{ site.links.github }}">GitHub</a> {% include external.html url=site.links.github %}.</p>
+</section>

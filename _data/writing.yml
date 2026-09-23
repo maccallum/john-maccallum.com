@@ -1,0 +1,436 @@
+# Publications. Drives /writing/. Newest first within each kind.
+# kind: article | conference | chapter. id is the anchor (/writing/#id)
+# and, where there is one, the PDF's name in assets/papers/.
+# Titles, authors, and abstracts are as printed in the PDFs; details
+# checked against Crossref where there is a DOI (2026-09-23).
+
+- id: 2020_NaccaratoMacCallum_PerformanceResearch_CuttingTogetherApart
+  kind: article
+  title: Cutting together-apart (une greffe)
+  authors:
+  - Teoma Naccarato
+  - John MacCallum
+  venue: Performance Research
+  details: '25 (5): 135–142'
+  year: '2020'
+  doi: 10.1080/13528165.2020.1868855
+- id: 2019_MacCallumNacccarato_PerformancePhilosophy_CollaborationAsDifferentiation
+  kind: article
+  title: 'Collaboration as Differentiation: Rethinking Interaction Intra-actively'
+  authors:
+  - John MacCallum
+  - Teoma Naccarato
+  venue: Performance Philosophy
+  details: '4 (2): 410–433'
+  year: '2019'
+  doi: 10.21476/PP.2019.42234
+  pdf: /assets/papers/2019_MacCallumNacccarato_PerformancePhilosophy_CollaborationAsDifferentiation.pdf
+- id: 2018_NaccaratoMacCallum_TEMPO_TheTouchOfTheStethoscope
+  kind: article
+  title: 'The Touch of the Stethoscope: Shaping Context in Intimate Performance'
+  authors:
+  - Teoma Naccarato
+  - John MacCallum
+  venue: TEMPO
+  details: '73 (287): 71–75'
+  year: '2018'
+  doi: 10.1017/S0040298218000669
+  pdf: /assets/papers/2018_NaccaratoMacCallum_TEMPO_TheTouchOfTheStethoscope.pdf
+  abstract: When tools like the stethoscope and electrocardiogram are appropriated for use beyond their
+    intended purpose – for example in music and dance performance – how does the training of foreign users
+    shift the framing of sound, and therefore what types of sounds from the body and apparatus come to
+    be analysed or considered? Can we qualify the difference between a doctor and a composer listening
+    to the heart through a stethoscope? How do the motives and methods of practitioners inform what they
+    hear, and how they touch – to the exclusion of sensory processes beyond their frame of reference?
+    As a choreographer and composer working with heart rate sensors, we do not seek to reveal or represent
+    the invisible workings of the heart. Rather, in our performances and installations, the sonification
+    and haptification of heart rhythms – along with the noise produced by the apparatus and its use –
+    are a means to compose a context for intimate listening and touch between performers and visitors
+    at the edges of appropriateness.
+- id: 2017_NaccaratoMacCallum_Leonardo_PeripheralEncounters
+  kind: article
+  title: Peripheral Encounters
+  authors:
+  - John MacCallum
+  - Teoma J. Naccarato
+  - with Laura Boudou and Stacey Pelinka
+  venue: Leonardo
+  details: '50 (3): 240–241'
+  year: '2017'
+  doi: 10.1162/LEON_a_01422
+  pdf: /assets/papers/2017_NaccaratoMacCallum_Leonardo_PeripheralEncounters.pdf
+- id: 2017_KirkNaccaratoMacCallum_PerformanceResearch_IntimateListening
+  kind: article
+  title: Intimate Listening
+  authors:
+  - Peader Kirk
+  - Teoma J. Naccarato
+  - John MacCallum
+  venue: Performance Research
+  details: '22 (3): 57–60'
+  year: '2017'
+  doi: 10.1080/13528165.2017.1348589
+  pdf: /assets/papers/2017_KirkNaccaratoMacCallum_PerformanceResearch_IntimateListening.pdf
+- id: 2016_NaccaratoMacCallum_JDSP_FromRepresentationToRelationality
+  kind: article
+  title: 'From Representation to Relationality: Bodies, Biosensors and Mediated Environments'
+  authors:
+  - Teoma Jackson Naccarato
+  - John MacCallum
+  venue: Journal of Dance & Somatic Practices
+  details: '8 (1): 57–72'
+  year: '2016'
+  doi: 10.1386/jdsp.8.1.57_1
+  pdf: /assets/papers/2016_NaccaratoMacCallum_JDSP_FromRepresentationToRelationality.pdf
+  abstract: In this article we propose a biorelational framework for performance with biosensors, in which
+    interactions are not based on causality, control, and representation, but rather, manifest through
+    shared awareness and agency across multiple, fluid assemblies of self, other and environment. The
+    transdisciplinary scope of this study traces trajectories from the performing and somatic arts into
+    philosophy, biomedicine, cognitive science and human-computer interaction. A brief survey of common
+    approaches to interaction design with biosensors will contextualize discussion of our current practice-based
+    research and creation project, ‘Choreography and Composition of Internal Time’. In this project, we
+    are examining temporal relationships between physiological processes, such as heart rate and breath,
+    with rhythms in movement, music and mediated environments.
+- id: 2017_NaccaratoMacCallum_MOCO_CriticalAppropriationsOfBiosensorsInArtisticPractice
+  kind: conference
+  title: Critical Appropriations of Biosensors in Artistic Practice
+  authors:
+  - Teoma J. Naccarato
+  - John MacCallum
+  venue: Proceedings of the 4th International Conference on Movement Computing (MOCO)
+  details: London, 1–7
+  year: '2017'
+  doi: 10.1145/3077981.3078053
+  pdf: /assets/papers/2017_NaccaratoMacCallum_MOCO_CriticalAppropriationsOfBiosensorsInArtisticPractice.pdf
+  abstract: In this article we discuss the ethical and æsthetic implications of the appropriation of biomedical
+    sensors in artistic practice. The concept of cross-disciplinary appropriation is elaborated with reference
+    to Guattari’s ethico-æsthetic paradigms, and Barad’s metaphor of diffraction as methodology. In reviewing
+    existing artistic projects with biosensors, we consider ways in which the recontextualization of technologies,
+    and likewise techniques, can both propagate and violate disciplinary expectations and approaches.
+    We propose that by way of critical appropriations of biosensors in artistic practice—that is to say,
+    de- and re-contextualizations of biosensors that acknowledge the shift of ecology and epistemology—artists
+    have a vital role to play in troubling reductive representations of bodies, and furthermore, destabilizing
+    the ethico-æsthetic boundaries of differently constituted disciplines.
+- id: 2016_BressonMacCallumFreed_FARM-ICFP_o.OM
+  kind: conference
+  title: 'o.OM: Structured-Functional Communication between Computer Music Systems using OSC and Odot'
+  authors:
+  - Jean Bresson
+  - John MacCallum
+  - Adrian Freed
+  venue: Proceedings of the 4th International Workshop on Functional Art, Music, Modelling, and Design
+    (FARM)
+  details: Nara, 41–47
+  year: '2016'
+  doi: 10.1145/2975980.2975985
+  pdf: /assets/papers/2016_BressonMacCallumFreed_FARM-ICFP_o.OM.pdf
+  abstract: 'O.—odot—is a portable media programming framework based on the OSC data encoding. It embeds
+    a small expression language which allows writing and executing programs in OSC structures. The integration
+    of programming and declarative functional descriptions within data transfer protocols enables structured
+    and expressive communication in media systems: program snippets can be distributed in OSC messages,
+    which evaluate to further OSC messages in the different communicating software. We present experiments
+    using this framework in the OpenMusic computer-aided composition environment, and illustrate via case
+    studies some advantages of such integrated system.'
+- id: 2015_MacCallumNaccarato_EVA_TheImpossibilityOfControl
+  kind: conference
+  title: 'The Impossibility of Control: Real-time Negotiations with the Heart'
+  authors:
+  - John MacCallum
+  - Teoma Naccarato
+  venue: Proceedings of Electronic Visualisation and the Arts (EVA)
+  details: London, 184–191
+  year: '2015'
+  doi: 10.14236/ewic/eva2015.19
+  pdf: /assets/papers/2015_MacCallumNaccarato_EVA_TheImpossibilityOfControl.pdf
+  abstract: 'We present a practice-based research project, which examines temporal relationships between
+    physiological processes with human movement and mediated environments. Ongoing research will provide
+    a foundation for the creation of performances in which real-time heart rate data from contemporary
+    dancers is used to generate click tracks for live musicians. The complex constructions of time in
+    this project necessitate novel visualization strategies throughout the research, development, creation,
+    and production process, including: time domain display of data with rich and facile interaction using
+    bokeh; visualization of biometric data as a form of biofeedback; and unique representations of time
+    in music notation.'
+- id: 2015_MacCallumNaccarato_CHI_InternalTime
+  kind: conference
+  title: Choreography and Composition of Internal Time
+  authors:
+  - John MacCallum
+  - Teoma Naccarato
+  venue: 'Workshop on Collaborating with Intelligent Machines: Interfaces for Creative Sound, CHI'
+  details: Seoul
+  year: '2015'
+- id: 2015_BressonMacCallum_SMC_TempoCurving
+  kind: conference
+  title: Tempo Curving as a Framework for Interactive Computer-Aided Composition
+  authors:
+  - Jean Bresson
+  - John MacCallum
+  venue: Proceedings of the Sound and Music Computing Conference (SMC)
+  details: Maynooth
+  year: '2015'
+  pdf: /assets/papers/2015_BressonMacCallum_SMC_TempoCurving.pdf
+  abstract: We present computer-aided composition experiments related to the notions of polyrhythmic structures
+    and variable tempo curves. We propose a formal context and some tools that enable the generation of
+    complex polyrhythms with continuously varying tempos integrated in compositional processes and performance,
+    implemented as algorithms and user interfaces.
+- id: 2015_MacCallumGooheartFreed_ICMC_Antony
+  kind: conference
+  title: 'Antony: A Reimagining'
+  authors:
+  - John MacCallum
+  - Matthew Goodheart
+  - Adrian Freed
+  venue: Proceedings of the International Computer Music Conference
+  details: Denton, Texas
+  year: '2015'
+  pdf: /assets/papers/2015_MacCallumGooheartFreed_ICMC_Antony.pdf
+  abstract: We present a re-realization of David Wessel’s Antony (1977). Antony was originally composed
+    using a novel set of additive synthesis techniques developed for the 4A and the PDP 11/40. Those techniques
+    continued to play a role throughout Wessel’s life as an improviser, and inspired many of his students
+    and colleagues. Our re-realization of Antony involves using those same techniques to reinterpret and
+    perform the very piece that they were used to create.
+- id: 2015_MacCallumEtAl_ICMC_MessageOrientedMiddleware
+  kind: conference
+  title: Dynamic Message-Oriented Middleware with Open Sound Control and Odot
+  authors:
+  - John MacCallum
+  - Rama Gottfried
+  - Ilya Rostovtsev
+  - Jean Bresson
+  - Adrian Freed
+  venue: Proceedings of the International Computer Music Conference
+  details: Denton, Texas
+  year: '2015'
+  pdf: /assets/papers/2015_MacCallumEtAl_ICMC_MessageOrientedMiddleware.pdf
+  abstract: We present recent work on odot, a system that extends Open Sound Control and facilitates the
+    rapid and dynamic construction of Message-Oriented Middleware providing an interoperability layer
+    for communication between applications. Unlike traditional middleware systems, odot, when embedded
+    in a host environment, provides a node where computation can take place, allowing middleware to take
+    shape dynamically as the needs of the system develop.
+- id: 2015_BressonEtAl_JIM_ProjetEfficace
+  kind: conference
+  title: 'Projet EFFICACe : développements et perspectives en composition assistée par ordinateur'
+  authors:
+  - Jean Bresson
+  - Dimitri Bouche
+  - Jérémie Garcia
+  - Thibaut Carpentier
+  - Florent Jacquemard
+  - John MacCallum
+  - Diemo Schwarz
+  venue: Actes des Journées d’Informatique Musicale (JIM)
+  details: Montréal
+  year: '2015'
+  pdf: /assets/papers/2015_BressonEtAl_JIM_ProjetEfficace.pdf
+  abstract: EFFICACe est un projet de recherche centré sur les outils de composition assistée par ordinateur
+    (CAO), explorant les rapports entre calcul, temps et interactions dans les processus de composition
+    musicale. Nous présentons différents travaux en cours dans le cadre de ce projet, concernant l’application
+    de processus interactifs pour le traitement et l’ordonnancement des séquences temporelles, le traitement
+    et la spatialisation sonore, ou encore les interfaces homme-machine.
+  lang: fr
+- id: 2014_MacCallumFreedWessel_ICMC_AspectOrientedProgramming
+  kind: conference
+  title: New Tools for Aspect-Oriented Programming in Music and Media Programming Environments
+  authors:
+  - John MacCallum
+  - Adrian Freed
+  - David Wessel
+  venue: Proceedings of the International Computer Music Conference
+  details: Athens, 1587–1591
+  year: '2014'
+  pdf: /assets/papers/2014_MacCallumFreedWessel_ICMC_AspectOrientedProgramming.pdf
+  abstract: Media/arts programming is often experimental and exploratory in nature and requiring a flexible
+    development environment to enable continually changing requirements and to facilitate iterative design
+    in which the development of software impacts the design of a work of art, which in turn produces new
+    requirements for the software. We discuss agile development as it relates to media/arts programming.
+    We present aspect-oriented programming and its implementation in Max/MSP using Open Sound Control
+    and the odot library as tool for mobilizing the benefits of agile development.
+- id: 2014_FreedEtAl_ICMC_o.io
+  kind: conference
+  title: 'o.io: a Unified Communications Framework for Music, Intermedia and Cloud Interaction'
+  authors:
+  - Adrian Freed
+  - David DeFilippo
+  - Rama Gottfried
+  - John MacCallum
+  - Jeff Lubow
+  - Derek Razo
+  - David Wessel
+  venue: Proceedings of the International Computer Music Conference
+  details: Athens, 1592–1597
+  year: '2014'
+  pdf: /assets/papers/2014_FreedEtAl_ICMC_o.io.pdf
+  abstract: We present work on the “o.io” system, a suite of tools for hiding vendor-specific and protocol-
+    specific details of controllers and actuators and for replacing diffuse documentation and heterogeneous
+    ontologies with harmonized, situational schema carried along in real-time with gesture and actuator
+    control values as Open Sound Control (OSC) bundles. We introduce useful general design patterns and
+    object-oriented tools that support them. We conclude with details of support of two particular devices
+    that illustrate the potential of “o.io”, the QuNeo and Bluetooth LE heart rate monitors.
+- id: 2013_MacCallumFreedWessel_NIME_AgileInterfaceDevelopment
+  kind: conference
+  title: Agile Interface Development using OSC Expressions and Process Migration
+  authors:
+  - John MacCallum
+  - Adrian Freed
+  - David Wessel
+  venue: Proceedings of the International Conference on New Interfaces for Musical Expression
+  details: Daejeon, 347–351
+  year: '2013'
+  pdf: /assets/papers/2013_MacCallumFreedWessel_NIME_AgileInterfaceDevelopment.pdf
+  abstract: This paper introduces “o.expr,” an expression language for dynamic, object- and agent-oriented
+    computation of gesture signal processing workflows using OSC bundles. The use of o.expr is shown for
+    a range of gesture processing tasks. Aspects of o.expr, including statelessness and homoiconicity,
+    simplify agile applications development and provide support for heterogeneous computational networks.
+- id: 2013_FreedEtAl_NIME_Fingerboard
+  kind: conference
+  title: '“Old” is the new “New”: a Fingerboard Case Study in Recrudescence as a NIME Development Strategy'
+  authors:
+  - Adrian Freed
+  - Frances-Marie Uitti
+  - Sam Mansfield
+  - John MacCallum
+  venue: Proceedings of the International Conference on New Interfaces for Musical Expression
+  details: Daejeon, 441–445
+  year: '2013'
+  pdf: /assets/papers/2013_FreedEtAl_NIME_Fingerboard.pdf
+  abstract: This paper addresses the problem that most electrophones and computer-based musical instruments
+    are ephemera lasting long enough to signal academic and technical prowess. They rarely are used more
+    than in a few musical performances. We offer a case study that suggests that longevity of use depends
+    on stabilizing the interface and innovating the implementation to maintain the required stability
+    of performance for players.
+- id: 2011_FreedMacCallumSchmeder_NIME_ComposabilityForMusicalGSP
+  kind: conference
+  title: Composability for Musical Gesture Signal Processing using new OSC-based Object and Functional
+    Programming Extensions to Max/MSP
+  authors:
+  - Adrian Freed
+  - John MacCallum
+  - Andy Schmeder
+  venue: Proceedings of the International Conference on New Interfaces for Musical Expression
+  details: Oslo, 308–311
+  year: '2011'
+  pdf: /assets/papers/2011_FreedMacCallumSchmeder_NIME_ComposabilityForMusicalGSP.pdf
+  abstract: An effective programming style for gesture signal processing is described using a new library
+    that brings efficient run-time polymorphism, functional and instance-based object-oriented programming
+    to Max/MSP. By introducing better support for generic programming and composability Max/MSP becomes
+    a more productive environment for managing the growing scale and complexity of gesture sensing systems
+    for musical instruments and interactive installations.
+- id: 2011_FreedMacCallumSchmeder_ICMC_DynamicInstanceBasedOOP
+  kind: conference
+  title: Dynamic, Instance-Based, Object-Oriented Programming in Max/MSP using Open Sound Control Message
+    Delegation
+  authors:
+  - Adrian Freed
+  - John MacCallum
+  - Andrew Schmeder
+  venue: Proceedings of the International Computer Music Conference
+  details: Huddersfield
+  year: '2011'
+  pdf: /assets/papers/2011_FreedMacCallumSchmeder_ICMC_DynamicInstanceBasedOOP.pdf
+  abstract: A new media programming style is introduced that brings efficient run-time polymorphism, functional
+    and instance-based object-oriented programming to Max/MSP and related visual dataflow languages. Examples
+    are presented to illustrate new, unusual and effective applications of the approach of using OSC messages
+    for object representations and data flow for method delegation.
+- id: 2010_MacCallumSchmeder_ICMC_Timewarp
+  kind: conference
+  title: 'Timewarp: A Graphical Tool for the Control of Polyphonic Smoothly Varying Tempos'
+  authors:
+  - John MacCallum
+  - Andrew Schmeder
+  venue: Proceedings of the International Computer Music Conference
+  details: New York
+  year: '2010'
+  pdf: /assets/papers/2010_MacCallumSchmeder_ICMC_Timewarp.pdf
+  abstract: We present a parametric method for the variable control of tempo with specification of shape
+    and phase alignment constraints, and its implementation as a graphical interface written in C for
+    the Max/MSP environment. This tool aids in the construction and management of polyphonic streams of
+    independent, fixed or smoothly-varying tempos suitable for live performance or computer-generated
+    scores. We also present a brief history of how polyphonic tempo manipulation has been used in context
+    and compare our work with two recent projects to implement similar tools.
+- id: 2010_FreedEtAl_ICMC_HybridizationInterfaces
+  kind: conference
+  title: Visualizations and Interaction Strategies for Hybridization Interfaces
+  authors:
+  - Adrian Freed
+  - John MacCallum
+  - Andrew Schmeder
+  - David Wessel
+  venue: Proceedings of the International Conference on New Interfaces for Musical Expression
+  details: Sydney, 343–347
+  year: '2010'
+  pdf: /assets/papers/2010_FreedEtAl_ICMC_HybridizationInterfaces.pdf
+  abstract: We present two complementary approaches for the visualization and interaction of dimensionally
+    reduced data sets using hybridization interfaces. Our implementations privilege syncretic systems
+    allowing one to explore combinations (hybrids) of disparate elements of a data set through their placement
+    in a 2-D space. The first approach allows for the placement of data points anywhere on the plane according
+    to an anticipated performance strategy. The contribution (weight) of each data point varies according
+    to a power function of the distance from the control cursor. The second approach uses constrained
+    vertex colored triangulations of manifolds with labels placed at the vertices of triangular tiles.
+    Weights are computed by barycentric projection of the control cursor position.
+- id: 2009_MacCallumSchmederWessel_ICMC_TimbralMigration
+  kind: conference
+  title: 'Timbral Migration: Stochastic Processes for the Control of Smooth Spectral Transformation'
+  authors:
+  - John MacCallum
+  - Andrew Schmeder
+  - David Wessel
+  venue: Proceedings of the International Computer Music Conference
+  details: Montréal
+  year: '2009'
+  pdf: /assets/papers/2009_MacCallumSchmederWessel_ICMC_TimbralMigration.pdf
+  abstract: 'We present an additive synthesis engine that can produce smooth transitions between timbres
+    without glissandi or audible transients. With this algorithm, one can explore the musically rich area
+    of hybrid timbres that arise as one timbre “migrates” into another. This method operates in real-time
+    using live or pre-recorded sinusoidal analyses as input. Parameterization of the migration behavior
+    enables interactive control. We present the history of this engine that begins with work by David
+    Wessel at IRCAM in the 1970s. We discuss two implementations: a statistical method based on sampling
+    from a discrete probability mass function derived from a sparse input spectrum, and a stochastic local-update
+    method using parallel Markov Chain Monte Carlo processes, which enables control over spectral flux,
+    spectral smearing and migration rate. We conclude with a summary of notable musical uses in contemporary
+    electroacoustic music.'
+- id: 2005_MacCallumHuntEinbond_ICMC_TimbrePsychoacousticParameter
+  kind: conference
+  title: Timbre as a Psychoacoustic Parameter for Harmonic Analysis and Composition
+  authors:
+  - John MacCallum
+  - Jeremy Hunt
+  - Aaron Einbond
+  venue: Proceedings of the International Computer Music Conference
+  year: '2005'
+  pdf: /assets/papers/2005_MacCallumHuntEinbond_ICMC_TimbrePsychoacousticParameter.pdf
+  abstract: Timbre can affect our subjective experience of musical dissonance and harmonic progression.
+    To this end, we have developed a set of algorithms to measure roughness (sensory dissonance), and
+    pitch correlation between sonorities, taking into account the effects of timbre and microtonal inflection.
+    We proceed from the work of Richard Parncutt and Ernst Terhardt, extending their algorithms for the
+    psychoacoustic analysis of harmony to include spectral data from actual instrumental sounds. This
+    allows for the study of a much wider variety of timbrally-rich acoustic or electronic sounds which
+    was not possible with the previous algorithms. Further, we generalize these algorithms by working
+    directly with frequency rather than a tempered division of the octave, making them available to the
+    full range of microtonal harmonies. The new algorithms, by yielding different roughness estimates
+    depending on the orchestration of a sonority, confirm our intuitive understanding that orchestration
+    affects sensory dissonance. This package of tools presents rich possibilities for composition and
+    analysis of music that is timbrally-dynamic and microtonally-complex.
+- id: 2008_MacCallumEinbond_CMMR_SensoryDissonance
+  kind: chapter
+  title: Real-time Analysis of Sensory Dissonance
+  authors:
+  - John MacCallum
+  - Aaron Einbond
+  venue: 'Computer Music Modeling and Retrieval: Sense of Sounds'
+  details: ed. Richard Kronland-Martinet, Sølvi Ystad, and Kristoffer Jensen, Springer, 203–211
+  year: '2008'
+  pdf: /assets/papers/2008_MacCallumEinbond_CMMR_SensoryDissonance.pdf
+  abstract: 'We describe a tool for real-time musical analysis based on a measure of roughness, the principal
+    element of sensory dissonance. While most historical musical analysis is based on the notated score,
+    our tool permits analysis of a recorded or live audio signal in its full complexity. We proceed from
+    the work of Richard Parncutt and Ernst Terhardt, extending their algorithms for the psychoacoustic
+    analysis of harmony to be used for the live analysis of spectral data. This allows for the study of
+    a wider variety of timbrally-rich acoustic or electronic sounds which was not possible with previous
+    algorithms. Further, the direct treatment of audio signal facilitates a wide range of analytical applications,
+    from the comparison of multiple recordings of the same musical work to the real-time analysis of a
+    live performance. Our algorithm is programmed in C as an external object for the program Max/MSP.
+
+    Taking musical examples by Arnold Schoenberg, Gérard Grisey and Iannis Xenakis, our algorithm yields
+    varying roughness estimates depending on instrumental orchestration or electronic texture, confirming
+    our intuitive understanding that timbre affects sensory dissonance. This is one of the many possibilities
+    this tool presents for analysis and composition of music that is timbrally-dynamic and microtonally-complex.'
