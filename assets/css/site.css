@@ -145,3 +145,8 @@ figcaption { font-size: 0.9rem; margin-top: 0.5rem; }
   border-top: 1px dashed var(--rule);
   font-size: 0.85rem;
 }
+
+.credit { font-size: 0.9rem; color: var(--muted); }
+.list-head { margin-top: 3rem; }
+#software dd, #sites dd { margin-bottom: 0.5rem; }
+#software dt, #sites dt { text-transform: none; letter-spacing: 0; font-size: 1rem; color: var(--text); }

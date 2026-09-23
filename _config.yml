@@ -7,7 +7,7 @@ tagline: Composer and musical systems designer
 description: >-
   John MacCallum is a composer, media artist, and software engineer whose
   work uses technology to probe our relationship to time, with the heart
-  as timekeeper. Works, recordings, scores, and the instruments he builds.
+  as timekeeper. Works, recordings, scores, and the software he builds.
 email: john.m@ccallum.com
 url: "https://john-maccallum.com"
 baseurl: ""
@@ -18,6 +18,7 @@ links:
   bandcamp: "https://john-maccallum.bandcamp.com"
   github: "https://github.com/maccallum"
   odot: "https://github.com/CNMAT/CNMAT-odot"
+  rtecg: "https://github.com/maccallum/rtecg"
   linktree: "https://linktr.ee/john.maccallum"
   frictionfield: "https://frictionfield.co"
   iii: "https://iii-iii-iii.org"

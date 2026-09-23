@@ -3,13 +3,12 @@ layout: default
 description: >-
   John MacCallum is a composer, media artist, and software engineer whose
   work uses technology to probe our relationship to time, with the heart
-  as timekeeper. Recent works with Teoma Naccarato, notated works,
-  recordings, and the instruments he builds.
+  as timekeeper. Works with Teoma Naccarato, notated works,
+  recordings, and the software he builds.
 nav:
-  - {label: Recent works, href: "#recent"}
-  - {label: Listen, href: "#listen"}
-  - {label: All works, href: "#works"}
-  - {label: Links, href: "#links"}
+  - {label: Works, href: "#works"}
+  - {label: Software, href: "#software"}
+  - {label: Project sites, href: "#sites"}
   - {label: Contact, href: "#contact"}
 ---
 {%- assign featured = site.data.works | where_exp: "w", "w.featured" | sort: "featured" -%}
@@ -21,9 +20,9 @@ nav:
   <p>John MacCallum is a composer, media artist, and software engineer. Born in California and trained in music composition and computer science, he lived in Berlin from 2019 to 2025 and is now based in Falmouth, UK. His work uses technology to probe our relationship to time. At its center is the heart, as timekeeper, material performer, and world-builder. For over a decade that work has been made in collaboration with choreographer and media artist Teoma Naccarato: extended-duration performances inside high-channel-count real-time audio/visual systems that put philosophical pressure on notions of representation, boundaries, and binaries. He designs and builds the software these systems run on, as he has throughout his career, first at UC Berkeley’s Center for New Music and Audio Technologies and now as an engineer on Max and Max for Live at Cycling ’74 and Ableton; the music drives the software, and the software, in turn, the music. He holds degrees in music composition from UC Berkeley (PhD), McGill, and the University of the Pacific.</p>
 </section>
 
-<section id="recent">
-  <h2>Three recent works</h2>
-  <p class="lede">All three were created and performed with choreographer Teoma Naccarato. In each, MacCallum composed the sound and live electronics and designed the sensing, video, and network systems; Naccarato choreographed and directed. Both perform.</p>
+<section id="works">
+  <h2>Works</h2>
+  <p class="lede">Since 2014, most of the work has been made with choreographer Teoma Naccarato, from 2025 as <a href="{{ site.links.frictionfield }}">Friction Field Collaborative</a>. Choreography, direction, and video are Naccarato’s; sound, live electronics, and the sensing, video, and network systems are MacCallum’s. Both perform.</p>
 
   {%- for w in featured %}
   <article class="featured" id="{{ w.slug }}">
@@ -50,22 +49,8 @@ nav:
     </p>
   </article>
   {%- endfor %}
-</section>
 
-<section id="listen">
-  <h2>Listen</h2>
-  <figure class="audio">
-    <iframe src="{{ limn.recording_embed }}" title="{{ limn.title }}, recording" loading="lazy" seamless></iframe>
-    <figcaption><em>{{ limn.title }}</em> ({{ limn.year }}), for flute, cello, and live electronics. Commissioned by the {{ limn.commission }}; performed from 2015 to 2026, most recently in Berkeley in February 2026. <a href="{{ limn.recording }}">Listen on Bandcamp</a>.</figcaption>
-  </figure>
-  <p>More recordings on <a href="{{ site.links.bandcamp }}">Bandcamp</a>.</p>
-</section>
-
-<section id="works">
-  <h2>Works</h2>
-
-  <h3>Performance, video, and installation works</h3>
-  <p class="lede">These {{ collaborative | size }} works were created and performed with choreographer Teoma Naccarato, since 2025 under the name <a href="{{ site.links.frictionfield }}">Friction Field Collaborative</a>. Unless otherwise noted, MacCallum is responsible for composition, sound, live electronics, and the design of the sensing, video, and network systems; Naccarato for choreography, direction, and video. Both perform.</p>
+  <h3 class="list-head">Performance, video, and installation</h3>
   <ul class="works">
     {%- for w in collaborative %}
     <li>
@@ -78,8 +63,11 @@ nav:
     {%- endfor %}
   </ul>
 
-  <h3>Notated and electroacoustic works</h3>
-  <p class="lede">Linked titles lead to program notes, recordings, and, where available, scores, parts, sketches, and electronics.</p>
+  <h3 class="list-head">Notated and electroacoustic</h3>
+  <figure class="audio">
+    <iframe src="{{ limn.recording_embed }}" title="{{ limn.title }}, recording" loading="lazy" seamless></iframe>
+    <figcaption><em>{{ limn.title }}</em> ({{ limn.year }}), flute, cello, and live electronics. Commissioned by the {{ limn.commission }}; performed from 2015 to 2026, most recently in Berkeley in February 2026. More recordings on <a href="{{ site.links.bandcamp }}">Bandcamp</a>.</figcaption>
+  </figure>
   <ul class="works">
     {%- for w in solo %}
     <li>
@@ -91,33 +79,36 @@ nav:
     </li>
     {%- endfor %}
   </ul>
+  <p class="lede">Linked titles lead to program notes, recordings, and, where available, scores, parts, sketches, and electronics.</p>
 </section>
 
-<section id="links">
-  <h2>Links</h2>
+<section id="software">
+  <h2>Software</h2>
   <dl class="links">
-    <dt>Recordings</dt>
-    <dd><a href="{{ site.links.bandcamp }}">Bandcamp</a></dd>
+    <dt><a href="{{ site.links.odot }}">odot</a></dt>
+    <dd>A programming environment for OpenSoundControl, co-designed with Adrian Freed at UC Berkeley’s Center for New Music and Audio Technologies (CNMAT). MacCallum wrote the C implementation, the expression language, and much of the Max library. Taught at Berkeley, Arizona State University, and the Hochschule für Musik und Theater Hamburg.</dd>
+    <dt>asoma</dt>
+    <dd>The successor to odot: a distributed system of sensors, computers, and cameras addressed as a single instrument. An independent project; first public release planned for 2027.</dd>
+    <dt><a href="{{ site.links.rtecg }}">rtecg</a></dt>
+    <dd>Real-time feature detection for the electrocardiogram, an implementation of the Pan–Tompkins algorithm.</dd>
+  </dl>
+  <p>More on <a href="{{ site.links.github }}">GitHub</a>.</p>
+</section>
 
-    <dt>Instruments</dt>
-    <dd><a href="{{ site.links.odot }}">odot</a>, a programming environment for OpenSoundControl, co-designed with Adrian Freed at CNMAT</dd>
-    <dd><a href="{{ site.links.github }}">GitHub</a></dd>
-
-    <dt>Collaboration</dt>
-    <dd><a href="{{ site.links.frictionfield }}">Friction Field Collaborative</a>, with Teoma Naccarato</dd>
-    <dd><a href="{{ site.links.iii }}">III</a> and <a href="{{ site.links.immediations }}">Im/mediations</a>, the two series of works</dd>
-    <dd><a href="{{ site.links.interstitial_listening }}">Interstitial Listening</a>, workshops</dd>
-
-    <dt>CV</dt>
-    {%- if site.cv_full != "" %}
-    <dd><a href="{{ site.cv_full | relative_url }}">Full CV</a> (PDF){% if site.cv_one_page != "" %} · <a href="{{ site.cv_one_page | relative_url }}">One page</a> (PDF){% endif %}</dd>
-    {%- else %}
-    <dd>Available by <a href="mailto:{{ site.email }}?subject=CV">email</a></dd>
-    {%- endif %}
+<section id="sites">
+  <h2>Project sites</h2>
+  <dl class="links">
+    <dt><a href="{{ site.links.frictionfield }}">Friction Field Collaborative</a></dt>
+    <dd>With Teoma Naccarato.</dd>
+    <dt><a href="{{ site.links.iii }}">III</a> and <a href="{{ site.links.immediations }}">Im/mediations</a></dt>
+    <dd>The two series of works with Naccarato, 2014–2023.</dd>
+    <dt><a href="{{ site.links.interstitial_listening }}">Interstitial Listening</a></dt>
+    <dd>Workshops.</dd>
   </dl>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  <p>CV on request by email.</p>
 </section>
