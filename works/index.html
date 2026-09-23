@@ -1,0 +1,84 @@
+---
+layout: default
+title: Works
+description: >-
+  Complete list of works by John MacCallum: performance, video, and
+  installation works with Teoma Naccarato, and notated and
+  electroacoustic works with recordings, scores, and performance history.
+---
+{%- assign collaborative = site.data.works | where: "collaborative", true -%}
+{%- assign solo = site.data.works | where: "collaborative", false -%}
+
+<h1>Works</h1>
+
+<nav class="filters" aria-label="Filter by tag">
+  <p><span class="filter-label">Made with</span>
+    {%- for t in site.data.tags.forms %}
+    <a href="?tag={{ t.name | slugify }}" data-tag="{{ t.name | slugify }}" title="{{ t.about }}">{{ t.label }}</a>
+    {%- endfor %}
+  </p>
+  <p><span class="filter-label">Themes</span>
+    {%- for t in site.data.tags.themes %}
+    <a href="?tag={{ t.name | slugify }}" data-tag="{{ t.name | slugify }}" title="{{ t.about }}">{{ t.label }}</a>
+    {%- endfor %}
+  </p>
+  <p class="filter-status" hidden><span id="filter-about"></span> <a href="{{ '/works/' | relative_url }}">Show all</a></p>
+</nav>
+
+<section class="works-group">
+  <h2>Performance, video, and installation</h2>
+  <p class="lede">With choreographer Teoma Naccarato, from 2025 as <a href="{{ site.links.frictionfield }}">Friction Field Collaborative</a>. Choreography, direction, and video are Naccarato’s; sound, live electronics, and the sensing, video, and network systems are MacCallum’s. Both perform. Each work is documented on its project page.</p>
+  <ul class="works">
+    {%- for w in collaborative %}
+    {%- assign all = w.forms | concat: w.themes %}
+    <li data-tags="{% for t in all %}{{ t | slugify }} {% endfor %}">
+      {%- if w.external != "" -%}
+      <a href="{{ w.external }}">{{ w.title }}</a>
+      {%- else -%}
+      <span class="title">{{ w.title }}</span>
+      {%- endif %} <span class="meta">{{ w.year }}{% if w.duration != "" %} · {{ w.duration }}{% endif %} · {{ w.forces }}</span>
+      {% include tags.html work=w %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="works-group">
+  <h2>Notated and electroacoustic</h2>
+  <ul class="works">
+    {%- for w in solo %}
+    {%- assign all = w.forms | concat: w.themes %}
+    <li data-tags="{% for t in all %}{{ t | slugify }} {% endfor %}">
+      <a href="{{ '/works/' | append: w.slug | append: '/' | relative_url }}"><em>{{ w.title }}</em></a> <span class="meta">{{ w.year }} · {{ w.forces }} · {{ w.duration }}</span>
+      {% include tags.html work=w %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<script>
+  // Filtering is an enhancement: without JavaScript every work is listed.
+  (function () {
+    var tag = new URLSearchParams(location.search).get("tag");
+    if (!tag) return;
+    var about = {
+      {%- assign alltags = site.data.tags.forms | concat: site.data.tags.themes %}
+      {%- for t in alltags %}
+      {{ t.name | slugify | jsonify }}: {{ t.label | append: ": " | append: t.about | jsonify }}{% unless forloop.last %},{% endunless %}
+      {%- endfor %}
+    };
+    if (!about[tag]) return;
+    document.querySelectorAll(".works > li").forEach(function (li) {
+      li.hidden = (" " + li.dataset.tags).indexOf(" " + tag + " ") < 0;
+    });
+    document.querySelectorAll(".works-group").forEach(function (g) {
+      g.hidden = !g.querySelector(".works > li:not([hidden])");
+    });
+    document.querySelectorAll(".filters a[data-tag]").forEach(function (a) {
+      if (a.dataset.tag === tag) a.setAttribute("aria-current", "true");
+    });
+    var status = document.querySelector(".filter-status");
+    document.getElementById("filter-about").textContent = about[tag];
+    status.hidden = false;
+  })();
+</script>

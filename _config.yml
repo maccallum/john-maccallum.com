@@ -25,14 +25,16 @@ links:
   immediations: "https://immediations.com"
   interstitial_listening: "https://interstitial-listening.com"
 
-# The old PHP site stays on DreamHost until its work pages are migrated.
-# Linked absolutely so the links work from the GitHub Pages
-# preview too. Must be empty of uses before the domain moves.
-legacy_base: "https://john-maccallum.com/index.php?page="
-
 collections:
+  works:
+    output: true
+    permalink: /works/:name/
   publications:
     output: false   # later: /writing
+
+defaults:
+  - scope: {path: "", type: works}
+    values: {layout: work}
 
 # The 2021 draft pages and the PHP site's folders stay in the repo as
 # sources but are not built.
@@ -47,7 +49,13 @@ exclude:
   - make-bg.pl
   - wind.js
   - iii.txt
-  - compositions
+  # Old work folders: the PDFs and zips are published at their old paths so
+  # direct links keep working; the PHP page fragments are not.
+  - "compositions/*.txt"
+  - "compositions/*~"
+  - "compositions/*/soundcloud"
+  - "compositions/*/dontmessup"
+  - compositions/iii_circulation
   - software
   - writings
   - cv
@@ -68,3 +76,8 @@ exclude:
 # empty, the front page offers the CV by email.
 cv_full: ""
 cv_one_page: ""
+
+markdown: kramdown
+kramdown:
+  input: kramdown      # plain kramdown; no extra gem needed
+  smart_quotes: ["apos", "apos", "quot", "quot"]   # the notes already use curly quotes

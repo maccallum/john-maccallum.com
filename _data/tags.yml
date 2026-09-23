@@ -1,0 +1,43 @@
+# Tags used in _data/works.yml (and, later, software and writing).
+# To add a tag: add it here, then to the items it applies to. To rename
+# one: change `name` here and find-and-replace it in works.yml.
+
+forms:
+  - name: notated
+    label: Notated
+    about: A score exists for performers to play.
+  - name: live electronics
+    label: Live electronics
+    about: Sound made or transformed by computer during the performance.
+  - name: performance art
+    label: Performance art
+    about: Bodies in performance, outside the concert format.
+  - name: installation
+    label: Installation
+    about: A space that visitors enter.
+  - name: video
+    label: Video
+    about: Film, or video as a material of the work.
+  - name: livestream
+    label: Livestream
+    about: The work existed as a broadcast.
+
+themes:
+  - name: time
+    label: Time
+    about: Tempo, synchrony, and players in independent, continuously varying tempos.
+  - name: heart
+    label: Heart
+    about: The heartbeat and breath as timekeeper and material, sensed by ECG and stethoscope.
+  - name: duration
+    label: Duration
+    about: Extended-duration performance, from three hours to seventy-two.
+  - name: cameras
+    label: Cameras
+    about: Arrays of cameras, live video, and surveillance.
+  - name: networks
+    label: Networks
+    about: Distributed systems of sensors, computers, and cameras; OpenSoundControl.
+  - name: listening
+    label: Listening
+    about: Listening to bodies, one's own and others'.

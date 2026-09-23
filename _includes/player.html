@@ -1,0 +1,17 @@
+{%- comment -%} An embedded recording or video. include.item: {label, embed, url, height}; include.kind: audio | video {%- endcomment -%}
+{%- assign item = include.item -%}
+{%- if include.kind == "video" %}
+<figure class="media">
+  <div class="video"><iframe src="{{ item.embed }}" title="{{ include.title | strip_html }}, {{ item.label }}" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+  <figcaption>{{ item.label }}{% if item.url %} · <a href="{{ item.url }}">Open on YouTube</a>{% endif %}</figcaption>
+</figure>
+{%- else %}
+<figure class="media audio">
+  <iframe src="{{ item.embed }}" style="height: {{ item.height | default: 120 }}px" title="{{ include.title | strip_html }}, {{ item.label }}" loading="lazy" seamless></iframe>
+  {%- if item.url %}
+  <figcaption>{{ item.label }} · <a href="{{ item.url }}">Bandcamp</a></figcaption>
+  {%- else %}
+  <figcaption>{{ item.label }}</figcaption>
+  {%- endif %}
+</figure>
+{%- endif %}

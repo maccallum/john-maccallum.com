@@ -1,0 +1,10 @@
+{%- comment -%} Tag links for one work. include.work {%- endcomment -%}
+{%- assign w = include.work -%}
+{%- assign all = w.forms | concat: w.themes -%}
+{%- if all.size > 0 %}
+<ul class="tags" aria-label="Tags">
+  {%- for t in all %}
+  <li><a href="{{ '/works/' | relative_url }}?tag={{ t | slugify }}">{{ t }}</a></li>
+  {%- endfor %}
+</ul>
+{%- endif %}

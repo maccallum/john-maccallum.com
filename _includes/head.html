@@ -1,18 +1,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {%- if page.title and page.url != "/" %}
+  {%- if page.collection == "works" %}
+  {%- assign head_work = site.data.works | where: "slug", page.slug | first %}
+  {%- capture head_desc %}{{ head_work.title }} ({{ head_work.year }}), {{ head_work.forces | downcase }}, by John MacCallum. Program note, recording, score, and performance history.{% endcapture %}
+  <title>{{ head_work.title }} · John MacCallum</title>
+  {%- elsif page.title and page.url != "/" %}
   <title>{{ page.title }} · John MacCallum</title>
   {%- else %}
   <title>{{ site.title }}</title>
   {%- endif %}
-  {%- assign description = page.description | default: site.description | strip_newlines | strip %}
+  {%- assign description = head_desc | default: page.description | default: site.description | strip_newlines | strip %}
   <meta name="description" content="{{ description | escape }}">
   <meta name="author" content="{{ site.author }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.author }}">
-  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:title" content="{% if head_work %}{{ head_work.title | escape }}{% else %}{{ page.title | default: site.title | escape }}{% endif %}">
   <meta property="og:description" content="{{ description | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta name="color-scheme" content="light dark">

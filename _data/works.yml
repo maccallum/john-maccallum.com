@@ -1,18 +1,23 @@
-# One entry per work. Drives the front page's works index now and, later,
-# the per-work pages and the works index at /works.
+# One entry per work. Drives the front page, the works index at /works,
+# and the pages at /works/<slug> (notated and electroacoustic works; the
+# collaborative works are documented on their project sites).
 #
-# Facts (year, forces, duration, commission) come from
-# professional_docs/workslist/workslist.tex. Do not add a fact that is not
-# in the works list, the CV, or the old site's folders.
+# Facts (year, forces, duration, commission, performances) come from
+# professional_docs/workslist/workslist.tex and the old site's folders
+# (compositions/<folder>/). Do not add a fact that is in neither.
 #
-# kind:          notated | electroacoustic | performance | video | installation
-# collaborative: true for the works with Teoma Naccarato; `external` then
-#                points to the project page (frictionfield.co once it exists)
-# legacy:        folder on the old PHP site; linked until the work has a page
-#                here, then used for redirects
+# collaborative: true for the works with Teoma Naccarato; `external` is the
+#                project page (frictionfield.co once it exists)
+# forms:         what the work is made of; as many as apply. Defined in
+#                _data/tags.yml
+# themes:        what the work is about; as many as honestly apply.
+#                Defined in _data/tags.yml
 # featured:      1-3, the order on the front page
-# threads:       time | instruments | collaboration (primary tags)
-#
+# legacy:        folder on the old PHP site (for redirects)
+# recordings,
+# videos:        [{label, embed, url}]; embed is the player URL
+# materials:     [{label, url}]; local files keep their old-site paths
+# performances:  most recent first; premiere: true marks the premiere
 
 # ---------------------------------------------------------------
 # Performance, video, and installation works, with Teoma Naccarato
@@ -21,12 +26,12 @@
 - slug: once-replete
   title: "III: Once Replete"
   year: "2023"
-  kind: performance
   collaborative: true
   forces: "Two performers beneath plaster casts onto which video from III: Once Returned is projected; heartbeats sonified live from ECGs"
   duration: "6 h"
   support: "National Performance Network (NPN) Stepping Out, with funds from the German Federal Government Commissioner for Culture and the Media"
-  threads: [time, instruments, collaboration]
+  forms: [performance art, installation, video, live electronics]
+  themes: [heart, duration]
   external: "https://iii-iii-iii.org/about/iii-once-replete/"
   featured: 1
   summary: >-
@@ -34,17 +39,19 @@
     Two performers wearing electrocardiograms; the sound is composed live
     from their heart signals. Premiered June 1–3, 2023, SomoS Art Gallery,
     Berlin.
-  videos: []   # [{label: "Excerpt", embed: "<player URL>", url: "<page URL>"}]
+  videos: []
+  performances:
+    - {date: "June 1–3, 2023", venue: "SomoS Art Gallery, Berlin", premiere: true}
 
 - slug: once-returned
   title: "III: Once Returned"
   year: "2022"
-  kind: performance
   collaborative: true
-  forces: "72-hour continuous live-streamed performance: a six-hour choreography repeated twelve times without stopping, every action scripted by a metronome; two performers wearing ECGs, 12-camera video array, live audio from the electrocardiograms"
+  forces: "A six-hour choreography repeated twelve times without stopping, every action scripted by a metronome; two performers wearing ECGs, 12-camera video array, live audio from the electrocardiograms"
   duration: "72 h"
   support: "National Performance Network (NPN) Stepping Out, with funds from the German Federal Government Commissioner for Culture and the Media"
-  threads: [time, instruments, collaboration]
+  forms: [performance art, video, live electronics, livestream]
+  themes: [time, heart, duration, cameras, networks]
   external: "https://iii-iii-iii.org/about/iii-oncereturned/"
   featured: 2
   summary: >-
@@ -53,37 +60,43 @@
     including breath; the audio is composed in real time from two ECGs.
     Premiered May 30–June 2, 2022, Atelier III, Berlin.
   videos: []
+  performances:
+    - {date: "May 30–June 2, 2022", venue: "Atelier III, Berlin, live-streamed", premiere: true}
 
 - slug: 9x9x9
   title: "Im/mediations: 9x9x9"
   year: "2022"
-  kind: performance
   collaborative: true
   forces: "Nine live-streamed solo performances, each 90 minutes; nine performers, nine-camera array, click-track score"
   duration: "9 × 90′"
   support: "Fonds Darstellende Künste"
-  threads: [time, instruments, collaboration]
+  forms: [performance art, video, livestream]
+  themes: [time, duration, cameras]
   external: "https://immediations.com/9x9x9/"
+  performances:
+    - {date: "2022", venue: "Atelier III, Berlin, live-streamed", premiere: true}
 
 - slug: regard
   title: "III: Regard"
   year: "2022"
-  kind: video
   collaborative: true
   forces: "Video; three performers filmed in extreme close-up by three cameras each"
   duration: ""
-  threads: [collaboration]
+  forms: [video]
+  themes: [cameras]
   external: "https://iii-iii-iii.org/about/iii-regard/"
+  performances:
+    - {date: "2022", venue: "Experimental Film Virginia (created and premiered in residence)", premiere: true}
 
 - slug: remains
   title: "Im/mediations: REMAINS"
   year: "2021"
-  kind: performance
   collaborative: true
   forces: "Solo dancer with live electronics and nine-camera video surveillance system"
   duration: "15′"
   support: "National Performance Network (NPN) Stepping Out, with funds from the German Federal Government Commissioner for Culture and the Media"
-  threads: [instruments, collaboration]
+  forms: [performance art, video, live electronics, livestream]
+  themes: [cameras]
   external: "https://immediations.com/remains/"
   featured: 3
   summary: >-
@@ -91,243 +104,380 @@
     surveillance system. Premiered 2021 at Lake Studios Berlin,
     live-streamed.
   videos: []
+  performances:
+    - {date: "2021", venue: "Lake Studios, Berlin, live-streamed", premiere: true}
 
 - slug: void
   title: "Im/mediations: VOID"
   year: "2021"
-  kind: video
   collaborative: true
   forces: "Video and spoken-word composition; eighteen video solos"
   duration: "15′"
-  threads: [collaboration]
+  forms: [video]
+  themes: []
   external: "https://immediations.com/void/"
+  performances:
+    - {date: "2021", venue: "Lake Studios, Berlin, live-streamed", premiere: true}
 
 - slug: idle
   title: "Im/mediations: IDLE"
   year: "2021"
-  kind: performance
   collaborative: true
   forces: "Durational series of online one-on-one encounters; twelve-hour live stream"
   duration: "12 h"
-  threads: [time, collaboration]
+  forms: [performance art, livestream]
+  themes: [duration]
   external: "https://immediations.com/idle/"
+  performances:
+    - {date: "2021", venue: "Lake Studios, Berlin, live-streamed", premiere: true}
 
 - slug: once-removed
   title: "III: Once Removed"
   year: "2020"
-  kind: performance
   collaborative: true
   forces: "Two performers wearing ECGs, video, and live electronics; stage version with projection and intimate version in the round"
   duration: "10′ / 30′"
-  threads: [time, collaboration]
+  forms: [performance art, video, live electronics]
+  themes: [heart]
   external: "https://iii-iii-iii.org/about/iii-once-removed/"
+  performances:
+    - {date: "2020", venue: "Hochschule für Musik und Theater Hamburg, gala re-opening of the Forum (stage version)", premiere: true}
+    - {date: "2020", venue: "Petersburg Art Space, Berlin (version in the round)", premiere: true}
 
 - slug: circulation
   title: "III: Circulation"
   year: "2018"
-  kind: performance
   collaborative: true
   forces: "Three dancers wearing ECGs, video, and live electronics"
   duration: "30′"
-  threads: [time, collaboration]
+  forms: [performance art, video, live electronics]
+  themes: [heart]
   external: "https://iii-iii-iii.org/about/iii-circulation/"
   legacy: "./compositions/iii_circulation"
+  performances:
+    - {date: "2018", performers: "Naccarato, Justyna Kalbarczyk, Rachel Facchini (dancers); MacCallum (live electronics)", venue: "Lake Studios, Berlin"}
+    - {date: "2018", performers: "Naccarato, Laura Boudou (dancers); MacCallum (live electronics)", venue: "Centre for Dance Research (C-DaRE), Coventry University, UK", premiere: true}
 
 - slug: portraits
   title: "III: Portraits"
   year: "2018"
-  kind: video
   collaborative: true
   forces: "Two short films shown simultaneously"
   duration: "18′"
-  threads: [collaboration]
+  forms: [video]
+  themes: []
   external: "https://iii-iii-iii.org/about/iii-portraits/"
+  performances:
+    - {date: "2018", venue: "Lake Studios, Berlin, “Unfinished Fridays”", premiere: true}
 
 - slug: cloud
   title: "III: Cloud"
   year: "2018"
-  kind: performance
   collaborative: true
   forces: "Two dancers wearing ECGs and two percussionists"
   duration: "30′"
-  threads: [time, collaboration]
-  external: ""   # no project page found
+  forms: [performance art]
+  themes: [heart]
+  external: ""
+  performances:
+    - {date: "2018", performers: "Naccarato, Laura Boudou (dancers); Christian Smith, Ryan Kelly (percussion)", venue: "CLOUD/Danslab, The Hague, NL (created and documented in residence)"}
 
 - slug: tangente
   title: "III: Tangente"
   year: "2016–17"
-  kind: performance
   collaborative: true
   forces: "Three musicians, three dancers wearing ECGs, and three breathers"
   duration: "30′"
-  threads: [time, collaboration]
+  forms: [performance art]
+  themes: [heart]
   external: "https://iii-iii-iii.org/about/iii-tangente/"
+  performances:
+    - {date: "2017", venue: "Tangente Danse, Montréal, QC (created and premiered in residence)", premiere: true}
 
 - slug: coeur-de-cochon
   title: "III: Cœur de cochon"
   year: "2016"
-  kind: video
   collaborative: true
   forces: "Short film"
   duration: "7.5′"
-  threads: [collaboration]
+  forms: [video]
+  themes: []
   external: "https://iii-iii-iii.org/about/iii-coeurdecochon/"
+  performances:
+    - {date: "2018", venue: "Lake Studios, Berlin, “Unfinished Fridays”"}
+    - {date: "2017", venue: "Weisslich Vol. 10, Guest Projects, London, UK", premiere: true}
 
 - slug: respire
   title: "III: Respire"
   year: "2016"
-  kind: installation
   collaborative: true
   forces: "Three breathers; sonic and haptic installation"
   duration: "10′"
-  threads: [time, collaboration]
+  forms: [installation]
+  themes: [heart, listening]
   external: "https://iii-iii-iii.org/about/iii-respire/"
+  performances:
+    - {date: "2018", venue: "Lake Studios, Berlin, “Unfinished Fridays”"}
+    - {date: "2017", venue: "Weisslich Vol. 10, Guest Projects, London, UK"}
+    - {date: "2016", performers: "MacCallum, Naccarato, Laura Boudou", venue: "Djerassi Resident Artists Program, Woodside, CA", premiere: true}
 
 - slug: study-iii
   title: "Study III"
   year: "2016"
-  kind: performance
   collaborative: true
   forces: "Dancer wearing ECG and bass flute"
   duration: "8′"
-  threads: [time, collaboration]
-  external: ""   # no project page found
+  forms: [performance art]
+  themes: [time, heart]
+  external: ""
+  performances:
+    - {date: "2016", performers: "Laura Boudou (dancer); Stacey Pelinka (bass flute)", venue: "Djerassi Resident Artists Program, Woodside, CA", premiere: true}
 
 - slug: study-ii
   title: "Study II"
   year: "2015"
-  kind: performance
   collaborative: true
   forces: "Dancer wearing ECG, percussion, and live electronics"
   duration: "8′"
-  threads: [time, collaboration]
-  external: ""   # no project page found
+  forms: [performance art, live electronics]
+  themes: [time, heart]
+  external: ""
+  performances:
+    - {date: "2015", performers: "Naccarato (dancer); Loren Mach (percussion); MacCallum (live electronics)", venue: "Ubiquitous Swarm Lab Summer Retreat, UC Berkeley", premiere: true}
 
 - slug: synchronism
   title: "Synchronism"
   year: "2015"
-  kind: installation
   collaborative: true
   forces: "Performance-art installation: one-on-one performance, sound installation, and sound sculpture"
   duration: "3–4 h"
-  threads: [collaboration]
+  forms: [performance art, installation]
+  themes: [heart, duration, listening]
   external: "https://iii-iii-iii.org/about/iii-synchronism/"
+  performances:
+    - {date: "2015", performers: "Naccarato (one-on-one performance)", venue: "Montréal, QC"}
+    - {date: "August 12–15, 2015", performers: "Naccarato (one-on-one performance); MacCallum (live electronics)", venue: "SummerWorks Festival, Toronto, ON", premiere: true}
 
 - slug: study-i
   title: "Study I"
   year: "2014"
-  kind: performance
   collaborative: true
   forces: "Dancer wearing ECG and live electronics"
   duration: "8′"
-  threads: [time, instruments, collaboration]
-  external: ""   # no project page found
+  forms: [performance art, live electronics]
+  themes: [time, heart]
+  external: ""
+  performances:
+    - {date: "2014", performers: "Bekah Edie (dancer)", venue: "Ircam, Paris", premiere: true}
 
 # ---------------------------------------------------------------
-# Notated and electroacoustic works
+# Notated and electroacoustic works (pages at /works/<slug>)
 # ---------------------------------------------------------------
 
 - slug: limn
   title: "Limn"
   year: "2015"
-  kind: notated
   collaborative: false
   forces: "Flute, cello, and live electronics"
   duration: "7′"
-  commission: "Left Coast Chamber Ensemble"
-  threads: [time, instruments]
+  commission: "Commissioned by the Left Coast Chamber Ensemble"
+  forms: [notated, live electronics]
+  themes: [time, heart]
   legacy: "./compositions/limn"
-  recording_embed: "https://bandcamp.com/EmbeddedPlayer/track=3318269950/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/"
-  recording: "https://john-maccallum.bandcamp.com/track/limn-a"
+  recordings:
+    - {label: "Limn (A)", embed: "https://bandcamp.com/EmbeddedPlayer/track=3318269950/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/limn-a"}
+  materials:
+    - {label: "Score", url: "https://github.com/maccallum/limn-score/blob/master/score/limn_score.pdf"}
+    - {label: "Electronics", url: "https://github.com/maccallum/limn-electronics/archive/master.zip", note: "zip"}
+    - {label: "Sketch", url: "/compositions/limn/limn_sketch.pdf", note: "PDF, 1.4 MB"}
+  performances:
+    - {date: "February 15, 2026", performers: "Stacey Pelinka (flute), Leighton Fong (cello)", venue: "Left Coast Chamber Ensemble, “Dreaming Chaconne,” Doug Adams Gallery, Berkeley, CA"}
+    - {date: "2018", performers: "Stacey Pelinka (flute), Leighton Fong (cello), Stephen Bingen (electronics)", venue: "Noon Concert Series, UC Davis"}
+    - {date: "2018", performers: "Stacey Pelinka, Leighton Fong, Amadeus Regucera (electronics)", venue: "Center for New Music, San Francisco"}
+    - {date: "2016", performers: "Left Coast Chamber Ensemble; MacCallum (live electronics)", venue: "CCRMA, Stanford University"}
+    - {date: "2015", performers: "Left Coast Chamber Ensemble; MacCallum (live electronics)", venue: "Center for the Arts, Religion, and Education, Berkeley"}
+    - {date: "2015", performers: "Left Coast Chamber Ensemble; MacCallum (live electronics)", venue: "San Francisco Conservatory of Music"}
+    - {date: "October 25–26, 2015", performers: "Left Coast Chamber Ensemble: Stacey Pelinka (flute), Leighton Fong (cello); MacCallum (live electronics)", venue: "142 Throckmorton Theatre, Mill Valley, CA", premiere: true}
 
 - slug: synchromism
   title: "Synchromism"
   year: "2015"
-  kind: notated
   collaborative: false
   forces: "Organ (Rosales Op. 16)"
   duration: "35′"
-  commission: "Cyril Deaconoff, with support from the Fleishhacker Foundation"
-  threads: [time]
+  commission: "Commissioned by Cyril Deaconoff with support from the Fleishhacker Foundation"
+  forms: [notated, live electronics]
+  themes: []
+  performances:
+    - {date: "June 14, 2015", performers: "Cyril Deaconoff (organ); MacCallum (live electronics)", venue: "First Presbyterian Church of Oakland, CA", premiere: true}
 
 - slug: antony
   title: "Antony: A Reimagining"
   year: "2015"
-  kind: electroacoustic
   collaborative: false
-  forces: "Live electronics; a reimagining of David Wessel’s Antony (1977), with Matthew Goodheart and Adrian Freed, in memory of David Wessel"
+  forces: "Live electronics"
   duration: "15′"
-  threads: [instruments, collaboration]
+  commission: "A reimagining of David Wessel’s Antony (1977), with Matthew Goodheart and Adrian Freed, in memory of David Wessel"
+  forms: [live electronics]
+  themes: []
+  materials:
+    - {label: "Paper, ICMC 2015", url: "/assets/papers/2015_MacCallumGooheartFreed_ICMC_Antony.pdf", note: "PDF"}
+  performances:
+    - {date: "2015", performers: "MacCallum, Matthew Goodheart (electronics)", venue: "International Computer Music Conference, Denton, TX"}
+    - {date: "2015", performers: "MacCallum, Matthew Goodheart (electronics)", venue: "San Francisco Tape Music Festival", premiere: true}
 
 - slug: hyphos
   title: "Hyphos"
   year: "2014"
-  kind: notated
   collaborative: false
   forces: "Alto flute, bass clarinet, viola, and live electronics"
   duration: "10′"
-  commission: "Earplay"
-  threads: [time, instruments]
+  commission: "Commissioned by Earplay"
+  forms: [notated, live electronics]
+  themes: [time]
   legacy: "./compositions/hyphos"
+  recordings:
+    - {label: "Earplay", embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/351418252%3Fsecret_token%3Ds-F85tm&color=%23555555&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false", height: 166}
+  materials:
+    - {label: "Score", url: "https://github.com/maccallum/hyphos-score/blob/master/score/hyphos_fullscore_with_frontmatter.pdf"}
+    - {label: "Parts", url: "/compositions/hyphos/hyphos_parts.zip", note: "zip, 408 KB"}
+    - {label: "Electronics", url: "https://github.com/maccallum/hyphos-electronics/archive/master.zip", note: "zip"}
+  performances:
+    - {date: "2016", venue: "MANCA Festival, Nice, France"}
+    - {date: "2016", performers: "Earplay: Tod Brody (alto flute), Peter Josheff (bass clarinet), Ellen Ruth Rose (viola)", venue: "Festival of New American Music, Sacramento State University"}
+    - {date: "May 19, 2014", performers: "Earplay: Tod Brody (alto flute), Peter Josheff (bass clarinet), Ellen Ruth Rose (viola)", venue: "ODC Theater, San Francisco", premiere: true}
 
 - slug: delicate-texture-of-time
   title: "…delicate texture of time…"
   year: "2012–13"
-  kind: notated
   collaborative: false
   forces: "Flute, clarinet, saxophone, two percussion, violin, viola, and cello"
   duration: "13′"
-  commission: "ECO Ensemble, with support from the Mellon Foundation"
-  threads: [time]
+  commission: "Commissioned by the ECO Ensemble with support from the Mellon Foundation"
+  forms: [notated]
+  themes: [time]
   legacy: "./compositions/texture_of_time"
+  recordings:
+    - {label: "ECO Ensemble, Venice Biennale, 2014", embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/388477497&color=%23555555&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false", height: 166}
+    - {label: "ECO Ensemble", embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/88359439&color=%23555555&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false", height: 166}
+  materials:
+    - {label: "Score", url: "/compositions/texture_of_time/texture_fullscore.pdf", note: "PDF, 2 MB"}
+    - {label: "Parts", url: "/compositions/texture_of_time/texture_parts.zip", note: "zip, 1.1 MB"}
+    - {label: "Click tracks", url: "https://github.com/maccallum/texture-click-tracks/archive/master.zip", note: "zip"}
+    - {label: "Program note, ECO Ensemble", url: "/compositions/texture_of_time/pn_eco2.pdf", note: "PDF"}
+    - {label: "Sketch, pages 1–39", url: "/compositions/texture_of_time/texture_sketch_1-39.pdf", note: "PDF, 54 MB"}
+    - {label: "Sketch, pages 40–78", url: "/compositions/texture_of_time/texture_sketch_40-78.pdf", note: "PDF, 59 MB"}
+  performances:
+    - {date: "2014", performers: "ECO Ensemble", venue: "Venice Biennale, Italy"}
+    - {date: "February 23, 2013", performers: "ECO Ensemble", venue: "Berkeley, CA", premiere: true}
 
 - slug: aberration
   title: "Aberration"
   year: "2010"
-  kind: notated
   collaborative: false
   forces: "Percussion trio"
   duration: "8′"
-  commission: "Rootstock Percussion"
-  threads: [time]
+  commission: "Commissioned by and written for Rootstock Percussion (Chris Froh, Dan Kennedy, Loren Mach). Dedicated to Edmund Campion"
+  forms: [notated]
+  themes: [time]
   legacy: "./compositions/aberration"
+  recordings:
+    - {label: "Rootstock Percussion", embed: "https://bandcamp.com/EmbeddedPlayer/track=325422030/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/aberration"}
+  videos:
+    - {label: "Rootstock Percussion", embed: "https://www.youtube-nocookie.com/embed/7Q-GZx3dlTw", url: "https://www.youtube.com/watch?v=7Q-GZx3dlTw"}
+    - {label: "Rootstock Percussion recording Aberration", embed: "https://www.youtube-nocookie.com/embed/14DklG9-Hn4", url: "https://www.youtube.com/watch?v=14DklG9-Hn4"}
+  materials:
+    - {label: "Score", url: "https://github.com/maccallum/aberration-score/blob/master/aberration_fullscore.pdf"}
+    - {label: "Parts", url: "/compositions/aberration/aberration_parts.zip", note: "zip, 416 KB"}
+    - {label: "Click tracks", url: "https://github.com/maccallum/aberration-click-tracks/archive/master.zip", note: "zip"}
+    - {label: "Sketch", url: "/compositions/aberration/aberration_sketch.pdf", note: "PDF, 27 MB"}
+  performances:
+    - {date: "July 1, 2013", performers: "Rootstock Percussion (Chris Froh, Dan Kennedy, Loren Mach)", venue: "Music in the Mountains SummerFest, Nevada City, CA"}
+    - {date: "February 7, 2013", performers: "Rootstock Percussion", venue: "University of California, Davis"}
+    - {date: "November 5, 2012", performers: "Rootstock Percussion", venue: "Festival of New American Music, Sacramento, CA"}
+    - {date: "September 23, 2012", performers: "Rootstock Percussion", venue: "Central Pacific Railroad Tunnel 6, Donner Pass, CA"}
+    - {date: "February 8, 2012", performers: "McGill Percussion Ensemble", venue: "Pollack Hall, McGill University, Montréal"}
+    - {date: "April 8, 2011", performers: "Rootstock Percussion", venue: "Community Music Center, San Francisco"}
+    - {date: "December 13, 2010", performers: "Rootstock Percussion", venue: "Berkeley New Music Project, UC Berkeley"}
+    - {date: "October 25, 2010", performers: "Rootstock Percussion", venue: "Classical at the Freight, Freight & Salvage, Berkeley, CA", premiere: true}
+    - {date: "October 20, 2010", performers: "Rootstock Percussion", venue: "California State University, Sacramento"}
 
 - slug: el-arbol
   title: "El Árbol de la noche triste"
   year: "2010"
-  kind: notated
   collaborative: false
-  forces: "Viola and live electronics; written for Ellen Ruth Rose"
+  forces: "Viola or cello, and live electronics"
   duration: "10′"
-  threads: [time, instruments]
+  commission: "Written for Ellen Ruth Rose"
+  forms: [notated, live electronics]
+  themes: [time]
   legacy: "./compositions/el_arbol"
+  recordings:
+    - {label: "El Árbol de la noche triste", embed: "https://bandcamp.com/EmbeddedPlayer/track=4197628130/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/el-rbol-de-la-noche-triste"}
+  materials:
+    - {label: "Score, viola version", url: "https://github.com/maccallum/arbol-score/blob/master/score/viola_score.pdf"}
+    - {label: "Score, cello version", url: "https://github.com/maccallum/arbol-score/blob/master/score/cello_score.pdf"}
+    - {label: "Electronics", url: "https://github.com/maccallum/arbol-electronics/archive/master.zip", note: "zip"}
+  performances:
+    - {date: "2016", performers: "Marie Ythier (cello); MacCallum (electronics)", venue: "CMMAS, Morelia, Mexico"}
+    - {date: "October 19, 2011", performers: "Jin-Won Yoon (viola)", venue: "Seoul International Computer Music Festival, South Korea"}
+    - {date: "October 1, 2010", performers: "Benjamin Taylor (viola)", venue: "Spark Festival, Minneapolis, MN"}
+    - {date: "April 4, 2010", performers: "Ellen Ruth Rose (viola)", venue: "Berkeley New Music Project, UC Berkeley"}
+    - {date: "January 24, 2010", performers: "Ellen Ruth Rose (viola), Empyrean Ensemble", venue: "Mondavi Center for the Performing Arts, Davis, CA", premiere: true}
 
 - slug: blankness
   title: "…blankness…"
   year: "2008"
-  kind: notated
   collaborative: false
   forces: "Viola, vibraphone, and live electronics"
   duration: "12′"
-  threads: [instruments]
+  forms: [notated, live electronics]
+  themes: []
   legacy: "./compositions/blankness"
+  recordings:
+    - {label: "…blankness…", embed: "https://bandcamp.com/EmbeddedPlayer/track=3844739931/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/blankness"}
+  materials:
+    - {label: "Score", url: "/compositions/blankness/blankness.pdf", note: "PDF, 288 KB"}
+  performances:
+    - {date: "August 16, 2009", performers: "Pemi Paull (viola), Fabrice Marandola (percussion)", venue: "International Computer Music Conference, McGill University, Montréal"}
+    - {date: "April 13, 2009", performers: "Darcy Rindt (viola), Loren Mach (percussion)", venue: "Berkeley New Music Project, UC Berkeley"}
+    - {date: "November 19, 2008", performers: "Raphaël Chazal (viola), Romain Garcera (percussion)", venue: "MANCA Festival, Nice, France", premiere: true}
 
 - slug: frozen-into-shards-of-ice
   title: "…frozen into shards of ice…"
   year: "2007"
-  kind: electroacoustic
   collaborative: false
   forces: "Live electronics"
   duration: "15′"
-  threads: [instruments]
+  forms: [live electronics]
+  themes: []
   legacy: "./compositions/shards_of_ice"
+  recordings:
+    - {label: "…frozen into shards of ice…", embed: "https://bandcamp.com/EmbeddedPlayer/track=2726554258/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/frozen-into-shards-of-ice"}
+  performances:
+    - {date: "2014", performers: "MacCallum", venue: "Center for New Music, San Francisco"}
+    - {date: "2014", performers: "MacCallum", venue: "Berkeley Arts Festival, Berkeley, CA"}
+    - {date: "February 19, 2012", performers: "Johnny Meek", venue: "Music Technology Faculty Concert, Fenway Center, Boston, MA"}
+    - {date: "November 10, 2007", performers: "Fire Wire Ensemble", venue: "Chicago, IL"}
+    - {date: "November 7, 2007", performers: "MacCallum", venue: "MANCA Festival, Nice, France"}
+    - {date: "November 7, 2007", performers: "MacCallum", venue: "CNMAT/CCRMA Exchange, Stanford University"}
+    - {date: "August 27, 2007", venue: "International Computer Music Conference, Royal Danish Library, Copenhagen"}
+    - {date: "April 2, 2007", performers: "MacCallum", venue: "Berkeley New Music Project, UC Berkeley", premiere: true}
 
 - slug: almost-like-hail
   title: "…almost like hail…"
   year: "2007"
-  kind: notated
   collaborative: false
-  forces: "Percussion and live electronics; written for Chris Froh"
+  forces: "Percussion and live electronics"
   duration: "18′"
-  threads: [instruments]
+  commission: "Written for Chris Froh"
+  forms: [notated, live electronics]
+  themes: []
   legacy: "./compositions/almost_like_hail"
+  recordings:
+    - {label: "…almost like hail…", embed: "https://bandcamp.com/EmbeddedPlayer/track=1167859534/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/almost-like-hail"}
+  materials:
+    - {label: "Score", url: "/compositions/almost_like_hail/almost_like_hail.pdf", note: "PDF, 564 KB"}
+  performances:
+    - {date: "April 4, 2008", performers: "Chris Froh (percussion)", venue: "UC Davis Percussion Festival"}
+    - {date: "December 17, 2007", performers: "Chris Froh (percussion)", venue: "Berkeley New Music Project, UC Berkeley", premiere: true}

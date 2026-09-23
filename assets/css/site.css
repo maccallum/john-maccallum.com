@@ -129,7 +129,7 @@ figcaption { font-size: 0.9rem; margin-top: 0.5rem; }
 
 /* Works index: one line per work where the screen allows */
 .works { list-style: none; padding: 0; margin: 0.75rem 0 0; }
-.works li {
+.works > li {
   padding: 0.3rem 0;
   border-bottom: 1px dotted var(--rule);
 }
@@ -150,3 +150,38 @@ figcaption { font-size: 0.9rem; margin-top: 0.5rem; }
 .list-head { margin-top: 3rem; }
 #software dd, #sites dd { margin-bottom: 0.5rem; }
 #software dt, #sites dt { text-transform: none; letter-spacing: 0; font-size: 1rem; color: var(--text); }
+
+/* Page headings (pages other than the front page) */
+main > h1, .work-head h1 { font-size: 1.75rem; font-weight: normal; line-height: 1.25; margin: 0 0 0.5rem; }
+.work-head h1 .year { font-style: normal; color: var(--muted); }
+.work-head { margin-bottom: 2.5rem; }
+.work-head p { margin: 0.25rem 0; }
+.forces { font-size: 1.05rem; }
+.commission { color: var(--muted); font-size: 0.95rem; }
+.work section { margin-bottom: 2.5rem; }
+.media { margin: 0 0 1.25rem; max-width: var(--wide); }
+.media.audio iframe { border: 0; width: 100%; max-width: var(--measure); display: block; }
+.note blockquote { margin: 0 0 1.5rem; padding-left: 1rem; border-left: 1px dashed var(--rule); font-style: italic; }
+.note blockquote cite { display: block; font-style: normal; color: var(--muted); font-size: 0.9rem; }
+.note blockquote cite i { font-style: italic; }
+.note h2 { border-top: 0; font-size: 1.1rem; margin-top: 2rem; }
+.materials, .perfs { padding-left: 1.1rem; }
+.materials li, .perfs li { margin: 0.3rem 0; }
+.perfs { font-size: 0.95rem; }
+.perfs .date { white-space: nowrap; }
+.premiere { color: var(--muted); }
+.back { margin-top: 3rem; font-size: 0.9rem; }
+
+/* Tags */
+.tags { list-style: none; padding: 0; margin: 0.35rem 0 0; display: flex; flex-wrap: wrap; gap: 0.2rem 0.5rem; font-size: 0.8rem; }
+.tags a { color: var(--muted); text-decoration-style: dotted; }
+.works .tags { margin-top: 0.1rem; }
+
+/* Works index filters */
+.filters { margin: 1rem 0 2.5rem; font-size: 0.9rem; }
+.filters p { margin: 0.4rem 0; display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; align-items: baseline; }
+.filter-label { font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); min-width: 6.5rem; }
+.filters a[aria-current] { text-decoration: none; border-bottom: 2px solid currentColor; }
+.filter-status { color: var(--muted); }
+.works-group { margin-bottom: 3rem; }
+.works-group[hidden], .works > li[hidden] { display: none; }

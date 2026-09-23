@@ -1,0 +1,42 @@
+---
+layout: default
+title: Moved
+description: Pages from the previous version of this site have moved.
+sitemap: false
+---
+{%- comment -%}
+Old URLs were /index.php?page=<folder>. A Cloudflare redirect rule sends
+/index.php to /legacy/ with the query string kept; this page forwards to
+the new address. Work folders come from `legacy` in _data/works.yml.
+{%- endcomment -%}
+{%- assign legacy_works = site.data.works | where_exp: "w", "w.legacy" -%}
+<h1>This page has moved</h1>
+<p>The site was rebuilt in 2026. You should be forwarded automatically; if not, the page you were looking for is probably one of these:</p>
+<ul>
+  <li><a href="{{ '/works/' | relative_url }}">Works</a></li>
+  {%- for w in legacy_works %}
+  {%- if w.collaborative %}
+  <li><a href="{{ w.external }}">{{ w.title }}</a></li>
+  {%- else %}
+  <li><a href="{{ '/works/' | append: w.slug | append: '/' | relative_url }}"><em>{{ w.title }}</em></a></li>
+  {%- endif %}
+  {%- endfor %}
+  <li><a href="{{ '/#software' | relative_url }}">Software</a></li>
+  <li><a href="{{ '/' | relative_url }}">Home</a></li>
+</ul>
+<script>
+  (function () {
+    var home = {{ '/' | relative_url | jsonify }};
+    var map = {
+      "./compositions": {{ '/works/' | relative_url | jsonify }},
+      "./software": {{ '/#software' | relative_url | jsonify }},
+      "./writings": home,
+      "./cv": {{ '/#contact' | relative_url | jsonify }}
+      {%- for w in legacy_works %},
+      {{ w.legacy | jsonify }}: {% if w.collaborative %}{{ w.external | jsonify }}{% else %}{{ '/works/' | append: w.slug | append: '/' | relative_url | jsonify }}{% endif %}
+      {%- endfor %}
+    };
+    var page = (new URLSearchParams(location.search).get("page") || "").replace(/\/+$/, "");
+    location.replace(map[page] || home);
+  })();
+</script>

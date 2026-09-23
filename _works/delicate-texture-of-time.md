@@ -1,0 +1,5 @@
+---
+---
+> …what I am concerned with is the delicate texture of Time, void of all embroidered events. […] Physiologically the sense of Time is a sense of continuous becoming, and if ‘becoming’ has a voice, the latter might be, not unnaturally, a steady vibration;
+>
+> <cite>Vladimir Nabokov, <i>Ada or Ardor</i></cite>

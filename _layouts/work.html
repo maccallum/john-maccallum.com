@@ -1,0 +1,62 @@
+---
+layout: default
+---
+{%- assign w = site.data.works | where: "slug", page.slug | first -%}
+<article class="work">
+  <header class="work-head">
+    <h1><em>{{ w.title }}</em> <span class="year">({{ w.year }})</span></h1>
+    <p class="forces">{{ w.forces }}{% if w.duration != "" %} · {{ w.duration }}{% endif %}</p>
+    {%- if w.commission %}
+    <p class="commission">{{ w.commission }}.</p>
+    {%- endif %}
+    {% include tags.html work=w %}
+  </header>
+
+  {%- if w.recordings.size > 0 %}
+  <section>
+    <h2>{% if w.recordings.size > 1 %}Recordings{% else %}Recording{% endif %}</h2>
+    {%- for r in w.recordings %}{% include player.html item=r kind="audio" title=w.title %}{% endfor %}
+  </section>
+  {%- endif %}
+
+  {%- if w.videos.size > 0 %}
+  <section>
+    <h2>{% if w.videos.size > 1 %}Videos{% else %}Video{% endif %}</h2>
+    {%- for v in w.videos %}{% include player.html item=v kind="video" title=w.title %}{% endfor %}
+  </section>
+  {%- endif %}
+
+  {%- assign body = content | strip %}
+  {%- if body != "" %}
+  <section class="note">
+    <h2>Program note</h2>
+    {{ content }}
+  </section>
+  {%- endif %}
+
+  {%- if w.materials.size > 0 %}
+  <section>
+    <h2>Score and materials</h2>
+    <ul class="materials">
+      {%- for m in w.materials %}
+      {%- assign first = m.url | slice: 0 %}
+      <li><a href="{% if first == '/' %}{{ m.url | relative_url }}{% else %}{{ m.url }}{% endif %}">{{ m.label }}</a>{% if m.note %} <span class="meta">({{ m.note }})</span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+    <p class="meta">For performance materials not listed here, write to <a href="mailto:{{ site.email }}?subject={{ w.title | strip_html | url_encode }}">{{ site.email }}</a>.</p>
+  </section>
+  {%- endif %}
+
+  {%- if w.performances.size > 0 %}
+  <section>
+    <h2>Performances</h2>
+    <ul class="perfs">
+      {%- for p in w.performances %}
+      <li><span class="date">{{ p.date }}</span> · {{ p.venue }}{% if p.performers %} · {{ p.performers }}{% endif %}{% if p.premiere %} <span class="premiere">(premiere)</span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endif %}
+
+  <p class="back"><a href="{{ '/works/' | relative_url }}">All works</a></p>
+</article>
