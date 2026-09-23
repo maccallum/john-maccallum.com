@@ -1,0 +1,3 @@
+{%- comment -%} Marks a link as leaving the site, naming where it goes. include.url {%- endcomment -%}
+{%- assign host = include.url | split: "/" -%}
+<span class="ext">↗ {{ host[2] | remove: "www." }}</span>

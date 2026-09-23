@@ -11,29 +11,17 @@ description: >-
 
 <h1>Works</h1>
 
-<nav class="filters" aria-label="Filter by tag">
-  <p><span class="filter-label">Made with</span>
-    {%- for t in site.data.tags.forms %}
-    <a href="?tag={{ t.name | slugify }}" data-tag="{{ t.name | slugify }}" title="{{ t.about }}">{{ t.label }}</a>
-    {%- endfor %}
-  </p>
-  <p><span class="filter-label">Themes</span>
-    {%- for t in site.data.tags.themes %}
-    <a href="?tag={{ t.name | slugify }}" data-tag="{{ t.name | slugify }}" title="{{ t.about }}">{{ t.label }}</a>
-    {%- endfor %}
-  </p>
-  <p class="filter-status" hidden><span id="filter-about"></span> <a href="{{ '/works/' | relative_url }}">Show all</a></p>
-</nav>
+{% include tag-nav.html status=true %}
 
 <section class="works-group">
   <h2>Performance, video, and installation</h2>
-  <p class="lede">With choreographer Teoma Naccarato, from 2025 as <a href="{{ site.links.frictionfield }}">Friction Field Collaborative</a>. Choreography, direction, and video are Naccarato’s; sound, live electronics, and the sensing, video, and network systems are MacCallum’s. Both perform. Each work is documented on its project page.</p>
+  <p class="lede">With choreographer Teoma Naccarato, from 2025 as <a href="{{ site.links.frictionfield }}">Friction Field Collaborative</a>. Choreography, direction, and video are Naccarato’s; sound, live electronics, and the sensing, video, and network systems are MacCallum’s. Both perform. Each work is documented on its project site.</p>
   <ul class="works">
     {%- for w in collaborative %}
     {%- assign all = w.forms | concat: w.themes %}
     <li data-tags="{% for t in all %}{{ t | slugify }} {% endfor %}">
       {%- if w.external != "" -%}
-      <a href="{{ w.external }}">{{ w.title }}</a>
+      <a href="{{ w.external }}">{{ w.title }}</a> {% include external.html url=w.external %}
       {%- else -%}
       <span class="title">{{ w.title }}</span>
       {%- endif %} <span class="meta">{{ w.year }}{% if w.duration != "" %} · {{ w.duration }}{% endif %} · {{ w.forces }}</span>

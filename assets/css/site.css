@@ -148,6 +148,7 @@ figcaption { font-size: 0.9rem; margin-top: 0.5rem; }
 
 .credit { font-size: 0.9rem; color: var(--muted); }
 .list-head { margin-top: 3rem; }
+div.list-head .filters { margin: 0; }
 #software dd, #sites dd { margin-bottom: 0.5rem; }
 #software dt, #sites dt { text-transform: none; letter-spacing: 0; font-size: 1rem; color: var(--text); }
 
@@ -185,3 +186,6 @@ main > h1, .work-head h1 { font-size: 1.75rem; font-weight: normal; line-height:
 .filter-status { color: var(--muted); }
 .works-group { margin-bottom: 3rem; }
 .works-group[hidden], .works > li[hidden] { display: none; }
+
+.ext { font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
+main > section .filters { margin: 0.5rem 0 1rem; }

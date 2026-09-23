@@ -165,7 +165,7 @@
   forces: "Two short films shown simultaneously"
   duration: "18′"
   forms: [video]
-  themes: []
+  themes: [cameras]
   external: "https://iii-iii-iii.org/about/iii-portraits/"
   performances:
     - {date: "2018", venue: "Lake Studios, Berlin, “Unfinished Fridays”", premiere: true}
@@ -201,7 +201,7 @@
   forces: "Short film"
   duration: "7.5′"
   forms: [video]
-  themes: []
+  themes: [heart]
   external: "https://iii-iii-iii.org/about/iii-coeurdecochon/"
   performances:
     - {date: "2018", venue: "Lake Studios, Berlin, “Unfinished Fridays”"}
@@ -303,7 +303,7 @@
   title: "Synchromism"
   year: "2015"
   collaborative: false
-  forces: "Organ (Rosales Op. 16)"
+  forces: "Organ (Rosales Op. 16) and live electronics"
   duration: "35′"
   commission: "Commissioned by Cyril Deaconoff with support from the Fleishhacker Foundation"
   forms: [notated, live electronics]

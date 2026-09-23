@@ -33,7 +33,7 @@ nav:
     </div>
     {%- else %}
     <div class="video video-pending">
-      <p>Video in preparation. Stills and documentation on the <a href="{{ w.external }}">project page</a>.</p>
+      <p>Video in preparation. Stills and documentation on the <a href="{{ w.external }}">project page</a> {% include external.html url=w.external %}</p>
     </div>
     {%- endif %}
     <h3>{{ w.title }} <span class="year">({{ w.year }})</span></h3>
@@ -45,17 +45,19 @@ nav:
       {%- for v in w.videos %}
       <a href="{{ v.url | default: v.embed }}">{{ v.label }}</a> ·
       {%- endfor %}
-      <a href="{{ w.external }}">Project page</a>
+      <a href="{{ w.external }}">Project page</a> {% include external.html url=w.external %}
     </p>
   </article>
   {%- endfor %}
+
+  <div class="list-head">{% include tag-nav.html %}</div>
 
   <h3 class="list-head">Performance, video, and installation</h3>
   <ul class="works">
     {%- for w in collaborative %}
     <li>
       {%- if w.external != "" -%}
-      <a href="{{ w.external }}">{{ w.title }}</a>
+      <a href="{{ w.external }}">{{ w.title }}</a> {% include external.html url=w.external %}
       {%- else -%}
       <span class="title">{{ w.title }}</span>
       {%- endif %} <span class="meta">{{ w.year }}{% if w.duration != "" %} · {{ w.duration }}{% endif %}</span>
@@ -75,7 +77,7 @@ nav:
     </li>
     {%- endfor %}
   </ul>
-  <p><a href="{{ '/works/' | relative_url }}">All works, with performance history and filters by tag</a></p>
+  <p><a href="{{ '/works/' | relative_url }}">All works on one page</a>, with their tags</p>
 </section>
 
 <section id="software">

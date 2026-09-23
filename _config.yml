@@ -25,6 +25,13 @@ links:
   immediations: "https://immediations.com"
   interstitial_listening: "https://interstitial-listening.com"
 
+# Navigation on every page except the front page, which has its own.
+nav:
+  - {label: Works, href: "/works/"}
+  - {label: Software, href: "/#software"}
+  - {label: Project sites, href: "/#sites"}
+  - {label: Contact, href: "/#contact"}
+
 collections:
   works:
     output: true

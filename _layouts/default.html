@@ -10,11 +10,12 @@
     <p class="site-name"><a href="{{ '/' | relative_url }}">John MacCallum</a></p>
     {%- endif %}
     <p class="site-tagline">{{ site.tagline }}</p>
-    {%- if page.nav %}
+    {%- assign nav = page.nav | default: site.nav %}
+    {%- if nav %}
     <nav aria-label="Sections">
       <ul>
-        {%- for item in page.nav %}
-        <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+        {%- for item in nav %}
+        <li><a href="{% if item.href contains '#' and page.nav %}{{ item.href }}{% else %}{{ item.href | relative_url }}{% endif %}">{{ item.label }}</a></li>
         {%- endfor %}
       </ul>
     </nav>
