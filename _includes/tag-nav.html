@@ -1,16 +1,23 @@
 {%- comment -%} Links to the works index filtered by each tag. Used on the front page and the works index. {%- endcomment -%}
-<nav class="filters" aria-label="Browse works by tag">
-  <p><span class="filter-label">Made with</span>
-    {%- for t in site.data.tags.forms %}
-    <a href="{{ '/works/' | relative_url }}?tag={{ t.name | slugify }}" data-tag="{{ t.name | slugify }}" title="{{ t.about }}">{{ t.label }}</a>
-    {%- endfor %}
-  </p>
-  <p><span class="filter-label">Themes</span>
-    {%- for t in site.data.tags.themes %}
-    <a href="{{ '/works/' | relative_url }}?tag={{ t.name | slugify }}" data-tag="{{ t.name | slugify }}" title="{{ t.about }}">{{ t.label }}</a>
-    {%- endfor %}
-  </p>
+<nav class="filters" aria-labelledby="browse-{{ include.id | default: 'tags' }}">
+  <p class="filter-intro" id="browse-{{ include.id | default: 'tags' }}">Browse the works by form or by theme:</p>
+  <div class="filter-group">
+    <span class="filter-label">Form</span>
+    <ul>
+      {%- for t in site.data.tags.forms %}
+      <li><a href="{{ '/works/' | relative_url }}?tag={{ t.name | slugify }}" data-tag="{{ t.name | slugify }}" title="{{ t.about }}">{{ t.label }}</a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">Theme</span>
+    <ul>
+      {%- for t in site.data.tags.themes %}
+      <li><a href="{{ '/works/' | relative_url }}?tag={{ t.name | slugify }}" data-tag="{{ t.name | slugify }}" title="{{ t.about }}">{{ t.label }}</a></li>
+      {%- endfor %}
+    </ul>
+  </div>
   {%- if include.status %}
-  <p class="filter-status" hidden><span id="filter-about"></span> <a href="{{ '/works/' | relative_url }}">Show all</a></p>
+  <p class="filter-status" hidden>Showing works tagged “<span id="filter-about"></span> <a href="{{ '/works/' | relative_url }}">Show all works</a></p>
   {%- endif %}
 </nav>

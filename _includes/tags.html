@@ -1,10 +1,8 @@
-{%- comment -%} Tag links for one work. include.work {%- endcomment -%}
+{%- comment -%} Tag links for one work, grouped as form and theme. include.work {%- endcomment -%}
 {%- assign w = include.work -%}
-{%- assign all = w.forms | concat: w.themes -%}
-{%- if all.size > 0 %}
-<ul class="tags" aria-label="Tags">
-  {%- for t in all %}
-  <li><a href="{{ '/works/' | relative_url }}?tag={{ t | slugify }}">{{ t }}</a></li>
-  {%- endfor %}
-</ul>
+{%- if w.forms.size > 0 or w.themes.size > 0 %}
+<p class="tags">
+  {%- if w.forms.size > 0 %}<span class="tag-group">Form: {% for t in w.forms %}<a href="{{ '/works/' | relative_url }}?tag={{ t | slugify }}">{{ t }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif %}
+  {%- if w.themes.size > 0 %}<span class="tag-group">Theme: {% for t in w.themes %}<a href="{{ '/works/' | relative_url }}?tag={{ t | slugify }}">{{ t }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif %}
+</p>
 {%- endif %}

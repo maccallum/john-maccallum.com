@@ -173,17 +173,23 @@ main > h1, .work-head h1 { font-size: 1.75rem; font-weight: normal; line-height:
 .premiere { color: var(--muted); }
 .back { margin-top: 3rem; font-size: 0.9rem; }
 
-/* Tags */
-.tags { list-style: none; padding: 0; margin: 0.35rem 0 0; display: flex; flex-wrap: wrap; gap: 0.2rem 0.5rem; font-size: 0.8rem; }
+/* Tags on a work */
+.tags { margin: 0.3rem 0 0; font-size: 0.8rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0 1.25rem; }
 .tags a { color: var(--muted); text-decoration-style: dotted; }
 .works .tags { margin-top: 0.1rem; }
 
-/* Works index filters */
-.filters { margin: 1rem 0 2.5rem; font-size: 0.9rem; }
-.filters p { margin: 0.4rem 0; display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; align-items: baseline; }
-.filter-label { font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); min-width: 6.5rem; }
+/* Browse by tag (front page and works index) */
+.filters { margin: 1rem 0 2.5rem; padding: 0.9rem 1rem; background: var(--panel); font-size: 0.9rem; max-width: var(--wide); }
+.filter-intro { margin: 0 0 0.5rem; color: var(--muted); }
+.filter-group { display: grid; grid-template-columns: 4.5rem 1fr; align-items: baseline; margin: 0.25rem 0; }
+.filter-label { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.filter-group ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; }
 .filters a[aria-current] { text-decoration: none; border-bottom: 2px solid currentColor; }
-.filter-status { color: var(--muted); }
+.filter-status { margin: 0.75rem 0 0; }
+@media (max-width: 30rem) {
+  .filter-group { display: block; margin-top: 0.5rem; }
+  .filter-label { display: block; margin-bottom: 0.15rem; }
+}
 .works-group { margin-bottom: 3rem; }
 .works-group[hidden], .works > li[hidden] { display: none; }
 
