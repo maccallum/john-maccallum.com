@@ -25,9 +25,10 @@ links:
   immediations: "https://immediations.com"
   interstitial_listening: "https://interstitial-listening.com"
 
-# The old PHP site keeps running beside this one until cutover. Its work
-# pages are linked from here as /index.php?page=<legacy folder>.
-legacy_base: "/index.php?page="
+# The old PHP site stays on DreamHost until its work pages are migrated.
+# Linked absolutely so the links work from the GitHub Pages
+# preview too. Must be empty of uses before the domain moves.
+legacy_base: "https://john-maccallum.com/index.php?page="
 
 collections:
   publications:
