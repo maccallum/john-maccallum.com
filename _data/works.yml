@@ -18,6 +18,8 @@
 # videos:        [{label, embed, url}]; embed is the player URL
 # materials:     [{label, url, note}]; files live in compositions/<folder>/,
 #                the old site's paths, so old direct links keep working
+# music:         standalone electroacoustic version of a collaborative work
+#                {duration, about, recordings}
 # performances:  most recent first; premiere: true marks the premiere
 
 # ---------------------------------------------------------------
@@ -41,6 +43,11 @@
     from their heart signals. Premiered June 1–3, 2023, SomoS Art Gallery,
     Berlin.
   videos: []
+  music:
+    duration: "26′"
+    about: "Electroacoustic; the music of the performance as a standalone work"
+    recordings:
+      - {label: "III: Once Replete", embed: "https://bandcamp.com/EmbeddedPlayer/track=4109121422/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/iii-once-replete"}
   performances:
     - {date: "June 1–3, 2023", venue: "SomoS Art Gallery, Berlin", premiere: true}
 
@@ -105,6 +112,11 @@
     surveillance system. Premiered 2021 at Lake Studios Berlin,
     live-streamed.
   videos: []
+  music:
+    duration: "16′"
+    about: "Live electronics, fixed version"
+    recordings:
+      - {label: "Im/mediations: REMAINS", embed: "https://bandcamp.com/EmbeddedPlayer/track=4267652162/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/im-mediations-remains"}
   performances:
     - {date: "2021", venue: "Lake Studios, Berlin, live-streamed", premiere: true}
 
@@ -155,6 +167,13 @@
   themes: [heart]
   external: "https://iii-iii-iii.org/about/iii-circulation/"
   legacy: "./compositions/iii_circulation"
+  music:
+    duration: "20′ each"
+    about: "Three electroacoustic versions: 1:4a, 1:4b, and 2:4a"
+    recordings:
+      - {label: "III: Circulation 1:4a", embed: "https://bandcamp.com/EmbeddedPlayer/track=2599761694/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/iii-circulation-1-4a"}
+      - {label: "III: Circulation 1:4b", embed: "https://bandcamp.com/EmbeddedPlayer/track=3410715186/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/iii-circulation-1-4b"}
+      - {label: "III: Circulation 2:4a", embed: "https://bandcamp.com/EmbeddedPlayer/track=1198148497/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/iii-circulation-2-4a"}
   performances:
     - {date: "2018", performers: "Naccarato, Justyna Kalbarczyk, Rachel Facchini (dancers); MacCallum (live electronics)", venue: "Lake Studios, Berlin"}
     - {date: "2018", performers: "Naccarato, Laura Boudou (dancers); MacCallum (live electronics)", venue: "Centre for Dance Research (C-DaRE), Coventry University, UK", premiere: true}
@@ -279,14 +298,14 @@
   title: "Limn"
   year: "2015"
   collaborative: false
-  forces: "Flute, cello, and live electronics"
+  forces: "Three pieces: Limn (A) for electronics, Limn (B) for flute and cello, and Limn (A+B), each performable alone"
   duration: "7′"
   commission: "Commissioned by the Left Coast Chamber Ensemble"
   forms: [notated, live electronics]
   themes: [time, heart]
   legacy: "./compositions/limn"
   recordings:
-    - {label: "Limn (A)", embed: "https://bandcamp.com/EmbeddedPlayer/track=3318269950/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/limn-a"}
+    - {label: "Limn (A), for electronics", embed: "https://bandcamp.com/EmbeddedPlayer/track=3318269950/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/limn-a"}
   materials:
     - {label: "Score", url: "/compositions/limn/limn_score.pdf", note: "PDF, 616 KB"}
     - {label: "Electronics", url: "/compositions/limn/limn_electronics.zip", note: "Max patches and audio, zip, 54 MB"}
@@ -342,7 +361,7 @@
   themes: [time]
   legacy: "./compositions/hyphos"
   recordings:
-    - {label: "Earplay", embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/351418252%3Fsecret_token%3Ds-F85tm&color=%23555555&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false", height: 166}
+    - {label: "Hyphos", embed: "https://bandcamp.com/EmbeddedPlayer/track=1812228711/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/hyphos"}
   materials:
     - {label: "Score", url: "/compositions/hyphos/hyphos_score.pdf", note: "PDF, 972 KB"}
     - {label: "Parts", url: "/compositions/hyphos/hyphos_parts.zip", note: "zip, 408 KB"}
@@ -363,8 +382,8 @@
   themes: [time]
   legacy: "./compositions/texture_of_time"
   recordings:
-    - {label: "ECO Ensemble, Venice Biennale, 2014", embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/388477497&color=%23555555&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false", height: 166}
-    - {label: "ECO Ensemble", embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/88359439&color=%23555555&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false", height: 166}
+    - {label: "Studio recording", embed: "https://bandcamp.com/EmbeddedPlayer/track=121472327/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/delicate-texture-of-time"}
+    - {label: "Live, Venice Biennale, 2014", embed: "https://bandcamp.com/EmbeddedPlayer/track=3088660730/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/delicate-texture-of-time-live-venice-biennale-2014"}
   materials:
     - {label: "Score", url: "/compositions/texture_of_time/texture_fullscore.pdf", note: "PDF, 2 MB"}
     - {label: "Parts", url: "/compositions/texture_of_time/texture_parts.zip", note: "zip, 1.1 MB"}

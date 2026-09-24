@@ -31,6 +31,20 @@ description: >-
   </ul>
 </section>
 
+{%- assign with_music = site.data.works | where_exp: "w", "w.music" %}
+<section class="works-group">
+  <h2>Electroacoustic works from the collaborative pieces</h2>
+  <p class="lede">The music of three of the works with Teoma Naccarato, as standalone pieces.</p>
+  <ul class="works">
+    {%- for w in with_music %}
+    <li data-tags="live-electronics {% for t in w.themes %}{{ t | slugify }} {% endfor %}">
+      <span class="title">{{ w.title }}</span> <span class="meta">{{ w.year }} · {{ w.music.duration }} · {{ w.music.about }}</span>
+      <p class="tags">Listen: {% for r in w.music.recordings %}<a href="{{ r.url }}">{{ r.label | remove: w.title | strip | default: "Bandcamp" }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %} {% include external.html url="https://bandcamp.com/" %}</p>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
 <section class="works-group">
   <h2>Notated and electroacoustic</h2>
   <ul class="works">
@@ -40,6 +54,16 @@ description: >-
       <a href="{{ '/works/' | append: w.slug | append: '/' | relative_url }}"><em>{{ w.title }}</em></a> <span class="meta">{{ w.year }} · {{ w.forces }} · {{ w.duration }}</span>
       {% include tags.html work=w %}
     </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section id="recordings">
+  <h2>Recordings</h2>
+  <p class="lede">Self-released on <a href="{{ site.links.bandcamp }}">Bandcamp</a> {% include external.html url=site.links.bandcamp %}, numbered by dots.</p>
+  <ul class="perfs">
+    {%- for r in site.data.recordings %}
+    <li><a href="{{ r.url }}">{{ r.title }}</a> ({{ r.number }}) · {{ r.date }} · {{ r.contents }}</li>
     {%- endfor %}
   </ul>
 </section>
