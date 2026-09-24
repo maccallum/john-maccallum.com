@@ -234,3 +234,10 @@ ul.plain li { margin: 0.4rem 0; }
 .framing p { margin: 0; font-style: italic; }
 .contact-email { font-size: 1.2rem; }
 #elsewhere dt, #sites dt { text-transform: none; letter-spacing: 0; font-size: 1rem; color: var(--text); }
+.link-rows { display: grid; grid-template-columns: 11rem 1fr; gap: 0.35rem 1rem; max-width: var(--measure); }
+.link-rows dt { grid-column: 1; color: var(--muted); font-size: 0.95rem; }
+.link-rows dd { grid-column: 2; margin: 0; }
+@media (max-width: 30rem) {
+  .link-rows { display: block; }
+  .link-rows dt { margin-top: 0.9rem; }
+}
