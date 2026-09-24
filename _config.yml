@@ -71,7 +71,12 @@ exclude:
   - "compositions/*/dontmessup"
   - compositions/iii_circulation
   - "software/*.txt"
-  - writings
+  # Old paper folders: PDFs stay at their old paths; the fragments are not built.
+  - "writings/*.txt"
+  - "writings/*.bib"
+  - "writings/*~"
+  - "writings/*/dontmessup"
+  - writings/dontmessup
   - cv
   - _compositions
   - _performance_work

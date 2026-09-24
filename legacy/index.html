@@ -30,13 +30,14 @@ the new address. Work folders come from `legacy` in _data/works.yml.
     var map = {
       "./compositions": {{ '/works/' | relative_url | jsonify }},
       "./software": {{ '/software/' | relative_url | jsonify }},
-      "./writings": home,
+      "./writings": {{ '/writing/' | relative_url | jsonify }},
       "./cv": {{ '/contact/' | relative_url | jsonify }}
       {%- for w in legacy_works %},
       {{ w.legacy | jsonify }}: {% if w.collaborative %}{{ w.external | jsonify }}{% else %}{{ '/works/' | append: w.slug | append: '/' | relative_url | jsonify }}{% endif %}
       {%- endfor %}
     };
     var page = (new URLSearchParams(location.search).get("page") || "").replace(/\/+$/, "");
+    if (!map[page] && page.indexOf("./writings/") === 0) page = "./writings";
     location.replace(map[page] || home);
   })();
 </script>
