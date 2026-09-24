@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- if page.collection == "works" %}
   {%- assign head_work = site.data.works | where: "slug", page.slug | first %}
-  {%- capture head_desc %}{{ head_work.title }} ({{ head_work.year }}), {{ head_work.forces | downcase }}, by John MacCallum. Program note, recording, score, and performance history.{% endcapture %}
+  {%- capture head_desc %}{{ head_work.title }} ({{ head_work.year }}) by John MacCallum. {{ head_work.forces }}{% if head_work.duration != "" %}, {{ head_work.duration }}{% endif %}.{% if head_work.recordings.size > 0 %} Recording.{% endif %}{% assign mlabels = head_work.materials | map: "label" | join: " " %}{% if mlabels contains "Score" %} Score and materials.{% endif %}{% endcapture %}
   <title>{{ head_work.title }} · John MacCallum</title>
   {%- elsif page.title and page.url != "/" %}
   <title>{{ page.title }} · John MacCallum</title>

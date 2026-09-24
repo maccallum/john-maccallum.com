@@ -2,9 +2,8 @@
 layout: default
 title: Works
 description: >-
-  Complete list of works by John MacCallum: performance, video, and
-  installation works with Teoma Naccarato, and notated and
-  electroacoustic works with recordings, scores, and performance history.
+  All works by John MacCallum, with recordings, scores, and performance
+  history.
 ---
 {%- assign collaborative = site.data.works | where: "collaborative", true -%}
 {%- assign solo = site.data.works | where: "collaborative", false -%}
@@ -34,7 +33,7 @@ description: >-
 {%- assign with_music = site.data.works | where_exp: "w", "w.music" %}
 <section class="works-group">
   <h2>Electroacoustic works from the collaborative pieces</h2>
-  <p class="lede">The music of three of the works with Teoma Naccarato, as standalone pieces.</p>
+  <p class="lede">Standalone versions of the music.</p>
   <ul class="works">
     {%- for w in with_music %}
     <li data-tags="live-electronics {% for t in w.themes %}{{ t | slugify }} {% endfor %}">
@@ -60,7 +59,7 @@ description: >-
 
 <section id="recordings">
   <h2>Recordings</h2>
-  <p class="lede">Self-released on <a href="{{ site.links.bandcamp }}">Bandcamp</a> {% include external.html url=site.links.bandcamp %}, numbered by dots.</p>
+  <p class="lede">Self-released on <a href="{{ site.links.bandcamp }}">Bandcamp</a> {% include external.html url=site.links.bandcamp %}.</p>
   <ul class="perfs">
     {%- for r in site.data.recordings %}
     <li><a href="{{ r.url }}">{{ r.title }}</a> ({{ r.number }}) · {{ r.date }} · {{ r.contents }}</li>

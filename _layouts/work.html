@@ -36,7 +36,8 @@ layout: default
 
   {%- if w.materials.size > 0 %}
   <section>
-    <h2>Score and materials</h2>
+    {%- assign mlabels = w.materials | map: "label" | join: " " %}
+    <h2>{% if mlabels contains "Score" %}Score and materials{% else %}Materials{% endif %}</h2>
     <ul class="materials">
       {%- for m in w.materials %}
       {%- assign first = m.url | slice: 0 %}

@@ -8,36 +8,36 @@ forms:
     about: A score exists for performers to play.
   - name: live electronics
     label: Live electronics
-    about: Sound made or transformed by computer during the performance.
+    about: Sound made or changed by computer during the performance.
   - name: performance art
     label: Performance art
-    about: Bodies in performance, outside the concert format.
+    about: Performance outside the concert format.
   - name: installation
     label: Installation
     about: A space that visitors enter.
   - name: video
     label: Video
-    about: Film, or video as a material of the work.
+    about: Films, and works that use video.
   - name: livestream
     label: Livestream
-    about: The work existed as a broadcast.
+    about: Streamed live online.
 
 themes:
   - name: time
     label: Time
-    about: Tempo, synchrony, and players in independent, continuously varying tempos.
+    about: Tempo and synchrony, including music in independent, continuously varying tempos.
   - name: heart
     label: Heart
-    about: The heartbeat and breath as timekeeper and material, sensed by ECG and stethoscope.
+    about: Heartbeat and breath, sensed by ECG and stethoscope.
   - name: duration
     label: Duration
-    about: Extended-duration performance, from three hours to seventy-two.
+    about: Performances lasting from three to seventy-two hours.
   - name: cameras
     label: Cameras
-    about: Arrays of cameras, live video, and surveillance.
+    about: Works built on camera arrays and live video.
   - name: networks
     label: Networks
-    about: Distributed systems of sensors, computers, and cameras; OpenSoundControl.
+    about: Networked sensors, computers, and cameras, and OpenSoundControl.
   - name: listening
     label: Listening
-    about: Listening to bodies, one's own and others'.
+    about: Works built around listening to the body.
