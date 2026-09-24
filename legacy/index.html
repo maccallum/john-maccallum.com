@@ -21,7 +21,7 @@ the new address. Work folders come from `legacy` in _data/works.yml.
   <li><a href="{{ '/works/' | append: w.slug | append: '/' | relative_url }}"><em>{{ w.title }}</em></a></li>
   {%- endif %}
   {%- endfor %}
-  <li><a href="{{ '/#software' | relative_url }}">Software</a></li>
+  <li><a href="{{ '/software/' | relative_url }}">Software</a></li>
   <li><a href="{{ '/' | relative_url }}">Home</a></li>
 </ul>
 <script>
@@ -29,9 +29,9 @@ the new address. Work folders come from `legacy` in _data/works.yml.
     var home = {{ '/' | relative_url | jsonify }};
     var map = {
       "./compositions": {{ '/works/' | relative_url | jsonify }},
-      "./software": {{ '/#software' | relative_url | jsonify }},
+      "./software": {{ '/software/' | relative_url | jsonify }},
       "./writings": home,
-      "./cv": {{ '/#contact' | relative_url | jsonify }}
+      "./cv": {{ '/contact/' | relative_url | jsonify }}
       {%- for w in legacy_works %},
       {{ w.legacy | jsonify }}: {% if w.collaborative %}{{ w.external | jsonify }}{% else %}{{ '/works/' | append: w.slug | append: '/' | relative_url | jsonify }}{% endif %}
       {%- endfor %}

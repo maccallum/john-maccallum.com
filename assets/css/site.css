@@ -226,3 +226,11 @@ ul.plain li { margin: 0.4rem 0; }
   .slim-light { display: none; }
   .slim-dark { display: block; }
 }
+
+/* Front page, framing quotes, contact */
+.home-bio p { font-size: 1.15rem; max-width: var(--measure); }
+.portrait { display: block; width: 100%; max-width: 20rem; height: auto; margin: 0 0 1.5rem; }
+.framing { margin: 0 0 2.5rem; padding-left: 1rem; border-left: 1px dashed var(--rule); max-width: var(--measure); }
+.framing p { margin: 0; font-style: italic; }
+.contact-email { font-size: 1.2rem; }
+#elsewhere dt, #sites dt { text-transform: none; letter-spacing: 0; font-size: 1rem; color: var(--text); }

@@ -24,6 +24,7 @@ description: >-
       {%- else -%}
       <span class="title">{{ w.title }}</span>
       {%- endif %} <span class="meta">{{ w.year }}{% if w.duration != "" %} · {{ w.duration }}{% endif %} · {{ w.forces }}</span>
+      {%- for v in w.videos %}{% include player.html item=v kind="video" title=w.title %}{% endfor %}
       {% include tags.html work=w %}
     </li>
     {%- endfor %}
@@ -38,7 +39,7 @@ description: >-
     {%- for w in with_music %}
     <li data-tags="live-electronics {% for t in w.themes %}{{ t | slugify }} {% endfor %}">
       <span class="title">{{ w.title }}</span> <span class="meta">{{ w.year }} · {{ w.music.duration }} · {{ w.music.about }}</span>
-      <p class="tags">Listen: {% for r in w.music.recordings %}<a href="{{ r.url }}">{{ r.label | remove: w.title | strip | default: "Bandcamp" }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %} {% include external.html url="https://bandcamp.com/" %}</p>
+      {%- for r in w.music.recordings %}{% include slim-player.html item=r %}{% endfor %}
     </li>
     {%- endfor %}
   </ul>
@@ -51,6 +52,8 @@ description: >-
     {%- assign all = w.forms | concat: w.themes %}
     <li data-tags="{% for t in all %}{{ t | slugify }} {% endfor %}">
       <a href="{{ '/works/' | append: w.slug | append: '/' | relative_url }}"><em>{{ w.title }}</em></a> <span class="meta">{{ w.year }} · {{ w.forces }} · {{ w.duration }}</span>
+      {%- assign r = w.recordings | first %}
+      {%- if r %}{% include slim-player.html item=r %}{% endif %}
       {% include tags.html work=w %}
     </li>
     {%- endfor %}
@@ -59,7 +62,7 @@ description: >-
 
 <section id="recordings">
   <h2>Recordings</h2>
-  <p class="lede">Self-released on <a href="{{ site.links.bandcamp }}">Bandcamp</a> {% include external.html url=site.links.bandcamp %}.</p>
+  <p class="lede">Self-released on <a href="{{ site.links.bandcamp }}">Bandcamp</a> {% include external.html url=site.links.bandcamp %}</p>
   <ul class="perfs">
     {%- for r in site.data.recordings %}
     <li><a href="{{ r.url }}">{{ r.title }}</a> ({{ r.number }}) · {{ r.date }} · {{ r.contents }}</li>
