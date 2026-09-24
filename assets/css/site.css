@@ -216,3 +216,5 @@ ul.plain li { margin: 0.4rem 0; }
 #courses h3 { margin-top: 2rem; margin-bottom: 0; }
 #courses h3 + .meta { margin: 0.1rem 0 0.5rem; font-size: 0.9rem; }
 .about p { max-width: var(--measure); }
+.iterations { padding-left: 1.1rem; font-size: 0.95rem; }
+.iterations li { margin: 0.45rem 0; }
