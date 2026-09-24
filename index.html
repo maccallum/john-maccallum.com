@@ -16,7 +16,6 @@ nav:
 {%- assign featured = site.data.works | where_exp: "w", "w.featured" | sort: "featured" -%}
 {%- assign collaborative = site.data.works | where: "collaborative", true -%}
 {%- assign solo = site.data.works | where: "collaborative", false -%}
-{%- assign limn = site.data.works | where: "slug", "limn" | first -%}
 
 <section class="bio" aria-label="Biography">
   <p>John MacCallum is a composer, media artist, and software engineer. Born in California and trained in music composition and computer science, he lived in Berlin from 2019 to 2025 and is now based in Falmouth, UK. His work uses technology to probe our relationship to time. At its center is the heart, as timekeeper, material performer, and world-builder. For over a decade that work has been made in collaboration with choreographer and media artist Teoma Naccarato: extended-duration performances inside high-channel-count real-time audio/visual systems that put philosophical pressure on notions of representation, boundaries, and binaries. He designs and builds the software these systems run on, as he has throughout his career, first at UC Berkeley’s Center for New Music and Audio Technologies and now as an engineer on Max and Max for Live at Cycling ’74 and Ableton; the music drives the software, and the software, in turn, the music. He holds degrees in music composition from UC Berkeley (PhD), McGill, and the University of the Pacific.</p>
@@ -75,18 +74,16 @@ nav:
   </ul>
 
   <h3 class="list-head">Notated and electroacoustic</h3>
-  <figure class="audio">
-    <iframe src="{{ limn.recordings[0].embed }}" title="{{ limn.title }}, recording" loading="lazy" seamless></iframe>
-    <figcaption><em>Limn (A)</em>, the electronics of <a href="{{ '/works/limn/' | relative_url }}"><em>Limn</em></a> ({{ limn.year }}), which is three pieces: <em>Limn (A)</em> for electronics, <em>Limn (B)</em> for flute and cello, and <em>Limn (A+B)</em>, each performable alone. Commissioned by the {{ limn.commission | remove: "Commissioned by the " }}; performed from 2015 to 2026, most recently in Berkeley in February 2026. <a href="{{ '/works/#recordings' | relative_url }}">Five releases</a> on Bandcamp.</figcaption>
-  </figure>
   <ul class="works">
     {%- for w in solo %}
     <li>
       <a href="{{ '/works/' | append: w.slug | append: '/' | relative_url }}"><em>{{ w.title }}</em></a> <span class="meta">{{ w.year }} · {{ w.forces }} · {{ w.duration }}</span>
+      {%- assign r = w.recordings | first %}
+      {%- if r %}{% include slim-player.html item=r %}{% endif %}
     </li>
     {%- endfor %}
   </ul>
-  <p><a href="{{ '/works/' | relative_url }}">All works on one page</a>, with their tags</p>
+  <p><a href="{{ '/works/' | relative_url }}">All works on one page</a>, with their tags, and the <a href="{{ '/works/#recordings' | relative_url }}">five releases</a> on Bandcamp</p>
 </section>
 
 <section id="software">

@@ -218,3 +218,11 @@ ul.plain li { margin: 0.4rem 0; }
 .about p { max-width: var(--measure); }
 .iterations { padding-left: 1.1rem; font-size: 0.95rem; }
 .iterations li { margin: 0.45rem 0; }
+
+/* One-line Bandcamp players in the works lists */
+.slim { display: block; border: 0; width: 100%; max-width: var(--measure); height: 42px; margin: 0.35rem 0 0.15rem; }
+.slim-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  .slim-light { display: none; }
+  .slim-dark { display: block; }
+}

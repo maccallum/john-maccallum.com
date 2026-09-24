@@ -1,0 +1,6 @@
+{%- comment -%} Bandcamp's one-line player for a recording, in a light and a dark version; CSS shows the one that matches the reader's color scheme, and lazy loading keeps the hidden one from loading. include.item: {label, embed, url} {%- endcomment -%}
+{%- assign base = include.item.embed | replace: "size=large", "size=small" | replace: "artwork=small", "artwork=none" | replace: "tracklist=false/", "" -%}
+{%- assign light = base | replace: "bgcol=ffffff", "bgcol=ffffff" | replace: "linkcol=333333", "linkcol=333333" -%}
+{%- assign dark = base | replace: "bgcol=ffffff", "bgcol=333333" | replace: "linkcol=333333", "linkcol=e8e6e3" -%}
+<iframe class="slim slim-light" src="{{ light }}" title="{{ include.item.label | strip_html }}, recording" loading="lazy" seamless></iframe>
+<iframe class="slim slim-dark" src="{{ dark }}" title="{{ include.item.label | strip_html }}, recording" loading="lazy" seamless></iframe>
