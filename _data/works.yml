@@ -127,7 +127,7 @@
   forces: "Video and spoken-word composition; eighteen video solos"
   duration: "15′"
   forms: [video]
-  themes: []
+  themes: [duration, cameras]
   external: "https://immediations.com/void/"
   performances:
     - {date: "2021", venue: "Lake Studios, Berlin, live-streamed", premiere: true}
@@ -153,6 +153,8 @@
   forms: [performance art, video, live electronics]
   themes: [heart]
   external: "https://iii-iii-iii.org/about/iii-once-removed/"
+  videos:
+    - {label: "Video, 11 minutes", embed: "https://player.vimeo.com/video/419987492?dnt=1", url: "https://vimeo.com/419987492"}
   performances:
     - {date: "2020", venue: "Hochschule für Musik und Theater Hamburg, gala re-opening of the Forum (stage version)", premiere: true}
     - {date: "2020", venue: "Petersburg Art Space, Berlin (version in the round)", premiere: true}
@@ -187,6 +189,8 @@
   forms: [video]
   themes: [cameras]
   external: "https://iii-iii-iii.org/about/iii-portraits/"
+  videos:
+    - {label: "Full film, 18 minutes", embed: "https://player.vimeo.com/video/424295308?dnt=1", url: "https://vimeo.com/424295308"}
   performances:
     - {date: "2018", venue: "Lake Studios, Berlin, “Unfinished Fridays”", premiere: true}
 
@@ -223,6 +227,8 @@
   forms: [video]
   themes: [heart]
   external: "https://iii-iii-iii.org/about/iii-coeurdecochon/"
+  videos:
+    - {label: "Full film, 7 minutes", embed: "https://player.vimeo.com/video/424294807?dnt=1", url: "https://vimeo.com/424294807"}
   performances:
     - {date: "2018", venue: "Lake Studios, Berlin, “Unfinished Fridays”"}
     - {date: "2017", venue: "Weisslich Vol. 10, Guest Projects, London, UK", premiere: true}

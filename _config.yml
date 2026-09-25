@@ -12,11 +12,12 @@ email: john.m@ccallum.com
 url: "https://john-maccallum.com"
 baseurl: ""
 
-# Outbound links. Vimeo, LinkedIn, and Google Scholar are added once their
-# URLs are confirmed.
+# Outbound links.
 links:
   bandcamp: "https://john-maccallum.bandcamp.com"
   github: "https://github.com/maccallum"
+  vimeo: "https://vimeo.com/johnmaccallum"
+  linkedin: "https://www.linkedin.com/in/john-maccallum-a9682547"
   odot: "https://github.com/CNMAT/CNMAT-odot"
   rtecg: "https://github.com/maccallum/rtecg"
   linktree: "https://linktr.ee/john.maccallum"

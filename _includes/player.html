@@ -3,7 +3,8 @@
 {%- if include.kind == "video" %}
 <figure class="media">
   <div class="video"><iframe src="{{ item.embed }}" title="{{ include.title | strip_html }}, {{ item.label }}" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-  <figcaption>{{ item.label }}{% if item.url %} · <a href="{{ item.url }}">Open on YouTube</a>{% endif %}</figcaption>
+  {%- if item.url contains "vimeo" %}{% assign host = "Vimeo" %}{% else %}{% assign host = "YouTube" %}{% endif %}
+  <figcaption>{{ item.label }}{% if item.url %} · <a href="{{ item.url }}">{{ host }}</a>{% endif %}</figcaption>
 </figure>
 {%- else %}
 <figure class="media audio">
