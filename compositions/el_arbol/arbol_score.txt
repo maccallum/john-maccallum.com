@@ -1,9 +1,0 @@
-<script>document.write(messup("Score"))</script>:
-<br>
-<a href="https://github.com/maccallum/arbol-score/blob/master/score/viola_score.pdf">
-<script>document.write(messup("viola version"))</script>
-</a>
-<br>
-<a href="https://github.com/maccallum/arbol-score/blob/master/score/cello_score.pdf">
-<script>document.write(messup("cello version"))</script>
-</a>

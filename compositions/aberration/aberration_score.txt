@@ -1,2 +1,0 @@
-<a href="https://github.com/maccallum/aberration-score/blob/master/aberration_fullscore.pdf">
-<script>document.write(messup("score"))</script></a>

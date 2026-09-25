@@ -1,5 +1,4 @@
-# john-maccallum.com
-# Build: bundle exec jekyll build   Preview: bundle exec jekyll serve
+# john-maccallum.com. See README.md.
 
 title: "John MacCallum, composer and musical systems designer"
 author: John MacCallum
@@ -44,58 +43,18 @@ collections:
   works:
     output: true
     permalink: /works/:name/
-  publications:
-    output: false   # later: /writing
 
 defaults:
   - scope: {path: "", type: works}
     values: {layout: work}
 
-# The 2021 draft pages and the PHP site's folders stay in the repo as
-# sources but are not built.
 exclude:
+  - README.md
   - Gemfile
   - Gemfile.lock
   - vendor
   - .bundle
-  - .sass-cache
   - .zsh_history
-  - "*.php"
-  - make-bg.pl
-  - wind.js
-  - iii.txt
-  # Old work folders: the PDFs and zips are published at their old paths so
-  # direct links keep working; the PHP page fragments are not.
-  - "compositions/*.txt"
-  - "compositions/*~"
-  - "compositions/*/soundcloud"
-  - "compositions/*/dontmessup"
-  - compositions/iii_circulation
-  - "software/*.txt"
-  # Old paper folders: PDFs stay at their old paths; the fragments are not built.
-  - "writings/*.txt"
-  - "writings/*.bib"
-  - "writings/*~"
-  - "writings/*/dontmessup"
-  - writings/dontmessup
-  - cv
-  - _compositions
-  - _performance_work
-  - _ptags
-  - _sass
-  - about.html
-  - compositions.html
-  - musical_systems_design.html
-  - performance_work.html
-  - publications.html
-  - assets/css/main.scss
-  - assets/js
-
-# CV PDFs, served from assets/cv/ once there is a public version
-# (the application CV carries a phone number and home address). While
-# empty, the front page offers the CV by email.
-cv_full: ""
-cv_one_page: ""
 
 markdown: kramdown
 kramdown:

@@ -1,4 +1,0 @@
-<a href="https://github.com/maccallum/x">
-<script>document.write(messup("x"))</script><br>
-Random number generation and distribution for Max/MSP and other environments
-</a>

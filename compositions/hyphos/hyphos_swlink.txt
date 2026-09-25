@@ -1,7 +1,0 @@
-<a href="https://github.com/maccallum/hyphos-electronics/archive/master.tar.gz">
-<script>document.write(messup("software"))</script> (.tar.gz)
-</a>
-<br>
-<a href="https://github.com/maccallum/hyphos-electronics/archive/master.zip">
-<script>document.write(messup("software"))</script> (.zip)
-</a>
