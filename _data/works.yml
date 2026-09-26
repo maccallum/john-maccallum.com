@@ -312,7 +312,7 @@
   commission: "Commissioned by the Left Coast Chamber Ensemble"
   forms: [notated, live electronics]
   themes: [time, heart]
-  techniques: [varitemporal, harmonic scordatura, microtonal]
+  techniques: [varitemporal, hailstone harmony, harmonic scordatura, microtonal]
   legacy: "./compositions/limn"
   recordings:
     - {label: "Limn (A), for electronics", embed: "https://bandcamp.com/EmbeddedPlayer/track=3318269950/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/limn-a"}
@@ -371,7 +371,7 @@
   commission: "Commissioned by Earplay"
   forms: [notated, live electronics]
   themes: [time]
-  techniques: [varitemporal, migrator, harmonic scordatura, microtonal]
+  techniques: [varitemporal, hailstone harmony, migrator, harmonic scordatura, microtonal]
   legacy: "./compositions/hyphos"
   recordings:
     - {label: "Hyphos", embed: "https://bandcamp.com/EmbeddedPlayer/track=1812228711/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/hyphos"}
@@ -450,7 +450,7 @@
   commission: "Written for Ellen Ruth Rose"
   forms: [notated, live electronics]
   themes: [time]
-  techniques: [harmonic scordatura, microtonal]
+  techniques: [hailstone harmony, migrator, harmonic scordatura, microtonal]
   legacy: "./compositions/el_arbol"
   recordings:
     - {label: "El Árbol de la noche triste", embed: "https://bandcamp.com/EmbeddedPlayer/track=4197628130/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/el-rbol-de-la-noche-triste"}

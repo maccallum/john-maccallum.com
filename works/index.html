@@ -78,7 +78,8 @@ description: >-
     var about = {
       {%- assign alltags = site.data.tags.forms | concat: site.data.tags.themes | concat: site.data.tags.techniques %}
       {%- for t in alltags %}
-      {{ t.name | slugify | jsonify }}: {{ t.label | downcase | append: "”: " | append: t.about | jsonify }}{% unless forloop.last %},{% endunless %}
+      {%- capture href %}{% if t.link.href contains "://" %}{{ t.link.href }}{% elsif t.link.href %}{{ t.link.href | relative_url }}{% endif %}{% endcapture %}
+      {{ t.name | slugify | jsonify }}: {text: {{ t.label | downcase | append: "”: " | append: t.about | jsonify }}, href: {{ href | jsonify }}, label: {{ t.link.label | default: "" | jsonify }}}{% unless forloop.last %},{% endunless %}
       {%- endfor %}
     };
     if (!about[tag]) return;
@@ -92,7 +93,14 @@ description: >-
       if (a.dataset.tag === tag) a.setAttribute("aria-current", "true");
     });
     var status = document.querySelector(".filter-status");
-    document.getElementById("filter-about").textContent = about[tag];
+    document.getElementById("filter-about").textContent = about[tag].text;
+    if (about[tag].href) {
+      var a = document.createElement("a");
+      a.href = about[tag].href;
+      a.textContent = about[tag].label;
+      document.getElementById("filter-link").appendChild(a);
+      document.getElementById("filter-link").appendChild(document.createTextNode(" ·"));
+    }
     status.hidden = false;
   })();
 </script>
