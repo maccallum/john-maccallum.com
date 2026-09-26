@@ -67,7 +67,8 @@
     twelve-camera video array. Click-track scores guide every movement,
     including breath; the audio is composed in real time from two ECGs.
     Premiered May 30–June 2, 2022, Atelier III, Berlin.
-  videos: []
+  videos:
+    - {label: "Video, 29 minutes", embed: "https://player.vimeo.com/video/862682307?dnt=1", url: "https://vimeo.com/862682307"}
   performances:
     - {date: "May 30–June 2, 2022", venue: "Atelier III, Berlin, live-streamed", premiere: true}
 
