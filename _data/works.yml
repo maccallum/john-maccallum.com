@@ -37,6 +37,7 @@
   support: "National Performance Network (NPN) Stepping Out, with funds from the German Federal Government Commissioner for Culture and the Media"
   forms: [performance art, installation, video, live electronics]
   themes: [heart, duration]
+  techniques: [biotemporal]
   external: "https://iii-iii-iii.org/about/iii-once-replete/"
   featured: 1
   summary: >-
@@ -62,6 +63,7 @@
   support: "National Performance Network (NPN) Stepping Out, with funds from the German Federal Government Commissioner for Culture and the Media"
   forms: [performance art, video, live electronics, livestream]
   themes: [time, heart, duration, cameras, networks]
+  techniques: [biotemporal]
   external: "https://iii-iii-iii.org/about/iii-oncereturned/"
   featured: 2
   summary: >-
@@ -155,6 +157,7 @@
   duration: "10′ / 30′"
   forms: [performance art, video, live electronics]
   themes: [heart]
+  techniques: [biotemporal]
   external: "https://iii-iii-iii.org/about/iii-once-removed/"
   videos:
     - {label: "Video, 11 minutes", embed: "https://player.vimeo.com/video/419987492?dnt=1", url: "https://vimeo.com/419987492"}
@@ -170,6 +173,7 @@
   duration: "30′"
   forms: [performance art, video, live electronics]
   themes: [heart]
+  techniques: [biotemporal]
   external: "https://iii-iii-iii.org/about/iii-circulation/"
   legacy: "./compositions/iii_circulation"
   music:
@@ -205,6 +209,7 @@
   duration: "30′"
   forms: [performance art]
   themes: [heart]
+  techniques: [biotemporal]
   external: ""
   performances:
     - {date: "2018", performers: "Naccarato, Laura Boudou (dancers); Christian Smith, Ryan Kelly (percussion)", venue: "CLOUD/Danslab, The Hague, NL (created and documented in residence)"}
@@ -217,6 +222,7 @@
   duration: "30′"
   forms: [performance art]
   themes: [heart]
+  techniques: [biotemporal]
   external: "https://iii-iii-iii.org/about/iii-tangente/"
   performances:
     - {date: "2017", venue: "Tangente Danse, Montréal, QC (created and premiered in residence)", premiere: true}
@@ -258,6 +264,7 @@
   duration: "8′"
   forms: [performance art]
   themes: [time, heart]
+  techniques: [biotemporal]
   external: ""
   performances:
     - {date: "2016", performers: "Laura Boudou (dancer); Stacey Pelinka (bass flute)", venue: "Djerassi Resident Artists Program, Woodside, CA", premiere: true}
@@ -270,6 +277,7 @@
   duration: "8′"
   forms: [performance art, live electronics]
   themes: [time, heart]
+  techniques: [biotemporal]
   external: ""
   performances:
     - {date: "2015", performers: "Naccarato (dancer); Loren Mach (percussion); MacCallum (live electronics)", venue: "Ubiquitous Swarm Lab Summer Retreat, UC Berkeley", premiere: true}
@@ -295,6 +303,7 @@
   duration: "8′"
   forms: [performance art, live electronics]
   themes: [time, heart]
+  techniques: [biotemporal]
   external: ""
   performances:
     - {date: "2014", performers: "Bekah Edie (dancer)", venue: "Ircam, Paris", premiere: true}

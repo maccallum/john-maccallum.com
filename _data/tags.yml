@@ -47,6 +47,9 @@ techniques:
   - name: varitemporal
     label: Varitemporal
     about: Each player in their own tempo, and each tempo changing smoothly over time.
+  - name: biotemporal
+    label: Biotemporal
+    about: Tempo and sound taken from performers' heartbeats, read live by ECG.
   - name: hailstone harmony
     label: Hailstone harmony
     about: Harmony derived from the hailstone (Collatz) sequence.
