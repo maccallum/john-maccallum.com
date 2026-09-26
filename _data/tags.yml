@@ -41,3 +41,20 @@ themes:
   - name: listening
     label: Listening
     about: Works built around listening to the body.
+
+techniques:
+  - name: varitemporal
+    label: Varitemporal
+    about: Each player in their own tempo, and each tempo changing smoothly over time, unlike polytemporal music, where each player's tempo is fixed.
+  - name: hailstone harmony
+    label: Hailstone harmony
+    about: Harmony derived from the hailstone (Collatz) sequence.
+  - name: migrator
+    label: Migrator
+    about: David Wessel's additive-synthesis technique, in which one spectrum gradually migrates into another.
+  - name: harmonic scordatura
+    label: Harmonic scordatura
+    about: Strings retuned to the 5th, 7th, 11th, and 16th harmonics of a low A.
+  - name: microtonal
+    label: Microtonal
+    about: Pitches outside twelve-tone equal temperament.

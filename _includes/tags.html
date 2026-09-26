@@ -1,8 +1,9 @@
-{%- comment -%} Tag links for one work, grouped as form and theme. include.work {%- endcomment -%}
+{%- comment -%} Tag links for one work, grouped as form, theme, and technique. include.work {%- endcomment -%}
 {%- assign w = include.work -%}
-{%- if w.forms.size > 0 or w.themes.size > 0 %}
+{%- if w.forms.size > 0 or w.themes.size > 0 or w.techniques.size > 0 %}
 <p class="tags">
   {%- if w.forms.size > 0 %}<span class="tag-group">Form: {% for t in w.forms %}<a href="{{ '/works/' | relative_url }}?tag={{ t | slugify }}">{{ t }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif %}
   {%- if w.themes.size > 0 %}<span class="tag-group">Theme: {% for t in w.themes %}<a href="{{ '/works/' | relative_url }}?tag={{ t | slugify }}">{{ t }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif %}
+  {%- if w.techniques.size > 0 %}<span class="tag-group">Technique: {% for t in w.techniques %}<a href="{{ '/works/' | relative_url }}?tag={{ t | slugify }}">{{ t }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif %}
 </p>
 {%- endif %}

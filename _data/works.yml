@@ -12,6 +12,8 @@
 #                _data/tags.yml
 # themes:        what the work is about; as many as honestly apply.
 #                Defined in _data/tags.yml
+# techniques:    how the music is made (varitemporal, hailstone harmony, …).
+#                Defined in _data/tags.yml
 # featured:      1-3, the order on the front page
 # legacy:        folder on the old PHP site (for redirects)
 # recordings,
@@ -310,6 +312,7 @@
   commission: "Commissioned by the Left Coast Chamber Ensemble"
   forms: [notated, live electronics]
   themes: [time, heart]
+  techniques: [varitemporal, harmonic scordatura, microtonal]
   legacy: "./compositions/limn"
   recordings:
     - {label: "Limn (A), for electronics", embed: "https://bandcamp.com/EmbeddedPlayer/track=3318269950/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/limn-a"}
@@ -339,6 +342,7 @@
   commission: "Commissioned by Cyril Deaconoff with support from the Fleishhacker Foundation"
   forms: [notated, live electronics]
   themes: []
+  techniques: [hailstone harmony, migrator, microtonal]
   performances:
     - {date: "June 14, 2015", performers: "Cyril Deaconoff (organ); MacCallum (live electronics)", venue: "First Presbyterian Church of Oakland, CA", premiere: true}
 
@@ -351,6 +355,7 @@
   commission: "A reimagining of David Wessel’s Antony (1977), with Matthew Goodheart and Adrian Freed, in memory of David Wessel"
   forms: [live electronics]
   themes: []
+  techniques: [migrator]
   materials:
     - {label: "Paper, ICMC 2015", url: "/assets/papers/2015_MacCallumGooheartFreed_ICMC_Antony.pdf", note: "PDF"}
   performances:
@@ -366,6 +371,7 @@
   commission: "Commissioned by Earplay"
   forms: [notated, live electronics]
   themes: [time]
+  techniques: [varitemporal, migrator, harmonic scordatura, microtonal]
   legacy: "./compositions/hyphos"
   recordings:
     - {label: "Hyphos", embed: "https://bandcamp.com/EmbeddedPlayer/track=1812228711/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/hyphos"}
@@ -387,6 +393,7 @@
   commission: "Commissioned by the ECO Ensemble with support from the Mellon Foundation"
   forms: [notated]
   themes: [time]
+  techniques: [varitemporal, hailstone harmony, harmonic scordatura, microtonal]
   legacy: "./compositions/texture_of_time"
   recordings:
     - {label: "Studio recording", embed: "https://bandcamp.com/EmbeddedPlayer/track=121472327/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/delicate-texture-of-time"}
@@ -411,6 +418,7 @@
   commission: "Commissioned by and written for Rootstock Percussion (Chris Froh, Dan Kennedy, Loren Mach). Dedicated to Edmund Campion"
   forms: [notated]
   themes: [time]
+  techniques: [varitemporal]
   legacy: "./compositions/aberration"
   recordings:
     - {label: "Rootstock Percussion", embed: "https://bandcamp.com/EmbeddedPlayer/track=325422030/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/aberration"}
@@ -442,6 +450,7 @@
   commission: "Written for Ellen Ruth Rose"
   forms: [notated, live electronics]
   themes: [time]
+  techniques: [harmonic scordatura, microtonal]
   legacy: "./compositions/el_arbol"
   recordings:
     - {label: "El Árbol de la noche triste", embed: "https://bandcamp.com/EmbeddedPlayer/track=4197628130/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/el-rbol-de-la-noche-triste"}
@@ -464,6 +473,7 @@
   duration: "12′"
   forms: [notated, live electronics]
   themes: []
+  techniques: [hailstone harmony, migrator]
   legacy: "./compositions/blankness"
   recordings:
     - {label: "…blankness…", embed: "https://bandcamp.com/EmbeddedPlayer/track=3844739931/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/blankness"}
@@ -482,6 +492,7 @@
   duration: "15′"
   forms: [live electronics]
   themes: []
+  techniques: [hailstone harmony, migrator]
   legacy: "./compositions/shards_of_ice"
   recordings:
     - {label: "…frozen into shards of ice…", embed: "https://bandcamp.com/EmbeddedPlayer/track=2726554258/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/frozen-into-shards-of-ice"}
@@ -504,6 +515,7 @@
   commission: "Written for Chris Froh"
   forms: [notated, live electronics]
   themes: []
+  techniques: [varitemporal, hailstone harmony, migrator]
   legacy: "./compositions/almost_like_hail"
   recordings:
     - {label: "…almost like hail…", embed: "https://bandcamp.com/EmbeddedPlayer/track=1167859534/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/", url: "https://john-maccallum.bandcamp.com/track/almost-like-hail"}
