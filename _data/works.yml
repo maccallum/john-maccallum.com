@@ -116,7 +116,8 @@
     For solo dancer with live electronics and a nine-camera video
     surveillance system. Premiered 2021 at Lake Studios Berlin,
     live-streamed.
-  videos: []
+  videos:
+    - {label: "Full work, 16 minutes", embed: "https://player.vimeo.com/video/656978594?h=84e3344188&dnt=1", url: "https://vimeo.com/656978594/84e3344188"}
   music:
     duration: "16′"
     about: "Live electronics, fixed version"
